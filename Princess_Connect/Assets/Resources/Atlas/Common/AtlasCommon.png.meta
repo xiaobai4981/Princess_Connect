@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -3601,16 +3601,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_165
+      name: AtlasCommon_MissonBG
       rect:
         serializedVersion: 2
         x: 447
         y: 1804
         width: 64
-        height: 70
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 1, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7822,7 +7822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_367
+      name: AtlasCommon_MissonCnt
       rect:
         serializedVersion: 2
         x: 1864
@@ -9481,7 +9481,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_449
+      name: AtlasCommon_Misson
       rect:
         serializedVersion: 2
         x: 681
@@ -11497,7 +11497,6 @@ TextureImporter:
       AtlasCommon_162: -1269381628
       AtlasCommon_163: 371878277
       AtlasCommon_164: 1185298479
-      AtlasCommon_165: 1361416086
       AtlasCommon_166: 1261989265
       AtlasCommon_167: 210094631
       AtlasCommon_168: 385873887
@@ -11716,7 +11715,6 @@ TextureImporter:
       AtlasCommon_364: 1314345715
       AtlasCommon_365: 888495759
       AtlasCommon_366: 1519391796
-      AtlasCommon_367: -316237827
       AtlasCommon_369: 1948993064
       AtlasCommon_37: 1646399343
       AtlasCommon_370: -1372552590
@@ -11797,7 +11795,6 @@ TextureImporter:
       AtlasCommon_446: 1087408497
       AtlasCommon_447: -129473630
       AtlasCommon_448: -1591182121
-      AtlasCommon_449: 296235021
       AtlasCommon_45: -192221278
       AtlasCommon_450: -614986886
       AtlasCommon_451: 1799369607
@@ -11960,6 +11957,9 @@ TextureImporter:
       AtlasCommon_MenuBG_Selected: -1217347356
       AtlasCommon_Menu_Normal: -457963718
       AtlasCommon_Menu_Selected: -1936295505
+      AtlasCommon_Misson: 296235021
+      AtlasCommon_MissonBG: 1361416086
+      AtlasCommon_MissonCnt: -316237827
       AtlasCommon_OtherNormalBG_Normal: -1965531910
       AtlasCommon_Player: -1789696862
       AtlasCommon_Title: -307145133
