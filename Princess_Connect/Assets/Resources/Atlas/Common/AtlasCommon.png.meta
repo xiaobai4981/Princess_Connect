@@ -1081,13 +1081,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_45
+      name: AtlasCommon_Mana
       rect:
         serializedVersion: 2
         x: 1569
-        y: 1949
-        width: 28
-        height: 42
+        y: 1964
+        width: 27
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1690,11 +1690,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_74
+      name: AtlasCommon_EXPAB_Back
       rect:
         serializedVersion: 2
         x: 1225
-        y: 1933
+        y: 1932
         width: 32
         height: 26
       alignment: 0
@@ -2446,7 +2446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_110
+      name: AtlasCommon_EXP_Fill
       rect:
         serializedVersion: 2
         x: 1352
@@ -2509,7 +2509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_113
+      name: AtlasCommon_AB_Fill
       rect:
         serializedVersion: 2
         x: 1527
@@ -3223,7 +3223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_147
+      name: AtlasCommon_Diamond
       rect:
         serializedVersion: 2
         x: 802
@@ -6541,7 +6541,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_306
+      name: AtlasCommon_ExpImage
       rect:
         serializedVersion: 2
         x: 741
@@ -10279,27 +10279,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_487
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 572
-        width: 564
-        height: 210
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42d4558de6f590a428bf59eca6a80c82
-      internalID: 910046810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasCommon_488
       rect:
         serializedVersion: 2
@@ -10489,7 +10468,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_497
+      name: AtlasCommon_LoginBottomBG
       rect:
         serializedVersion: 2
         x: 1472
@@ -11014,7 +10993,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_522
+      name: AtlasCommon_MainTitle
       rect:
         serializedVersion: 2
         x: 1592
@@ -11182,7 +11161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_530
+      name: AtlasCommon_ABImage
       rect:
         serializedVersion: 2
         x: 2015
@@ -11412,6 +11391,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: AtlasCommon_LoginBG
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 569
+        width: 277
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a185496a4fe63a4bbc8b0a3253ec953
+      internalID: -125816361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -11437,10 +11437,8 @@ TextureImporter:
       AtlasCommon_108: -1530888933
       AtlasCommon_109: 861239458
       AtlasCommon_11: -84195254
-      AtlasCommon_110: 1641741656
       AtlasCommon_111: -1805626754
       AtlasCommon_112: -571994558
-      AtlasCommon_113: 1568893014
       AtlasCommon_114: -2113578280
       AtlasCommon_115: -737392021
       AtlasCommon_116: 1963023985
@@ -11477,7 +11475,6 @@ TextureImporter:
       AtlasCommon_144: -473793494
       AtlasCommon_145: 930169820
       AtlasCommon_146: 506958648
-      AtlasCommon_147: 1220128170
       AtlasCommon_148: 1104604172
       AtlasCommon_149: 441352282
       AtlasCommon_15: -1024235234
@@ -11650,7 +11647,6 @@ TextureImporter:
       AtlasCommon_303: 796579452
       AtlasCommon_304: 1587095923
       AtlasCommon_305: 2056251938
-      AtlasCommon_306: 1072883204
       AtlasCommon_307: -633702880
       AtlasCommon_308: -974418546
       AtlasCommon_309: 1504623689
@@ -11795,7 +11791,6 @@ TextureImporter:
       AtlasCommon_446: 1087408497
       AtlasCommon_447: -129473630
       AtlasCommon_448: -1591182121
-      AtlasCommon_45: -192221278
       AtlasCommon_450: -614986886
       AtlasCommon_451: 1799369607
       AtlasCommon_452: 2015689568
@@ -11844,7 +11839,6 @@ TextureImporter:
       AtlasCommon_494: 1691886523
       AtlasCommon_495: 1233008030
       AtlasCommon_496: -1180048426
-      AtlasCommon_497: 1581132623
       AtlasCommon_499: 607584202
       AtlasCommon_5: 1198405264
       AtlasCommon_50: -613435307
@@ -11872,7 +11866,6 @@ TextureImporter:
       AtlasCommon_52: -2144568318
       AtlasCommon_520: -407670936
       AtlasCommon_521: -1667014096
-      AtlasCommon_522: -53317573
       AtlasCommon_523: -1929787557
       AtlasCommon_524: 687672570
       AtlasCommon_525: 492710675
@@ -11881,7 +11874,6 @@ TextureImporter:
       AtlasCommon_528: -1212576442
       AtlasCommon_529: -2038661543
       AtlasCommon_53: 2077470449
-      AtlasCommon_530: 297375694
       AtlasCommon_531: 1980592221
       AtlasCommon_532: -43331417
       AtlasCommon_533: -1520026777
@@ -11911,7 +11903,6 @@ TextureImporter:
       AtlasCommon_71: 1813135154
       AtlasCommon_72: -1322786379
       AtlasCommon_73: 1800093138
-      AtlasCommon_74: -996717023
       AtlasCommon_75: -714640119
       AtlasCommon_76: 1111556136
       AtlasCommon_77: -1870454875
@@ -11939,6 +11930,8 @@ TextureImporter:
       AtlasCommon_97: -1083342769
       AtlasCommon_98: -543660669
       AtlasCommon_99: 926651874
+      AtlasCommon_ABImage: 297375694
+      AtlasCommon_AB_Fill: 1568893014
       AtlasCommon_ADVBG_Selected: 1289364539
       AtlasCommon_ADV_Normal: 1230020996
       AtlasCommon_ADV_Normall: -620935827
@@ -11946,13 +11939,21 @@ TextureImporter:
       AtlasCommon_CharacterBG_Selected: 1233035707
       AtlasCommon_Character_Normal: -1526765363
       AtlasCommon_Character_Selected: 693953528
+      AtlasCommon_Diamond: 1220128170
+      AtlasCommon_EXPAB_Back: -996717023
+      AtlasCommon_EXP_Fill: 1641741656
+      AtlasCommon_ExpImage: 1072883204
       AtlasCommon_HomeBG_Normal: 1245610865
       AtlasCommon_HomeBG_Selected: 902704345
       AtlasCommon_Home_Normal: 1432684402
       AtlasCommon_Home_Selected: -1364360713
+      AtlasCommon_LoginBG: -125816361
+      AtlasCommon_LoginBottomBG: 1581132623
       AtlasCommon_LotteryBG_Selected: 1364167370
       AtlasCommon_Lottery_Normal: -319047498
       AtlasCommon_Lottery_Selected: -1222804331
+      AtlasCommon_MainTitle: -53317573
+      AtlasCommon_Mana: -192221278
       AtlasCommon_MenuBG_Normal: 1443958557
       AtlasCommon_MenuBG_Selected: -1217347356
       AtlasCommon_Menu_Normal: -457963718
