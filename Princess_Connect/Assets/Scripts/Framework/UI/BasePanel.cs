@@ -38,7 +38,7 @@ public abstract class BasePanel : MonoBehaviour
         FindChildrenControl<Button>();
         FindChildrenControl<Toggle>();
         FindChildrenControl<Slider>();
-        FindChildrenControl<InputField>();
+        FindChildrenControl<TMP_InputField>();
         FindChildrenControl<ScrollRect>();
         FindChildrenControl<Dropdown>();
         //即使对象上挂在了多个组件 只要优先找到了重要组件
