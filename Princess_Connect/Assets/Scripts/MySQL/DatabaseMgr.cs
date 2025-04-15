@@ -97,6 +97,25 @@ public class DatabaseMgr
         }
     }
 
+    // 查询用户的信息
+    public int SearchUserIntInfo(string username, string anInfo)
+    {
+        try
+        {
+            string query = $"SELECT {anInfo} FROM users WHERE username = @username";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+
+            int res = Convert.ToInt32(cmd.ExecuteScalar());
+            return res;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Search failed: {e.Message}");
+            return -1;
+        }
+    }
+
     // 数据库关闭
     public void DatabaseClose()
     {

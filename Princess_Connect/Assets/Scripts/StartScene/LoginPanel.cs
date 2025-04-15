@@ -39,25 +39,40 @@ public class LoginPanel : BasePanel
         if (result)
         {
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
+            UIMgr.Instance.HidePanel<LoginPanel>(true);
+            UIMgr.Instance.HidePanel<TipsPanel>(true);
+            UIMgr.Instance.HidePanel<RegisterPanel>(true);
+            UIMgr.Instance.HidePanel<StartPanel>(true);
+            UIMgr.Instance.ShowPanel<BeginPanel>(E_UILayer.Bottom, (panel) =>
+            {
+                panel.UpdatePlayerName(username);
+                panel.UpdatePlayerInfo();
+            });
         }
         else
         {
-            //UIMgr.Instance.ShowPanel<TipsPanel>();
+            UIMgr.Instance.ShowPanel<TipsPanel>(E_UILayer.Top, (panel) =>
+            {
+                panel.ShowTips("ÓÃ»§Ãû»òÃÜÂë´íÎó£¡");
+            });
         }
     }
     // ×¢²áÂß¼­
     private void Resgister()
     {
         UIMgr.Instance.HidePanel<LoginPanel>();
-        // UIMgr.Instance.ShowPanel<RegisterPanel>();
+        UIMgr.Instance.ShowPanel<RegisterPanel>(E_UILayer.Middle, (panel) =>
+        {
+
+        });
     }
     public override void HideMe()
     {
-        throw new System.NotImplementedException();
+        
     }
 
     public override void ShowMe()
     {
-        throw new System.NotImplementedException();
+        
     }
 }

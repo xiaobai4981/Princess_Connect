@@ -43,7 +43,7 @@ public abstract class BasePanel : MonoBehaviour
         FindChildrenControl<Dropdown>();
         //即使对象上挂在了多个组件 只要优先找到了重要组件
         //之后也可以通过重要组件得到身上其他挂载的内容
-        FindChildrenControl<Text>();
+        FindChildrenControl<TMP_Text>();
         FindChildrenControl<TextMeshPro>();
         FindChildrenControl<Image>();
     }
