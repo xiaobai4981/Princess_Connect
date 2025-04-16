@@ -9,7 +9,7 @@ public class Main : MonoBehaviour
     {
         UIMgr.Instance.ShowPanel<StartPanel>(E_UILayer.Bottom, (panel) =>
         {
-            panel.TestFun();
+            
         });
     }
 

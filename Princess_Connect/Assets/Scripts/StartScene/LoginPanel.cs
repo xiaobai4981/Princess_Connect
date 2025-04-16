@@ -48,6 +48,10 @@ public class LoginPanel : BasePanel
                 panel.UpdatePlayerName(username);
                 panel.UpdatePlayerInfo();
             });
+            UIMgr.Instance.ShowPanel<BottomBtnPanel>(E_UILayer.Top, (panel) =>
+            {
+                
+            });
         }
         else
         {
