@@ -73,6 +73,15 @@ public class RegisterPanel : BasePanel
         bool result = DatabaseMgr.Instance.RegisterUser(username, password);
         if (result)
         {
+            Dictionary<string, object> columnUpdates = new Dictionary<string, object>
+            {
+                { "level", 1 },
+                { "totalexp", 10 },{ "nowexp", 0 },
+                { "totalab", 100 }, { "nowab", 100 },
+                { "manacnt", 33333 }, { "diamondcnt", 33333 },
+                { "missioncomplete", 0 }
+            };
+            DatabaseMgr.Instance.ModifyUserIntInfo(username, columnUpdates, false);
             // ¹Ø±Õ×¢²á½çÃæ
             UIMgr.Instance.HidePanel<RegisterPanel>();
             UIMgr.Instance.ShowPanel<TipsPanel>(E_UILayer.Top, (panel) =>

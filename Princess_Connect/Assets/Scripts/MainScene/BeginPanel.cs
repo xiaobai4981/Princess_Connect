@@ -24,6 +24,7 @@ public class BeginPanel : BasePanel
     public void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
+        int isNewPlayer = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
     }
 
     // 更新玩家信息

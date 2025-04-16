@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -113,6 +114,52 @@ public class DatabaseMgr
         {
             Debug.LogError($"Search failed: {e.Message}");
             return -1;
+        }
+    }
+
+    // 修改用户的信息
+    public bool ModifyUserIntInfo(string username, Dictionary<string, object> columnUpdates, bool isAdd)
+    {
+        if (columnUpdates == null || columnUpdates.Count == 0)
+            return false;
+        // 列名白名单（防止 SQL 注入）
+        var allowedColumns = new HashSet<string> { "level", "totalexp", "nowexp", "totalab", 
+                                                    "nowab", "manacnt", "diamondcnt", "missioncomplete" }; // 示例列
+        var invalidColumns = columnUpdates.Keys.Where(col => !allowedColumns.Contains(col)).ToList();
+        if (invalidColumns.Any())
+        {
+            Debug.LogError($"Invalid columns: {string.Join(", ", invalidColumns)}");
+            return false;
+        }
+        try
+        {
+            var setClauses = new List<string>();
+            foreach (var column in columnUpdates.Keys)
+            {
+                // 根据 isAdd 决定是直接赋值还是增量
+                var valuePlaceholder = isAdd ? $"{column} + @{column}" : $"@{column}";
+                setClauses.Add($"`{column}` = {valuePlaceholder}"); // MySQL 列名用反引号包裹
+            }
+            string setClause = string.Join(", ", setClauses);
+
+            string sql = $"UPDATE users SET {setClause} WHERE username = @username";
+            using (var cmd = new MySqlCommand(sql, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                foreach (var kv in columnUpdates)
+                {
+                    cmd.Parameters.AddWithValue($"@{kv.Key}", kv.Value);
+                }
+                if (conn.State != System.Data.ConnectionState.Open)
+                    conn.Open();
+                int rowsAffected = cmd.ExecuteNonQuery();
+                return rowsAffected > 0;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Modify failed: {e.Message}");
+            return false;
         }
     }
 

@@ -196,8 +196,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289027327
-  m_fontColor: {r: 1, g: 0.36078432, b: 0.64705884, a: 1}
+    rgba: 4289772628
+  m_fontColor: {r: 0.32974365, g: 0.735849, b: 0.68917865, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -549,8 +549,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289027327
-  m_fontColor: {r: 1, g: 0.36078432, b: 0.64705884, a: 1}
+    rgba: 4289772628
+  m_fontColor: {r: 0.32974365, g: 0.735849, b: 0.68917865, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1035,7 +1035,7 @@ MonoBehaviour:
     m_HighlightedSprite: {fileID: 902704345, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
     m_PressedSprite: {fileID: 902704345, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
     m_SelectedSprite: {fileID: 902704345, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
-    m_DisabledSprite: {fileID: 1245610865, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
+    m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -1121,8 +1121,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289027327
-  m_fontColor: {r: 1, g: 0.36078432, b: 0.64705884, a: 1}
+    rgba: 4289772628
+  m_fontColor: {r: 0.32974365, g: 0.735849, b: 0.68917865, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1352,8 +1352,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289027327
-  m_fontColor: {r: 1, g: 0.36078432, b: 0.64705884, a: 1}
+    rgba: 4289772628
+  m_fontColor: {r: 0.32974365, g: 0.735849, b: 0.68917865, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1421,8 +1421,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3392297383700819577}
-  - component: {fileID: 1502891559871834570}
-  - component: {fileID: 1360612868890867084}
+  - component: {fileID: -3444903080020127494}
+  - component: {fileID: 8745654190556982761}
   m_Layer: 5
   m_Name: BottomBtnPanel
   m_TagString: Untagged
@@ -1454,7 +1454,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1502891559871834570
+--- !u!222 &-3444903080020127494
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1462,7 +1462,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6582636753569667471}
   m_CullTransparentMesh: 1
---- !u!114 &1360612868890867084
+--- !u!114 &8745654190556982761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1645,8 +1645,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4289027327
-  m_fontColor: {r: 1, g: 0.36078432, b: 0.64705884, a: 1}
+    rgba: 4289772628
+  m_fontColor: {r: 0.32974365, g: 0.735849, b: 0.68917865, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
