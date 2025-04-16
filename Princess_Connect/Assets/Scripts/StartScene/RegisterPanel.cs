@@ -13,6 +13,9 @@ public class RegisterPanel : BasePanel
             case "Register":
                 Resgister();
                 break;
+            case "BackToLogin":
+                BackToLogin();
+                break;
         }
     }
     // Update is called once per frame
@@ -97,6 +100,14 @@ public class RegisterPanel : BasePanel
             });
         }
     }
+
+    // ·µ»ØµÇÂ¼½çÃæ
+    private void BackToLogin()
+    {
+        UIMgr.Instance.HidePanel<RegisterPanel>();
+        UIMgr.Instance.ShowPanel<LoginPanel>();
+    }
+
     public override void HideMe()
     {
         

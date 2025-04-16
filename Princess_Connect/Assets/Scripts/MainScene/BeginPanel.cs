@@ -55,7 +55,7 @@ public class BeginPanel : BasePanel
         diamondText.text = diamondCnt.ToString("N0");
         // 任务完成数更新
         TMP_Text missionText = GetControl<TMP_Text>("CntNum");
-        missionText.text = missionCnt.ToString();
+        missionText.text = missionCnt > 99? "99+" : missionCnt.ToString();
     }
 
     public override void HideMe()

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class BottomBtnPanel : BasePanel
 {
+    // 控制按钮动画的字典
     private Dictionary<string, ButtonData> buttonDataDict;
     private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
     private class ButtonData
@@ -38,6 +39,7 @@ public class BottomBtnPanel : BasePanel
                 }
             }
         }
+        
         // 设置默认按钮为按下状态
         Transform defaultBtn = transform.Find(defaultBtnName);
         if (defaultBtn != null)
@@ -106,7 +108,7 @@ public class BottomBtnPanel : BasePanel
         }
     }
 
-    // 设置动画
+    // 设置动画，并设置不同的界面
     public void SetActiveButton(string btnName)
     {
         if (!buttonDataDict.TryGetValue(btnName, out var activeData)) return;
@@ -122,7 +124,46 @@ public class BottomBtnPanel : BasePanel
                 btnImage.sprite = originalSprites[btn];
             }
         }
+        switch (btnName)
+        {
+            case "Home":
+                UIMgr.Instance.ShowPanel<BeginPanel>(E_UILayer.Bottom);
+                //UIMgr.Instance.HidePanel<CharacterPanel>(E_UILayer.Bottom);
+                //UIMgr.Instance.HidePanel<ADVPanel>(E_UILayer.Bottom);
+                //UIMgr.Instance.HidePanel<LotteryPanel>(E_UILayer.Bottom);
+                UIMgr.Instance.HidePanel<MenuPanel>();
+                break;
+            //case "Character":
+            //    UIMgr.Instance.HidePanel<BeginPanel>();
+            //    //UIMgr.Instance.ShowPanel<CharacterPanel>(E_UILayer.Bottom);
+            //    //UIMgr.Instance.HidePanel<ADVPanel>();
+            //    //UIMgr.Instance.HidePanel<LotteryPanel>();
+            //    UIMgr.Instance.HidePanel<MenuPanel>();
+            //    break;
+            //case "ADV":
+            //    UIMgr.Instance.HidePanel<BeginPanel>();
+            //    //UIMgr.Instance.HidePanel<CharacterPanel>();
+            //    //UIMgr.Instance.ShowPanel<ADVPanel>(E_UILayer.Bottom);
+            //    //UIMgr.Instance.HidePanel<LotteryPanel>();
+            //    UIMgr.Instance.HidePanel<MenuPanel>();
+            //    break;
+            //case "Lottery":
+            //    UIMgr.Instance.HidePanel<BeginPanel>();
+            //    //UIMgr.Instance.HidePanel<CharacterPanel>();
+            //    //UIMgr.Instance.HidePanel<ADVPanel>();
+            //    //UIMgr.Instance.ShowPanel<LotteryPanel>(E_UILayer.Bottom);
+            //    UIMgr.Instance.HidePanel<MenuPanel>();
+            //    break;
+            case "Menu":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                //UIMgr.Instance.HidePanel<CharacterPanel>();
+                //UIMgr.Instance.HidePanel<ADVPanel>();
+                //UIMgr.Instance.HidePanel<LotteryPanel>();
+                UIMgr.Instance.ShowPanel<MenuPanel>(E_UILayer.Bottom);
+                break;
+        }
     }
+
 
     public override void HideMe()
     {

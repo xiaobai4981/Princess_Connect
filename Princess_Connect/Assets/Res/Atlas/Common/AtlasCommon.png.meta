@@ -6058,7 +6058,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_283
+      name: AtlasCommon_MenuBtnSetting
       rect:
         serializedVersion: 2
         x: 806
@@ -6394,11 +6394,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_299
+      name: AtlasCommon_MenuBtnBackToStartScene
       rect:
         serializedVersion: 2
         x: 1399
-        y: 1602
+        y: 1603
         width: 67
         height: 67
       alignment: 0
@@ -6940,7 +6940,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_325
+      name: AtlasCommon_MenuPlayerStatusBG
       rect:
         serializedVersion: 2
         x: 1418
@@ -7192,7 +7192,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_337
+      name: AtlasCommon_MenuBtnCham
       rect:
         serializedVersion: 2
         x: 1659
@@ -9712,27 +9712,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_460
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 879
-        width: 276
-        height: 176
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20a0bd48f5fde4040b730109e1e94c0e
-      internalID: -725759389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasCommon_461
       rect:
         serializedVersion: 2
@@ -10930,27 +10909,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_519
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 0
-        width: 560
-        height: 515
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 123852c8a60660b44bc9cde862c0356f
-      internalID: -336275643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasCommon_520
       rect:
         serializedVersion: 2
@@ -11412,6 +11370,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: AtlasCommon_45
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1057
+        width: 190
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d685b940e28ac54199758a6a45f1dd2
+      internalID: -1947068830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasCommon_MenuBtnBG
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 988
+        width: 276
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f13b81e100295dc4a9bc36fc24714aa2
+      internalID: -2062104629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasCommon_LotteryBG
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 5
+        width: 281
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083cd6b973840e04ca6bdd4fe784d877
+      internalID: 1748330949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -11621,7 +11642,6 @@ TextureImporter:
       AtlasCommon_280: 791575164
       AtlasCommon_281: 124851840
       AtlasCommon_282: 1674840169
-      AtlasCommon_283: 1344009870
       AtlasCommon_284: -783462914
       AtlasCommon_285: 770663629
       AtlasCommon_286: 103412247
@@ -11638,7 +11658,6 @@ TextureImporter:
       AtlasCommon_296: 495352776
       AtlasCommon_297: -1840989832
       AtlasCommon_298: -1472631343
-      AtlasCommon_299: -958037445
       AtlasCommon_3: 1196387872
       AtlasCommon_30: -267518509
       AtlasCommon_300: 1409979676
@@ -11666,7 +11685,6 @@ TextureImporter:
       AtlasCommon_322: -1875651475
       AtlasCommon_323: -1042896487
       AtlasCommon_324: -1539638339
-      AtlasCommon_325: -1674030721
       AtlasCommon_326: -1097640692
       AtlasCommon_327: -593874806
       AtlasCommon_328: -445956156
@@ -11679,7 +11697,6 @@ TextureImporter:
       AtlasCommon_334: 434439908
       AtlasCommon_335: -457254288
       AtlasCommon_336: 1013807245
-      AtlasCommon_337: -904326793
       AtlasCommon_338: -163418567
       AtlasCommon_339: 1747036957
       AtlasCommon_34: 419421786
@@ -11791,6 +11808,7 @@ TextureImporter:
       AtlasCommon_446: 1087408497
       AtlasCommon_447: -129473630
       AtlasCommon_448: -1591182121
+      AtlasCommon_45: -1947068830
       AtlasCommon_450: -614986886
       AtlasCommon_451: 1799369607
       AtlasCommon_452: 2015689568
@@ -11908,62 +11926,68 @@ TextureImporter:
       AtlasCommon_77: -1870454875
       AtlasCommon_78: 402270149
       AtlasCommon_79: 251463007
-      AtlasCommon_8: 2091147903
-      AtlasCommon_80: -1509526463
-      AtlasCommon_81: 877814048
-      AtlasCommon_82: -1383480893
-      AtlasCommon_83: 426579310
-      AtlasCommon_84: -1989439619
-      AtlasCommon_85: -359537348
-      AtlasCommon_86: 1159850539
-      AtlasCommon_87: -318007892
-      AtlasCommon_88: 2015259623
-      AtlasCommon_89: -198484250
-      AtlasCommon_9: -1101699081
-      AtlasCommon_90: -1016153612
-      AtlasCommon_91: -1429677074
-      AtlasCommon_92: 1006180695
-      AtlasCommon_93: 958921897
-      AtlasCommon_94: -1110519437
-      AtlasCommon_95: 4272867
-      AtlasCommon_96: -1226504700
-      AtlasCommon_97: -1083342769
-      AtlasCommon_98: -543660669
-      AtlasCommon_99: 926651874
-      AtlasCommon_ABImage: 297375694
-      AtlasCommon_AB_Fill: 1568893014
-      AtlasCommon_ADVBG_Selected: 1289364539
-      AtlasCommon_ADV_Normal: 1230020996
-      AtlasCommon_ADV_Normall: -620935827
-      AtlasCommon_ADV_Selected: 2016756508
-      AtlasCommon_CharacterBG_Selected: 1233035707
-      AtlasCommon_Character_Normal: -1526765363
-      AtlasCommon_Character_Selected: 693953528
-      AtlasCommon_Diamond: 1220128170
-      AtlasCommon_EXPAB_Back: -996717023
-      AtlasCommon_EXP_Fill: 1641741656
-      AtlasCommon_ExpImage: 1072883204
-      AtlasCommon_HomeBG_Normal: 1245610865
-      AtlasCommon_HomeBG_Selected: 902704345
-      AtlasCommon_Home_Normal: 1432684402
-      AtlasCommon_Home_Selected: -1364360713
-      AtlasCommon_LoginBG: -125816361
-      AtlasCommon_LoginBottomBG: 1581132623
-      AtlasCommon_LotteryBG_Selected: 1364167370
-      AtlasCommon_Lottery_Normal: -319047498
-      AtlasCommon_Lottery_Selected: -1222804331
-      AtlasCommon_MainTitle: -53317573
-      AtlasCommon_Mana: -192221278
-      AtlasCommon_MenuBG_Normal: 1443958557
-      AtlasCommon_MenuBG_Selected: -1217347356
-      AtlasCommon_Menu_Normal: -457963718
-      AtlasCommon_Menu_Selected: -1936295505
-      AtlasCommon_Misson: 296235021
-      AtlasCommon_MissonBG: 1361416086
-      AtlasCommon_MissonCnt: -316237827
-      AtlasCommon_OtherNormalBG_Normal: -1965531910
-      AtlasCommon_Player: -1789696862
-      AtlasCommon_Title: -307145133
+      AtlasCommon_8: -1509526463
+      AtlasCommon_80: 877814048
+      AtlasCommon_81: -1383480893
+      AtlasCommon_82: 426579310
+      AtlasCommon_83: -1989439619
+      AtlasCommon_84: -359537348
+      AtlasCommon_85: 1159850539
+      AtlasCommon_86: -318007892
+      AtlasCommon_87: 2015259623
+      AtlasCommon_88: -198484250
+      AtlasCommon_89: -1101699081
+      AtlasCommon_9: -1016153612
+      AtlasCommon_90: -1429677074
+      AtlasCommon_91: 1006180695
+      AtlasCommon_92: 958921897
+      AtlasCommon_93: -1110519437
+      AtlasCommon_94: 4272867
+      AtlasCommon_95: -1226504700
+      AtlasCommon_96: -1083342769
+      AtlasCommon_97: -543660669
+      AtlasCommon_98: 926651874
+      AtlasCommon_99: 297375694
+      AtlasCommon_ABImage: 1568893014
+      AtlasCommon_AB_Fill: 1289364539
+      AtlasCommon_ADVBG_Selected: 1230020996
+      AtlasCommon_ADV_Normal: -620935827
+      AtlasCommon_ADV_Normall: 2016756508
+      AtlasCommon_ADV_Selected: 1233035707
+      AtlasCommon_CharacterBG_Selected: -1526765363
+      AtlasCommon_Character_Normal: 693953528
+      AtlasCommon_Character_Selected: 1220128170
+      AtlasCommon_Diamond: -996717023
+      AtlasCommon_EXPAB_Back: 1641741656
+      AtlasCommon_EXP_Fill: 1072883204
+      AtlasCommon_ExpImage: 1245610865
+      AtlasCommon_HomeBG_Normal: 902704345
+      AtlasCommon_HomeBG_Selected: 1432684402
+      AtlasCommon_Home_Normal: -1364360713
+      AtlasCommon_Home_Selected: -125816361
+      AtlasCommon_LoginBG: 1581132623
+      AtlasCommon_LoginBottomBG: 1364167370
+      AtlasCommon_LotteryBG: 1748330949
+      AtlasCommon_LotteryBG_Selected: -319047498
+      AtlasCommon_Lottery_Normal: -1222804331
+      AtlasCommon_Lottery_Selected: -53317573
+      AtlasCommon_MainTitle: -192221278
+      AtlasCommon_Mana: 1443958557
+      AtlasCommon_MenuBG_Normal: -1217347356
+      AtlasCommon_MenuBG_Selected: -2062104629
+      AtlasCommon_MenuBtnBG: -958037445
+      AtlasCommon_MenuBtnBackToStartScene: 1344009870
+      AtlasCommon_MenuBtnCham: -904326793
+      AtlasCommon_MenuBtnSetting: -1674030721
+      AtlasCommon_MenuPlayerStatusBG: -457963718
+      AtlasCommon_Menu_Normal: -1936295505
+      AtlasCommon_Menu_Selected: 296235021
+      AtlasCommon_Misson: 1361416086
+      AtlasCommon_MissonBG: -316237827
+      AtlasCommon_MissonCnt: -1965531910
+      AtlasCommon_OtherNormalBG_Normal: -1789696862
+      AtlasCommon_Player: -307145133
+      AtlasCommon_Title: 2091147903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
