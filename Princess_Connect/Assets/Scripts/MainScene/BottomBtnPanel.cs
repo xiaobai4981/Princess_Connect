@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,15 @@ public class BottomBtnPanel : BasePanel
     // 控制按钮动画的字典
     private Dictionary<string, ButtonData> buttonDataDict;
     private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
+    // 保存页面的类型
+    private static readonly Dictionary<Type, Action> PanelHiders = new Dictionary<Type, Action>() 
+    {
+        { typeof(BeginPanel), () => UIMgr.Instance.HidePanel<BeginPanel>() },
+        //{ typeof(CharacterPanel), () => UIMgr.Instance.HidePanel<CharacterPanel>() },
+        { typeof(ADVPanel), () => UIMgr.Instance.HidePanel<ADVPanel>() },   
+        { typeof(LotteryPanel), () => UIMgr.Instance.HidePanel<LotteryPanel>() },
+        { typeof(MenuPanel), () => UIMgr.Instance.HidePanel<MenuPanel>() }
+    };
     private class ButtonData
     {
         public Button button;
@@ -131,55 +141,42 @@ public class BottomBtnPanel : BasePanel
         switch (btnName)
         {
             case "Home":
-                UIMgr.Instance.ShowPanel<BeginPanel>(E_UILayer.Bottom, (panel) =>
-                {
-                    panel.UpdatePlayerName(nowPlayerName);
-                    panel.UpdatePlayerInfo();
-                });
-                //UIMgr.Instance.HidePanel<CharacterPanel>(E_UILayer.Bottom);
-                //UIMgr.Instance.HidePanel<ADVPanel>(E_UILayer.Bottom);
-                UIMgr.Instance.HidePanel<LotteryPanel>();
-                UIMgr.Instance.HidePanel<MenuPanel>();
+                SwitchPanel<BeginPanel>();
                 break;
             case "Character":
-                UIMgr.Instance.HidePanel<BeginPanel>();
-                //UIMgr.Instance.ShowPanel<CharacterPanel>(E_UILayer.Bottom);
-                //UIMgr.Instance.HidePanel<ADVPanel>();
-                UIMgr.Instance.HidePanel<LotteryPanel>();
-                UIMgr.Instance.HidePanel<MenuPanel>();
+                //SwitchPanel<CharacterPanel>();
                 break;
             case "ADV":
-                UIMgr.Instance.HidePanel<BeginPanel>();
-                //UIMgr.Instance.HidePanel<CharacterPanel>();
-                //UIMgr.Instance.ShowPanel<ADVPanel>(E_UILayer.Bottom);
-                UIMgr.Instance.HidePanel<LotteryPanel>();
-                UIMgr.Instance.HidePanel<MenuPanel>();
+                SwitchPanel<ADVPanel>();
                 break;
             case "Lottery":
-                UIMgr.Instance.HidePanel<BeginPanel>();
-                //UIMgr.Instance.HidePanel<CharacterPanel>();
-                //UIMgr.Instance.HidePanel<ADVPanel>();
-                UIMgr.Instance.ShowPanel<LotteryPanel>(E_UILayer.Bottom, (panel) =>
-                {
-                    panel.UpdatePlayerName(nowPlayerName);
-                    panel.UpdatePlayerInfo();
-                });
-                UIMgr.Instance.HidePanel<MenuPanel>();
+                SwitchPanel<LotteryPanel>();
                 break;
             case "Menu":
-                UIMgr.Instance.HidePanel<BeginPanel>();
-                //UIMgr.Instance.HidePanel<CharacterPanel>();
-                //UIMgr.Instance.HidePanel<ADVPanel>();
-                UIMgr.Instance.HidePanel<LotteryPanel>();
-                UIMgr.Instance.ShowPanel<MenuPanel>(E_UILayer.Bottom, (panel) =>
-                {
-                    panel.UpdatePlayerName(nowPlayerName);
-                    panel.UpdatePlayerInfo();
-                });
+                SwitchPanel<MenuPanel>();
                 break;
         }
     }
 
+    // 切换面板的操作
+    private void SwitchPanel<T>() where T : BasePanel
+    {
+        foreach (var panel in PanelHiders)
+        {
+            if (panel.Key == typeof(T))
+                continue;
+            panel.Value.Invoke();
+        }
+        UIMgr.Instance.ShowPanel<T>(E_UILayer.Bottom, (panel) =>
+        {
+            panel.UpdatePlayerName(nowPlayerName);
+            //if (typeof(T) != typeof(CharacterPanel))
+            //{
+                panel.UpdatePlayerInfo();
+            //}
+            
+        });
+    }
 
     public override void HideMe()
     {
