@@ -6,9 +6,6 @@ using UnityEngine;
 
 public class BeginPanel : BasePanel
 {
-    private string nowPlayerName;
-    public RectTransform Exp;
-    public RectTransform AB;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,14 +18,13 @@ public class BeginPanel : BasePanel
 
     }
     // 记录现在的玩家
-    public void UpdatePlayerName(string nowPlayerName)
+    public override void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
-        int isNewPlayer = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
     }
 
     // 更新玩家信息
-    public void UpdatePlayerInfo()
+    public override void UpdatePlayerInfo()
     {
         int level = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
         int nowExp = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "nowexp");

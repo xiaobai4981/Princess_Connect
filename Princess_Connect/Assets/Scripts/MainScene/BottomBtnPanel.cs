@@ -84,6 +84,10 @@ public class BottomBtnPanel : BasePanel
     {
         
     }
+    public override void UpdatePlayerName(string nowPlayerName)
+    {
+        this.nowPlayerName = nowPlayerName;
+    }
 
     // 为每一个控件写入操作
     protected override void ClickBtn(string btnName)
@@ -127,39 +131,51 @@ public class BottomBtnPanel : BasePanel
         switch (btnName)
         {
             case "Home":
-                UIMgr.Instance.ShowPanel<BeginPanel>(E_UILayer.Bottom);
+                UIMgr.Instance.ShowPanel<BeginPanel>(E_UILayer.Bottom, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdatePlayerInfo();
+                });
                 //UIMgr.Instance.HidePanel<CharacterPanel>(E_UILayer.Bottom);
                 //UIMgr.Instance.HidePanel<ADVPanel>(E_UILayer.Bottom);
-                //UIMgr.Instance.HidePanel<LotteryPanel>(E_UILayer.Bottom);
+                UIMgr.Instance.HidePanel<LotteryPanel>();
                 UIMgr.Instance.HidePanel<MenuPanel>();
                 break;
-            //case "Character":
-            //    UIMgr.Instance.HidePanel<BeginPanel>();
-            //    //UIMgr.Instance.ShowPanel<CharacterPanel>(E_UILayer.Bottom);
-            //    //UIMgr.Instance.HidePanel<ADVPanel>();
-            //    //UIMgr.Instance.HidePanel<LotteryPanel>();
-            //    UIMgr.Instance.HidePanel<MenuPanel>();
-            //    break;
-            //case "ADV":
-            //    UIMgr.Instance.HidePanel<BeginPanel>();
-            //    //UIMgr.Instance.HidePanel<CharacterPanel>();
-            //    //UIMgr.Instance.ShowPanel<ADVPanel>(E_UILayer.Bottom);
-            //    //UIMgr.Instance.HidePanel<LotteryPanel>();
-            //    UIMgr.Instance.HidePanel<MenuPanel>();
-            //    break;
-            //case "Lottery":
-            //    UIMgr.Instance.HidePanel<BeginPanel>();
-            //    //UIMgr.Instance.HidePanel<CharacterPanel>();
-            //    //UIMgr.Instance.HidePanel<ADVPanel>();
-            //    //UIMgr.Instance.ShowPanel<LotteryPanel>(E_UILayer.Bottom);
-            //    UIMgr.Instance.HidePanel<MenuPanel>();
-            //    break;
+            case "Character":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                //UIMgr.Instance.ShowPanel<CharacterPanel>(E_UILayer.Bottom);
+                //UIMgr.Instance.HidePanel<ADVPanel>();
+                UIMgr.Instance.HidePanel<LotteryPanel>();
+                UIMgr.Instance.HidePanel<MenuPanel>();
+                break;
+            case "ADV":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                //UIMgr.Instance.HidePanel<CharacterPanel>();
+                //UIMgr.Instance.ShowPanel<ADVPanel>(E_UILayer.Bottom);
+                UIMgr.Instance.HidePanel<LotteryPanel>();
+                UIMgr.Instance.HidePanel<MenuPanel>();
+                break;
+            case "Lottery":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                //UIMgr.Instance.HidePanel<CharacterPanel>();
+                //UIMgr.Instance.HidePanel<ADVPanel>();
+                UIMgr.Instance.ShowPanel<LotteryPanel>(E_UILayer.Bottom, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdatePlayerInfo();
+                });
+                UIMgr.Instance.HidePanel<MenuPanel>();
+                break;
             case "Menu":
                 UIMgr.Instance.HidePanel<BeginPanel>();
                 //UIMgr.Instance.HidePanel<CharacterPanel>();
                 //UIMgr.Instance.HidePanel<ADVPanel>();
-                //UIMgr.Instance.HidePanel<LotteryPanel>();
-                UIMgr.Instance.ShowPanel<MenuPanel>(E_UILayer.Bottom);
+                UIMgr.Instance.HidePanel<LotteryPanel>();
+                UIMgr.Instance.ShowPanel<MenuPanel>(E_UILayer.Bottom, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdatePlayerInfo();
+                });
                 break;
         }
     }

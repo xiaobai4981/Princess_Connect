@@ -15,6 +15,12 @@ public class MenuPanel : BasePanel
     {
         
     }
+
+    public override void UpdatePlayerName(string nowPlayerName)
+    {
+        this.nowPlayerName = nowPlayerName;
+    }
+
     public override void HideMe()
     {
 

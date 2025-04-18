@@ -50,7 +50,7 @@ public class LoginPanel : BasePanel
             });
             UIMgr.Instance.ShowPanel<BottomBtnPanel>(E_UILayer.Top, (panel) =>
             {
-                
+                panel.UpdatePlayerName(username);
             });
         }
         else

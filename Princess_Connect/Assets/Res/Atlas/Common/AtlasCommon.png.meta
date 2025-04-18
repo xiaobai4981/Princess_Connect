@@ -6184,7 +6184,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_289
+      name: AtlasCommon_LotteryBtnBG
       rect:
         serializedVersion: 2
         x: 1659
@@ -7595,7 +7595,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 794
-        y: 1423
+        y: 1424
         width: 154
         height: 59
       alignment: 0
@@ -8959,7 +8959,7 @@ TextureImporter:
       name: AtlasCommon_ADV_Normall
       rect:
         serializedVersion: 2
-        x: 210
+        x: 209
         y: 1172
         width: 212
         height: 60
@@ -9586,27 +9586,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_454
-      rect:
-        serializedVersion: 2
-        x: 1178
-        y: 942
-        width: 382
-        height: 132
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3834e462d15a9a84eb6630a0343f3942
-      internalID: -1471701857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasCommon_455
       rect:
         serializedVersion: 2
@@ -10006,7 +9985,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_475
+      name: AtlasCommon_LotteryBtnNormal
       rect:
         serializedVersion: 2
         x: 1745
@@ -11421,7 +11400,7 @@ TextureImporter:
         width: 281
         height: 356
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 1, w: 1}
       outline: []
       physicsShape: []
@@ -11429,6 +11408,27 @@ TextureImporter:
       bones: []
       spriteID: 083cd6b973840e04ca6bdd4fe784d877
       internalID: 1748330949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasCommon_LotteryBtnPressed
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 945
+        width: 216
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a10c230f51fee4fb3d88df5773c60b
+      internalID: 1752429255
       vertices: []
       indices: 
       edges: []
@@ -11647,7 +11647,6 @@ TextureImporter:
       AtlasCommon_286: 103412247
       AtlasCommon_287: 873332619
       AtlasCommon_288: 721677118
-      AtlasCommon_289: 1418593105
       AtlasCommon_29: -1550702087
       AtlasCommon_290: 1391489751
       AtlasCommon_291: 2090819243
@@ -11835,7 +11834,6 @@ TextureImporter:
       AtlasCommon_472: -2009021810
       AtlasCommon_473: 925667444
       AtlasCommon_474: -962362223
-      AtlasCommon_475: -1188905915
       AtlasCommon_476: 443471885
       AtlasCommon_477: 234595488
       AtlasCommon_478: 2014199877
@@ -11969,6 +11967,9 @@ TextureImporter:
       AtlasCommon_LoginBottomBG: 1364167370
       AtlasCommon_LotteryBG: 1748330949
       AtlasCommon_LotteryBG_Selected: -319047498
+      AtlasCommon_LotteryBtnBG: 1418593105
+      AtlasCommon_LotteryBtnNormal: -1188905915
+      AtlasCommon_LotteryBtnPressed: 1752429255
       AtlasCommon_Lottery_Normal: -1222804331
       AtlasCommon_Lottery_Selected: -53317573
       AtlasCommon_MainTitle: -192221278

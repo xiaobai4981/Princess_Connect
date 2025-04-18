@@ -134,7 +134,4270 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: AtlasGachaTop_NormalLotteryTitle
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 561
+        width: 529
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d18cd85f3aed64e96bd6d856d16dc1
+      internalID: -6548946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_CharacterLotteryTitle
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 342
+        width: 548
+        height: 111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60ea81c9790ab04b9f4cd1b3f18bf15
+      internalID: -102046841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryacterOne
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 531
+        width: 147
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103221fafcf0e224e86e38611d186445
+      internalID: -1126530539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryacterTwo
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 619
+        width: 139
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349028dd011b1404ea35e09c1bfd8054
+      internalID: -1698774704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryacterThree
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 455
+        width: 109
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee43d17f320300479a01bddcacf1d09
+      internalID: 135123959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryacterFour
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 455
+        width: 124
+        height: 144
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cae3f6083efa54fbd87052c7b2f409
+      internalID: -1996064780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryNormalBtn
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 555
+        width: 182
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56e6d75afb537c4d96389f3a7e5662a
+      internalID: 305909035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryActerBtn
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 557
+        width: 180
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1463863f946af64f8fa7b5763812e30
+      internalID: 761578549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_0
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 992
+        width: 183
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e530aef99e82b924c9e5bcecd3355a1c
+      internalID: 1726349774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_1
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 993
+        width: 80
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a14cd195aeaa84a9e75874a2c89786
+      internalID: 2958182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_2
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 992
+        width: 87
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79fc056d0b6d1704189f72505c998aca
+      internalID: 1226862467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_3
+      rect:
+        serializedVersion: 2
+        x: 1863
+        y: 1010
+        width: 85
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ef50344aa7b734d9d4b773e0150841
+      internalID: 438161593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_4
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 1010
+        width: 90
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92cad6d10ae46549b55066beca83cb0
+      internalID: -211659933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_5
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 936
+        width: 180
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7e140d382e47345a64f103a034331c
+      internalID: 440334028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_6
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 916
+        width: 131
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec880c64d11b6f141ac9f7c4f4db434e
+      internalID: 1416820409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_7
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 872
+        width: 223
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e7f5f4f5d60b41a1387f07e31bb87
+      internalID: 476887210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_8
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 932
+        width: 85
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f21d9ad21168ce43ab493a8c0fe9774
+      internalID: -1698218408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_9
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 976
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c22833ae0973e33488d97d40b74e9b8d
+      internalID: -1018048801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_10
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 910
+        width: 34
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c765d8199c7be554abd7bb3651e85715
+      internalID: -1292171990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_11
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 825
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f561df1a439fbc64ba1c588cb365957d
+      internalID: 1420407019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryTimes
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 936
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8552644ecacb0a4585f66678b5662da
+      internalID: -1710556400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_13
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 932
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f708b3065fc76374f9520e92751b8cb4
+      internalID: -1843951286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_14
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 912
+        width: 40
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c01e4be387e191418b1c6a8a6c8db05
+      internalID: 1608522462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_15
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 912
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fe54106c34848c46a814d25b9c3325b
+      internalID: 1080260439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_16
+      rect:
+        serializedVersion: 2
+        x: 1416
+        y: 817
+        width: 136
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79a959d96fff6724da3837c000ee41d2
+      internalID: 1195256580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_17
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 797
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93e2046421ca2f40ab9f25ffdbe223e
+      internalID: 745565581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_18
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 865
+        width: 116
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54760fdfa8de65f4ba3dbe1ee3839424
+      internalID: 593924330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_19
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 896
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd68ffeda8c4f3f4aac5dd1c1f0ea8d0
+      internalID: 1327009938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_20
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 827
+        width: 85
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1513a15e28098b4478d8d73c713e6c09
+      internalID: 906861459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_21
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 827
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e8b417f5eba864dba1cf63a9ff29a6
+      internalID: -1632864992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_22
+      rect:
+        serializedVersion: 2
+        x: 934
+        y: 827
+        width: 90
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4249ed66f47624ba8754ed16307918
+      internalID: -85508251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_23
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 827
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d12096a890cb4468b6ed511ab3cba9
+      internalID: 1546125879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_24
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 882
+        width: 37
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8500778967e64b0449826dfaaf52b251
+      internalID: 1838319168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_25
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 882
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7f9e433d71ec649a6e22f33d101f40
+      internalID: 1132154525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_26
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 825
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d22ca438ada3fe4aaf802a51ec1000b
+      internalID: 1435489939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_27
+      rect:
+        serializedVersion: 2
+        x: 2020
+        y: 865
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5b0d8fec757b074e8e5ce3077edc60c
+      internalID: 1181923259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_28
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 854
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec8fb8faac180443a9ce95d0d9f8b87
+      internalID: 1391026102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_29
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 854
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40b1c7a7e733b4b488ac548eaca0e3aa
+      internalID: -2046538232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryNormalTips
+      rect:
+        serializedVersion: 2
+        x: 1692
+        y: 797
+        width: 208
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1931c75ed83a2946a2685ea3cbb6d9b
+      internalID: -560155328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_31
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 797
+        width: 131
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e149d6a24f28f124d970483053379c50
+      internalID: -1534037282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_32
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 800
+        width: 140
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a404c67b2fd3d1a4180a0786fc8b2b7f
+      internalID: -1215887758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_33
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 758
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316cbb1fc0692f546be94b52d687f65c
+      internalID: 291584664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_34
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 827
+        width: 55
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b0f7e56f39d394584b7c2a21649065
+      internalID: -2099087315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_35
+      rect:
+        serializedVersion: 2
+        x: 1166
+        y: 827
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49be2c6f34e6964a99167b9ae0a1f06
+      internalID: 203273416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 721
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1500f5e9c40d40b4ca35ff983298b0c0
+      internalID: 1749012830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_37
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 776
+        width: 150
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 453f4f1812adeaf47a6e0fd3cd9f0ca4
+      internalID: -702311534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_38
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 775
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fd3b89c48449445beb8b3d498314ea
+      internalID: -896099274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_39
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 721
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b468a350ba294424b8773e42e1679085
+      internalID: -1710192627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_40
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 730
+        width: 85
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c18f89f7a611f7b4c885a4985d81cf78
+      internalID: 1785955087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_41
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 721
+        width: 90
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7d9f80522ee51b478a1ca20d71d295e
+      internalID: -220611414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_42
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 760
+        width: 138
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40976106b52e98f4b9290f1446abf5c7
+      internalID: 2142228028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_43
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 789
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da07c1ee1fb224748b45d42c62c4b6f2
+      internalID: 15305542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_44
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 749
+        width: 393
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0952b0f944d44f4481b8059b5deb7b0
+      internalID: -801228267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_45
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 785
+        width: 88
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382cad58356169541a01893ab87e54ef
+      internalID: -1889068406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_46
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 677
+        width: 92
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0bbec92cc190c4eaa3616d48d44926
+      internalID: 1645354931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_47
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 766
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e64c8113ad5074290cf0192f6f0f99
+      internalID: -1856389762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_48
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 698
+        width: 135
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e5298f76e09a0841b46d7332001bfcd
+      internalID: -1185605714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_49
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 675
+        width: 180
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ddee284d75fb84e85a554b0583d7e6
+      internalID: -659867739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_50
+      rect:
+        serializedVersion: 2
+        x: 1763
+        y: 675
+        width: 180
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb129615c7932c469a8880fe13331d8
+      internalID: 1654818494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_51
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 752
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea4cacec98ae02f4faf611e324517de8
+      internalID: -1358128498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_52
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 753
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8be3c294388d7b4498d1b1b9552e992
+      internalID: 1371587439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryTimesOne
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 753
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd846f8a78e43f540b6690a9ede15d43
+      internalID: 1515657805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_54
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 730
+        width: 164
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919d9fd1eae150c45a6ad1f1adf1dcf3
+      internalID: -386548456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_55
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 756
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7b2001bb639d34abec43c302350839
+      internalID: 1654752997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_56
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 758
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a89d0a6bc4894469b85790630dde04
+      internalID: -635142635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_57
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 698
+        width: 80
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d72c268a7f948649b77219ffba3f1e5
+      internalID: -473005270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_58
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 754
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f455f58a245b87d449437d63b742d8e6
+      internalID: -1106078210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_59
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 760
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fbb86d48d1eaa24a9e12fe55e68eced
+      internalID: 705106342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_60
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 730
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d35288e4c3fb9d4cbd982a1e2b1f78d
+      internalID: 1960226813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_61
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 723
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387f11b83e33a9b42ae3935eb72b17db
+      internalID: -754210523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_62
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 730
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753536e05b86154459d44f28ff0089e2
+      internalID: 1891263304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_63
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 614
+        width: 90
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc97c0995f781044eb0ee116fab81227
+      internalID: -2037702545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_LotteryTimesTen
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 701
+        width: 55
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50cf4f1de8d53244aa0aa632a55b8c9b
+      internalID: 428915407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_65
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 701
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebbeb2ba44783b45a2b073c8c3d40ec
+      internalID: -956250564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_66
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 714
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea2cb11f2444ca4ba172015fbb81757
+      internalID: -1655966914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_67
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 601
+        width: 83
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b6d7584d8f16741924222ba89ed348
+      internalID: -1342614179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_68
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 717
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80fe8d0aa26907c439df8b7af08c0c20
+      internalID: 301874618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_69
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 601
+        width: 90
+        height: 141
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510c9416863ff994cb792cee0a25525b
+      internalID: 887476709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_70
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 698
+        width: 54
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6296ee45a630e6f4982b4557f2c6137e
+      internalID: -1555751754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_71
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 727
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ea986ef58c26d4bb63681f8ac39a77
+      internalID: -226957676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_72
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 698
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3821493ddb5fecf44b905fb4860c2556
+      internalID: 1557322054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_73
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 675
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7863ce5f0a44335428d0c2d378e675f3
+      internalID: -1351007074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_74
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 710
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641eb7cf6a379074bb2780551ae804be
+      internalID: 795767094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_75
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 700
+        width: 15
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 635676d48f5d9b14caf28d21c68b4c1e
+      internalID: 288606934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_76
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 707
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d941943fef31e44dbcf2e82f5056b2b
+      internalID: -815955286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_77
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 694
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c8e480c78638a4a9860c8f4e1a84d8
+      internalID: -424619896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_78
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 710
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 304aae88c1fff1949907f52e42a73ad7
+      internalID: 924016650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_79
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 697
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f98a4579aac1de418e90c0926b58ca1
+      internalID: -772890589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_80
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 698
+        width: 20
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89cb66f8cd8099d4f8a813eff627f7ad
+      internalID: -2053679568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_81
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 614
+        width: 81
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bfcd718db7298041a5de42d79d53d0b
+      internalID: -2057080818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_82
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 676
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2b1374f24c9cd478c4729f0a30af5c
+      internalID: 2031029639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_83
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 514
+        width: 136
+        height: 171
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5784ed1d9d416df48b002893cd7d2954
+      internalID: -1384482644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_84
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 648
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5f7ae9da98d80439a505d4392d9bc7
+      internalID: 321939472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_85
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 645
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701f0399ed178014ab2c602f921c295c
+      internalID: 908187798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_86
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 529
+        width: 137
+        height: 148
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff286bff125d29045b151e4a414a43b5
+      internalID: -316639097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_87
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 640
+        width: 95
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb93c80d371c8f44873b4c7bfe948a0
+      internalID: -1660614187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_88
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 614
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce116dd11e050ae488792417340ddeb4
+      internalID: -1479715714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_89
+      rect:
+        serializedVersion: 2
+        x: 1949
+        y: 553
+        width: 90
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f7d61426bf5a749852ddb174bcaba0
+      internalID: 199837232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_90
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 555
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72c491e666a46c48a53fda4f43950f8
+      internalID: 1534377862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_91
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 453
+        width: 295
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395eb334fb4fda54b9eb94bf36fa1f33
+      internalID: 2123092852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_92
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 530
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fff95d4e037fa5c47832095eacb00a2b
+      internalID: 1812409386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_93
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 491
+        width: 60
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300a1aa98ea15804e91718d11facee7c
+      internalID: 1203733256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_94
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 491
+        width: 60
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d778808eb676a547b20c75c7581673d
+      internalID: 385992890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_95
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 491
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77780744ea547f848bf6f27295abc5a7
+      internalID: -1202040100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_96
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 491
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b08e5ebb3bcdde245b1bcb4a40069318
+      internalID: -1423160991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_97
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 492
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 888733a683e3b8e4793111f48fd5c987
+      internalID: 1452656163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_98
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 492
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7de9ae9467aad4cade15662da95737
+      internalID: 95467260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_99
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 533
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecef89500a05574991a6e8c943de4c2
+      internalID: 1239992339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_100
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 429
+        width: 257
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794aa0b7529ba3c4a8b82c1db2b8eb3a
+      internalID: 1993414439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_101
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455
+        width: 131
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80383abdf1768a4ea33c844e0fe8424
+      internalID: -399796041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_102
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 518
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f677cef2cff734e9d46091ad1e34f8
+      internalID: -848573145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_103
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 521
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30b2de4d79a0d549adcdd76250c73f5
+      internalID: -799685179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_104
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 494
+        width: 26
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ea7078c80aea14fb0fe4126b9c52d6
+      internalID: -1990548888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_105
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 428
+        width: 506
+        height: 101
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9342d8ad5d839b34c9b6817048d88189
+      internalID: 1532827640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_106
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 515
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59ba25f1b19c3743b98f7285f71cbf6
+      internalID: -774160832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_107
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 455
+        width: 132
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3608f124ec83c498807b221a8e71c5
+      internalID: -1865012735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_108
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 497
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c580d720d27a3e4e80bcf1ba9d84b7b
+      internalID: -715000568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_109
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 485
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420aa9043631d214ca572697b76f153e
+      internalID: -1806784576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_110
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 428
+        width: 138
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad29ed7fc1a73b4480b240e9ea8b1fe
+      internalID: 2100510076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_111
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 455
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c07a05c3727a6d54b97f38f1fd594ce0
+      internalID: -501765429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_112
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 432
+        width: 42
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd2fd7892b2d5143ad19d7789cc2a72
+      internalID: 549291084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_113
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 336
+        width: 140
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc4d7b79c1808f44b997f796c434b8d
+      internalID: -838916628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_114
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 356
+        width: 319
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12102412029a14c418056f823145f0aa
+      internalID: -1858683493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_115
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 336
+        width: 139
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a78103cd0b77ef45b4643f39bbea5ae
+      internalID: 1946162739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_116
+      rect:
+        serializedVersion: 2
+        x: 2018
+        y: 425
+        width: 22
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbaecb07c86d46f40b3a63ed52a5aa1b
+      internalID: -1770738040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_117
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 388
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a4f41064a1803499b8e850f7b56b4b
+      internalID: 726404342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_118
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 388
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79c8b012ab24cfd4493aac746f42e891
+      internalID: -1527621437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_119
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 339
+        width: 61
+        height: 87
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efaacfad62acfb49885f9d57c80395d
+      internalID: 986294294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_120
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 332
+        width: 152
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94a6d19072d2cf4bad9e829fb56023a
+      internalID: -1140466846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_121
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 400
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feec2a92676a25c468c8fdddba50e844
+      internalID: -134697792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_122
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 339
+        width: 214
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bff91b666a09504b9a714c276312b19
+      internalID: -290146720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_123
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 399
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f405de3af7333114ea0a112e9d256863
+      internalID: -2020068317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_124
+      rect:
+        serializedVersion: 2
+        x: 1640
+        y: 332
+        width: 146
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9256af4662a2148853e07a8917b923
+      internalID: 1592919556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_125
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 393
+        width: 179
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3188e764a0950894e8bafb0d4eeb1fc2
+      internalID: -1091360241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_126
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 395
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5864d24674a34c944befedcfa8461e75
+      internalID: 1763073080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_127
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 392
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f843e4b9dea0ef241a6c5f16532a5254
+      internalID: -2073367234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_128
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 344
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66770d3f845c6794dba64f3bef627253
+      internalID: 1440822537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_129
+      rect:
+        serializedVersion: 2
+        x: 1785
+        y: 378
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c593f97e232f5da4380898938fbdcfbe
+      internalID: 206320569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_130
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 331
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a32c24ca5b2d894799ea67420b06ee5
+      internalID: -1104661623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_131
+      rect:
+        serializedVersion: 2
+        x: 1868
+        y: 223
+        width: 151
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686b4cebeb312bb4ab80caa164acd422
+      internalID: 1386366148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_132
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 360
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f80400438da383438eace3f909c00d3
+      internalID: -990465920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_133
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 344
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8feab9f616690044b98389c4f168c977
+      internalID: -497033543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_134
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 333
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f85c83b309b95a4793c9c0199cce69f
+      internalID: 1445336298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_135
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 318
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83da8e738d4cec44b2c969e2825dda6
+      internalID: 948410652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_136
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 321
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f956580991715a94abb4f92eb54578d8
+      internalID: 1131692547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_137
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 268
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d559f5bb070bf754686501ebe57a0596
+      internalID: 1974168265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_138
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 269
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02517516a1a53ba41a0e717254b02c79
+      internalID: 533533810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_139
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 269
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee45c6668400a045b916a030598ae26
+      internalID: -499916943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_140
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 268
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8789354fad0fb4082bc956a5270f04
+      internalID: 1565866537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_141
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 269
+        width: 49
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d58e786eb42dd64180627558b355b86
+      internalID: -1711733253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_142
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 269
+        width: 56
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8243507f91fc30047896bf2d7a0d33fd
+      internalID: 162038965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_143
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 268
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d359dc14437bf94bbcbd32407bdd4dd
+      internalID: -1227280583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_144
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 268
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b6b8071eecf714f9db53d88b90863e
+      internalID: 1986288802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_145
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 315
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c89685f6ec5b55c43956d2085693d67d
+      internalID: -814998528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_146
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 320
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529a573d61899834cb72a67d1a06f977
+      internalID: -1340755222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_147
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 299
+        width: 33
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8ade78f874aa843bc40c2615f65b4b
+      internalID: -1273228644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_148
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 321
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39bda509d1ac6ac4abcc83e000984fb1
+      internalID: -180795528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_149
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 259
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33ab6f138f915d947ad1965ca3cdd877
+      internalID: 129715470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_150
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 259
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af47152634c3a34a9a73ec518b70ef9
+      internalID: 1677882721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_151
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 260
+        width: 66
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17392ae6b4afb934aab401f6f2ceeed9
+      internalID: 1139735403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_152
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 259
+        width: 65
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37582813d5d39d4ca72da97b4fd6f12
+      internalID: 68715671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_153
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 298
+        width: 32
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93902dba18864a4c84a26b1bd89babe
+      internalID: -444701582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_154
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 317
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98aefdd6db74a14a9c12d43e7e2af62
+      internalID: -1381299544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_155
+      rect:
+        serializedVersion: 2
+        x: 1308
+        y: 96
+        width: 564
+        height: 236
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2c4a492842bd742a1c3a4f5f60a9ef
+      internalID: 539485939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_156
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 306
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9bfc9305be2244c9196d37788be903
+      internalID: -1886669543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_157
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 280
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bf31cb7fb8c2504ea942762ca56e865
+      internalID: -332408469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_158
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 283
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e105b8a4f2ac3cd49aca8043279cd9fa
+      internalID: 134150398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_159
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 278
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd2f3a9363a1fe4893184fbfc7a0c89
+      internalID: 700179946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_160
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 297
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c2fb5cc9115cb4aaf5edf475ff7455
+      internalID: 144066802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_161
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 280
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7ca1e66d5d9ab47a63cc53c50a4f99
+      internalID: 642031204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_162
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 281
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87a5c466adcaecb43a2c257c856cc567
+      internalID: -1871874051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_163
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 72
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2d26a1445d98c41811c5a8eaaf5c04
+      internalID: -278682125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_164
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 232
+        width: 72
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f82cc99e7fd7249b7ef11deee4273a
+      internalID: 1534975936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_165
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 232
+        width: 72
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39863feb2aa239a4c913b9b2a865219a
+      internalID: 1010103011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_166
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 232
+        width: 73
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8d2eebbf20a5741b577d11fe48cac9
+      internalID: -1318999393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_167
+      rect:
+        serializedVersion: 2
+        x: 1224
+        y: 256
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7873717a34eaca840aa8e978f59e4bf3
+      internalID: 500377063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_168
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 250
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123318d3b2d86e84fb38bc65ac1947ed
+      internalID: -684564105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_169
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 196
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39f93be90f755a74cb1fc23c46398e91
+      internalID: 1665220319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_170
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 144
+        width: 294
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14538c450031f54ca55d861fc84a6e1
+      internalID: -1662270673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_171
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 160
+        height: 227
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386d2091b1ef01e4aad639ee29138d62
+      internalID: -931113988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_172
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 128
+        width: 255
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3e687699ec22a42963b47f68edb6db
+      internalID: -126966099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_173
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 99
+        width: 160
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b545c7bbc16eb74a803d7e9a7e034a2
+      internalID: -2116553589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_174
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 220
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18eeea3fd5ad164da53550a1d6cadcf
+      internalID: 69308312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_175
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837cb781c83e5e046ae22fbc05622979
+      internalID: -1289904598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_176
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 110
+        width: 167
+        height: 110
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13c25695d0e26434eaf9f05c57621b88
+      internalID: -1111411341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_177
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 108
+        width: 162
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6666ec54b89955f40b0dcd4bc0804478
+      internalID: -1158842991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_178
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 148
+        width: 155
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc9c49ac0597be4abe2997069582c3f
+      internalID: -239451452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_179
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 28
+        width: 369
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c9b6918863c234e808f7a7c7a87095
+      internalID: -760213349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_180
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 110
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 312413cc3e2dcf94c83db33fd23adb2b
+      internalID: 487931461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_181
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 0
+        width: 92
+        height: 142
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5613c7834a6464c8e57df91dc112af
+      internalID: -1315709995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_182
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 89
+        width: 44
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec8edde1f33423478d37e99c5a702df
+      internalID: 1760683954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_183
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 117
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5bd6381ce2ca47478eeb3bbce03851c
+      internalID: 919524402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_184
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 0
+        width: 616
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cbc47f1429d344e8016313917e9d37
+      internalID: -646834676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_185
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 0
+        width: 596
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d76a702edffb7444b818db403ad065a
+      internalID: 476624093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_186
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 87
+        width: 41
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a7647d8ad90fa46b70c9c02dda1910
+      internalID: -709583779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_187
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 58
+        width: 23
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf2dc5737b3714489e022831eb25f73
+      internalID: -1868717129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_188
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 44
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f66f3bacdaddd04e8de2ee6513c0927
+      internalID: 1959352116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_189
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 28
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728fef9e55bf1d642928d2373e970fed
+      internalID: -1600467433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_190
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 995f5f981f3123745963844e15f1fb97
+      internalID: -2032546004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_191
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 20
+        width: 28
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfd601e8a902694792fac3aad852f92
+      internalID: 757084685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_192
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 21
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c2372ee9802b3479f8da6239a1071d
+      internalID: 836149084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_193
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 16
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce1e5ef3e075c4a489b267c207f3fbbb
+      internalID: 1540746202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasGachaTop_194
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 0
+        width: 31
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421271c1d4b1d774896970252771087f
+      internalID: -1798880309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +4408,210 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AtlasGachaTop_0: 1726349774
+      AtlasGachaTop_1: 2958182
+      AtlasGachaTop_10: -1292171990
+      AtlasGachaTop_100: 1993414439
+      AtlasGachaTop_101: -399796041
+      AtlasGachaTop_102: -848573145
+      AtlasGachaTop_103: -799685179
+      AtlasGachaTop_104: -1990548888
+      AtlasGachaTop_105: 1532827640
+      AtlasGachaTop_106: -774160832
+      AtlasGachaTop_107: -1865012735
+      AtlasGachaTop_108: -715000568
+      AtlasGachaTop_109: -1806784576
+      AtlasGachaTop_11: 1420407019
+      AtlasGachaTop_110: 2100510076
+      AtlasGachaTop_111: -501765429
+      AtlasGachaTop_112: 549291084
+      AtlasGachaTop_113: -838916628
+      AtlasGachaTop_114: -1858683493
+      AtlasGachaTop_115: 1946162739
+      AtlasGachaTop_116: -1770738040
+      AtlasGachaTop_117: 726404342
+      AtlasGachaTop_118: -1527621437
+      AtlasGachaTop_119: 986294294
+      AtlasGachaTop_120: -1140466846
+      AtlasGachaTop_121: -134697792
+      AtlasGachaTop_122: -290146720
+      AtlasGachaTop_123: -2020068317
+      AtlasGachaTop_124: 1592919556
+      AtlasGachaTop_125: -1091360241
+      AtlasGachaTop_126: 1763073080
+      AtlasGachaTop_127: -2073367234
+      AtlasGachaTop_128: 1440822537
+      AtlasGachaTop_129: 206320569
+      AtlasGachaTop_13: -1843951286
+      AtlasGachaTop_130: -1104661623
+      AtlasGachaTop_131: 1386366148
+      AtlasGachaTop_132: -990465920
+      AtlasGachaTop_133: -497033543
+      AtlasGachaTop_134: 1445336298
+      AtlasGachaTop_135: 948410652
+      AtlasGachaTop_136: 1131692547
+      AtlasGachaTop_137: 1974168265
+      AtlasGachaTop_138: 533533810
+      AtlasGachaTop_139: -499916943
+      AtlasGachaTop_14: 1608522462
+      AtlasGachaTop_140: 1565866537
+      AtlasGachaTop_141: -1711733253
+      AtlasGachaTop_142: 162038965
+      AtlasGachaTop_143: -1227280583
+      AtlasGachaTop_144: 1986288802
+      AtlasGachaTop_145: -814998528
+      AtlasGachaTop_146: -1340755222
+      AtlasGachaTop_147: -1273228644
+      AtlasGachaTop_148: -180795528
+      AtlasGachaTop_149: 129715470
+      AtlasGachaTop_15: 1080260439
+      AtlasGachaTop_150: 1677882721
+      AtlasGachaTop_151: 1139735403
+      AtlasGachaTop_152: 68715671
+      AtlasGachaTop_153: -444701582
+      AtlasGachaTop_154: -1381299544
+      AtlasGachaTop_155: 539485939
+      AtlasGachaTop_156: -1886669543
+      AtlasGachaTop_157: -332408469
+      AtlasGachaTop_158: 134150398
+      AtlasGachaTop_159: 700179946
+      AtlasGachaTop_16: 1195256580
+      AtlasGachaTop_160: 144066802
+      AtlasGachaTop_161: 642031204
+      AtlasGachaTop_162: -1871874051
+      AtlasGachaTop_163: -278682125
+      AtlasGachaTop_164: 1534975936
+      AtlasGachaTop_165: 1010103011
+      AtlasGachaTop_166: -1318999393
+      AtlasGachaTop_167: 500377063
+      AtlasGachaTop_168: -684564105
+      AtlasGachaTop_169: 1665220319
+      AtlasGachaTop_17: 745565581
+      AtlasGachaTop_170: -1662270673
+      AtlasGachaTop_171: -931113988
+      AtlasGachaTop_172: -126966099
+      AtlasGachaTop_173: -2116553589
+      AtlasGachaTop_174: 69308312
+      AtlasGachaTop_175: -1289904598
+      AtlasGachaTop_176: -1111411341
+      AtlasGachaTop_177: -1158842991
+      AtlasGachaTop_178: -239451452
+      AtlasGachaTop_179: -760213349
+      AtlasGachaTop_18: 593924330
+      AtlasGachaTop_180: 487931461
+      AtlasGachaTop_181: -1315709995
+      AtlasGachaTop_182: 1760683954
+      AtlasGachaTop_183: 919524402
+      AtlasGachaTop_184: -646834676
+      AtlasGachaTop_185: 476624093
+      AtlasGachaTop_186: -709583779
+      AtlasGachaTop_187: -1868717129
+      AtlasGachaTop_188: 1959352116
+      AtlasGachaTop_189: -1600467433
+      AtlasGachaTop_19: 1327009938
+      AtlasGachaTop_190: -2032546004
+      AtlasGachaTop_191: 757084685
+      AtlasGachaTop_192: 836149084
+      AtlasGachaTop_193: 1540746202
+      AtlasGachaTop_194: -1798880309
+      AtlasGachaTop_2: 1226862467
+      AtlasGachaTop_20: 906861459
+      AtlasGachaTop_21: -1632864992
+      AtlasGachaTop_22: -85508251
+      AtlasGachaTop_23: 1546125879
+      AtlasGachaTop_24: 1838319168
+      AtlasGachaTop_25: 1132154525
+      AtlasGachaTop_26: 1435489939
+      AtlasGachaTop_27: 1181923259
+      AtlasGachaTop_28: 1391026102
+      AtlasGachaTop_29: -2046538232
+      AtlasGachaTop_3: 438161593
+      AtlasGachaTop_31: -1534037282
+      AtlasGachaTop_32: -1215887758
+      AtlasGachaTop_33: 291584664
+      AtlasGachaTop_34: -2099087315
+      AtlasGachaTop_35: 203273416
+      AtlasGachaTop_36: 1749012830
+      AtlasGachaTop_37: -702311534
+      AtlasGachaTop_38: -896099274
+      AtlasGachaTop_39: -1710192627
+      AtlasGachaTop_4: -211659933
+      AtlasGachaTop_40: 1785955087
+      AtlasGachaTop_41: -220611414
+      AtlasGachaTop_42: 2142228028
+      AtlasGachaTop_43: 15305542
+      AtlasGachaTop_44: -801228267
+      AtlasGachaTop_45: -1889068406
+      AtlasGachaTop_46: 1645354931
+      AtlasGachaTop_47: -1856389762
+      AtlasGachaTop_48: -1185605714
+      AtlasGachaTop_49: -659867739
+      AtlasGachaTop_5: 440334028
+      AtlasGachaTop_50: 1654818494
+      AtlasGachaTop_51: -1358128498
+      AtlasGachaTop_52: 1371587439
+      AtlasGachaTop_54: -386548456
+      AtlasGachaTop_55: 1654752997
+      AtlasGachaTop_56: -635142635
+      AtlasGachaTop_57: -473005270
+      AtlasGachaTop_58: -1106078210
+      AtlasGachaTop_59: 705106342
+      AtlasGachaTop_6: 1416820409
+      AtlasGachaTop_60: 1960226813
+      AtlasGachaTop_61: -754210523
+      AtlasGachaTop_62: 1891263304
+      AtlasGachaTop_63: -2037702545
+      AtlasGachaTop_65: -956250564
+      AtlasGachaTop_66: -1655966914
+      AtlasGachaTop_67: -1342614179
+      AtlasGachaTop_68: 301874618
+      AtlasGachaTop_69: 887476709
+      AtlasGachaTop_7: 476887210
+      AtlasGachaTop_70: -1555751754
+      AtlasGachaTop_71: -226957676
+      AtlasGachaTop_72: 1557322054
+      AtlasGachaTop_73: -1351007074
+      AtlasGachaTop_74: 795767094
+      AtlasGachaTop_75: 288606934
+      AtlasGachaTop_76: -815955286
+      AtlasGachaTop_77: -424619896
+      AtlasGachaTop_78: 924016650
+      AtlasGachaTop_79: -772890589
+      AtlasGachaTop_8: -1698218408
+      AtlasGachaTop_80: -2053679568
+      AtlasGachaTop_81: -2057080818
+      AtlasGachaTop_82: 2031029639
+      AtlasGachaTop_83: -1384482644
+      AtlasGachaTop_84: 321939472
+      AtlasGachaTop_85: 908187798
+      AtlasGachaTop_86: -316639097
+      AtlasGachaTop_87: -1660614187
+      AtlasGachaTop_88: -1479715714
+      AtlasGachaTop_89: 199837232
+      AtlasGachaTop_9: -1018048801
+      AtlasGachaTop_90: 1534377862
+      AtlasGachaTop_91: 2123092852
+      AtlasGachaTop_92: 1812409386
+      AtlasGachaTop_93: 1203733256
+      AtlasGachaTop_94: 385992890
+      AtlasGachaTop_95: -1202040100
+      AtlasGachaTop_96: -1423160991
+      AtlasGachaTop_97: 1452656163
+      AtlasGachaTop_98: 95467260
+      AtlasGachaTop_99: 1239992339
+      AtlasGachaTop_CharacterLotteryTitle: -102046841
+      AtlasGachaTop_LotteryActerBtn: 761578549
+      AtlasGachaTop_LotteryNormalBtn: -2131125347
+      AtlasGachaTop_LotteryNormalTips: -560155328
+      AtlasGachaTop_LotteryTimes: -1710556400
+      AtlasGachaTop_LotteryTimesOne: 1515657805
+      AtlasGachaTop_LotteryTimesTen: 428915407
+      AtlasGachaTop_LotteryacterFour: -1996064780
+      AtlasGachaTop_LotteryacterOne: -1126530539
+      AtlasGachaTop_LotteryacterThree: 135123959
+      AtlasGachaTop_LotteryacterTwo: -1698774704
+      AtlasGachaTop_NormalLotteryTitle: -6548946
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

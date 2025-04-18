@@ -7,6 +7,42 @@ using UnityEngine.UI;
 
 public abstract class BasePanel : MonoBehaviour
 {
+    protected string nowPlayerName;
+    public RectTransform Exp;
+    public RectTransform AB;
+    // 记录现在的玩家
+    public virtual void UpdatePlayerName(string nowPlayerName)
+    {
+        
+    }
+
+    // 更新玩家信息
+    public virtual void UpdatePlayerInfo()
+    {
+        int level = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
+        int nowExp = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "nowexp");
+        int totalExp = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "totalexp");
+        int nowAB = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "nowab");
+        int totalAB = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "totalab");
+        int manaCnt = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "manacnt");
+        int diamondCnt = DatabaseMgr.Instance.SearchUserIntInfo(nowPlayerName, "diamondcnt");
+        // 等级更新
+        TMP_Text levelText = GetControl<TMP_Text>("Level");
+        levelText.text = level.ToString();
+        // 经验更新
+        Exp.sizeDelta = new Vector2((float)nowExp / (float)totalExp * 250f, Exp.sizeDelta.y);
+        // 体力更新
+        AB.sizeDelta = new Vector2((float)nowAB / (float)totalAB * 250f, Exp.sizeDelta.y);
+        TMP_Text ABText = GetControl<TMP_Text>("ABText");
+        ABText.text = nowAB.ToString() + "/" + totalAB.ToString();
+        // 玛娜更新
+        TMP_Text manaText = GetControl<TMP_Text>("ManaText");
+        manaText.text = manaCnt.ToString("N0");
+        // 钻石更新
+        TMP_Text diamondText = GetControl<TMP_Text>("DiamondText");
+        diamondText.text = diamondCnt.ToString("N0");
+    }
+
     /// <summary>
     /// 用于存储所有要用到的UI控件，用历史替换原则 父类装子类
     /// </summary>
