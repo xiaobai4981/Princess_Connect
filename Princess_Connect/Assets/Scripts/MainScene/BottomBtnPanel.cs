@@ -14,7 +14,7 @@ public class BottomBtnPanel : BasePanel
     private static readonly Dictionary<Type, Action> PanelHiders = new Dictionary<Type, Action>() 
     {
         { typeof(BeginPanel), () => UIMgr.Instance.HidePanel<BeginPanel>() },
-        //{ typeof(CharacterPanel), () => UIMgr.Instance.HidePanel<CharacterPanel>() },
+        { typeof(CharacterPanel), () => UIMgr.Instance.HidePanel<CharacterPanel>() },
         { typeof(ADVPanel), () => UIMgr.Instance.HidePanel<ADVPanel>() },   
         { typeof(LotteryPanel), () => UIMgr.Instance.HidePanel<LotteryPanel>() },
         { typeof(MenuPanel), () => UIMgr.Instance.HidePanel<MenuPanel>() }
@@ -144,7 +144,7 @@ public class BottomBtnPanel : BasePanel
                 SwitchPanel<BeginPanel>();
                 break;
             case "Character":
-                //SwitchPanel<CharacterPanel>();
+                SwitchPanel<CharacterPanel>();
                 break;
             case "ADV":
                 SwitchPanel<ADVPanel>();
@@ -170,10 +170,10 @@ public class BottomBtnPanel : BasePanel
         UIMgr.Instance.ShowPanel<T>(E_UILayer.Bottom, (panel) =>
         {
             panel.UpdatePlayerName(nowPlayerName);
-            //if (typeof(T) != typeof(CharacterPanel))
-            //{
+            if (typeof(T) != typeof(CharacterPanel))
+            {
                 panel.UpdatePlayerInfo();
-            //}
+            }
             
         });
     }
