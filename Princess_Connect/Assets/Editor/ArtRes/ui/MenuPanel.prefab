@@ -470,7 +470,6 @@ GameObject:
   - component: {fileID: 9009790718653305546}
   - component: {fileID: 5914237999857760507}
   - component: {fileID: 1061025521915375944}
-  - component: {fileID: 9079254221814642296}
   - component: {fileID: 2191442969803786929}
   m_Layer: 5
   m_Name: Item
@@ -582,27 +581,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &9079254221814642296
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2485868393819568526}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a88eaf4e5a5df6c4e82d06df2e8246d8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2191442969803786929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1288,6 @@ GameObject:
   - component: {fileID: 3762580782277341089}
   - component: {fileID: 7638649745278350012}
   - component: {fileID: 6355267627800226236}
-  - component: {fileID: 4219089008068789926}
   - component: {fileID: 8584055553176455534}
   m_Layer: 5
   m_Name: BackToStart
@@ -1422,27 +1399,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &4219089008068789926
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3962892562183999879}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a88eaf4e5a5df6c4e82d06df2e8246d8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8584055553176455534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2205,7 +2161,6 @@ GameObject:
   - component: {fileID: 5058800490100598388}
   - component: {fileID: 1678127290610423359}
   - component: {fileID: 5848325568042456649}
-  - component: {fileID: 1598714679802929811}
   - component: {fileID: 8319671279971911670}
   m_Layer: 5
   m_Name: Settings
@@ -2317,27 +2272,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &1598714679802929811
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6094981502298765958}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a88eaf4e5a5df6c4e82d06df2e8246d8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &8319671279971911670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,7 +3059,6 @@ GameObject:
   - component: {fileID: 246594430126864878}
   - component: {fileID: 1951883678345032893}
   - component: {fileID: 5300230119615816096}
-  - component: {fileID: 7775098202047460803}
   - component: {fileID: 9069069464179992305}
   m_Layer: 5
   m_Name: Designation
@@ -3237,27 +3170,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!95 &7775098202047460803
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7983556554591050924}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a88eaf4e5a5df6c4e82d06df2e8246d8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &9069069464179992305
 MonoBehaviour:
   m_ObjectHideFlags: 0

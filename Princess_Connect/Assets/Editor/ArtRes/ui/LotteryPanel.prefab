@@ -758,7 +758,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 761578549, guid: 985aab22939719542a1969d573e210d3, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -1975,7 +1975,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 305909035, guid: 985aab22939719542a1969d573e210d3, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -3108,7 +3108,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 761578549, guid: 985aab22939719542a1969d573e210d3, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -4725,7 +4725,6 @@ MonoBehaviour:
   AB: {fileID: 657154960222879801}
   CharacterLot: {fileID: 3300315210518521909}
   NormalLot: {fileID: 897906309769212613}
-  defaultBtn: {fileID: 8766322408994846809}
 --- !u!1 &6396331752073456792
 GameObject:
   m_ObjectHideFlags: 0

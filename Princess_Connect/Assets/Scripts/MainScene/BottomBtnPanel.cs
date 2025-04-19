@@ -49,7 +49,6 @@ public class BottomBtnPanel : BasePanel
                 }
             }
         }
-        
         // 设置默认按钮为按下状态
         Transform defaultBtn = transform.Find(defaultBtnName);
         if (defaultBtn != null)
@@ -82,6 +81,7 @@ public class BottomBtnPanel : BasePanel
                 };
             }
         }
+
     }
     // Start is called before the first frame update
     void Start()
@@ -94,6 +94,7 @@ public class BottomBtnPanel : BasePanel
     {
         
     }
+
     public override void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
@@ -131,11 +132,16 @@ public class BottomBtnPanel : BasePanel
         {
             bool isActive = pair.Key == btnName;
             pair.Value.animator.SetBool("isPressed", isActive);
+            // 手动设置 Sprite（不依赖 Button 组件）
+            Image btnImage = pair.Value.button.GetComponent<Image>();
+            btnImage.sprite = isActive ?
+            pair.Value.button.spriteState.pressedSprite :
+            originalSprites[pair.Value.button];
             if (!isActive)
             {
                 Button btn = this.transform.Find(pair.Key).GetComponent<Button>();
-                Image btnImage = btn.GetComponent<Image>();
-                btnImage.sprite = originalSprites[btn];
+                Image btnImg = btn.GetComponent<Image>();
+                btnImg.sprite = originalSprites[btn];
             }
         }
         switch (btnName)

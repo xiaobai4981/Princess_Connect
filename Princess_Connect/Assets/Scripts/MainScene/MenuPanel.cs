@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MenuPanel : BasePanel
 {
@@ -22,7 +23,7 @@ public class MenuPanel : BasePanel
         switch (btnName)
         {
             case "Item":
-                
+
                 break;
             case "Setting":
                 
