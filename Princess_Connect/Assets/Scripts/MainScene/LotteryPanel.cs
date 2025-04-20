@@ -53,7 +53,6 @@ public class LotteryPanel : BasePanel
         }
         else
         {
-            Debug.Log(buttonDataDict);
             foreach (var pair in buttonDataDict)
             {
                 Button btn = ModeBtn.Find(pair.Key).GetComponent<Button>();

@@ -8,11 +8,6 @@ using UnityEngine.UI;
 
 public class LoginPanel : BasePanel
 {
-    private void Start()
-    {
-        DatabaseMgr.Instance.Initialize();
-    }
-
     // 为每一个控件写入操作
     protected override void ClickBtn(string btnName)
     {
