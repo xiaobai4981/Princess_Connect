@@ -50,10 +50,10 @@ public class BeginPanel : BasePanel
         // 钻石更新
         TMP_Text diamondText = GetControl<TMP_Text>("DiamondText");
         diamondText.text = diamondCnt.ToString("N0");
-        //int missionCnt = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "missioncomplete");
         // 任务完成数更新
-        //TMP_Text missionText = GetControl<TMP_Text>("CntNum");
-        //missionText.text = missionCnt > 99? "99+" : missionCnt.ToString();
+        int missionCnt = MissionDataMgr.Instance.GetMissionAchieveCount(nowPlayerName);
+        TMP_Text missionText = GetControl<TMP_Text>("CntNum");
+        missionText.text = missionCnt > 99 ? "99+" : missionCnt.ToString();
     }
 
     public override void HideMe()
