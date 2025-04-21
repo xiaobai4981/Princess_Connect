@@ -73,18 +73,14 @@ public class RegisterPanel : BasePanel
             return;
         }
         // 调用数据库登录方法
-        bool result = DatabaseMgr.Instance.RegisterUser(username, password);
+        bool result = PlayerDataMgr.Instance.RegisterUser(username, password);
         if (result)
         {
             Dictionary<string, object> columnUpdates = new Dictionary<string, object>
             {
-                { "level", 1 },
-                { "totalexp", 10 },{ "nowexp", 0 },
-                { "totalab", 100 }, { "nowab", 100 },
-                { "manacnt", 33333 }, { "diamondcnt", 33333 },
-                { "missioncomplete", 0 }
+                { "last_stamina_update", System.DateTime.Now },
             };
-            DatabaseMgr.Instance.ModifyUserIntInfo(username, columnUpdates, false);
+            PlayerDataMgr.Instance.ModifyUserIntInfo(username, columnUpdates, false);
             // 关闭注册界面
             UIMgr.Instance.HidePanel<RegisterPanel>();
             UIMgr.Instance.ShowPanel<TipsPanel>(E_UILayer.Top, (panel) =>

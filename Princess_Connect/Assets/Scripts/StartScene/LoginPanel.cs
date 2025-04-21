@@ -30,7 +30,7 @@ public class LoginPanel : BasePanel
         // 获取密码
         string password = GetControl<TMP_InputField>("PasswordInput").text;
         // 调用数据库登录方法
-        bool result = DatabaseMgr.Instance.LoginUser(username, password);
+        bool result = PlayerDataMgr.Instance.LoginUser(username, password);
         if (result)
         {
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
