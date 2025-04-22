@@ -47,6 +47,14 @@ public class MusicMgr : BaseManager<MusicMgr>
         }
     }
 
+    // 查询现在在播放的背景音乐名字
+    public string GetNowBKMusicName()
+    {
+        if (bkMusic == null)
+            return "";
+        return bkMusic.clip.name;
+    }
+
 
     //播放背景音乐
     public void PlayBKMusic(string name)

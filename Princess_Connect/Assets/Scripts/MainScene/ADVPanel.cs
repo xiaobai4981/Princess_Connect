@@ -28,6 +28,9 @@ public class ADVPanel : BasePanel
 
     public override void ShowMe()
     {
-
+        if (MusicMgr.Instance.GetNowBKMusicName() != "CharacterBG")
+        {
+            MusicMgr.Instance.PlayBKMusic("CharacterBG");
+        }
     }
 }
