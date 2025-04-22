@@ -17,6 +17,6 @@ public class CharacterPanel : BasePanel
 
     public override void ShowMe()
     {
-
+        MusicMgr.Instance.PlayBKMusic("CharacterBG");
     }
 }

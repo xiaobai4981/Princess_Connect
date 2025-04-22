@@ -44,7 +44,6 @@ public class MenuPanel : BasePanel
 
     private void BackToStart()
     {
-        DatabaseMgr.Instance.DatabaseClose();
         UIMgr.Instance.ShowPanel<StartPanel>(E_UILayer.Bottom, (panel) =>
         {
 
@@ -64,7 +63,7 @@ public class MenuPanel : BasePanel
 
     public override void ShowMe()
     {
-
+        MusicMgr.Instance.PlayBKMusic("MenuBG");
     }
 
 }

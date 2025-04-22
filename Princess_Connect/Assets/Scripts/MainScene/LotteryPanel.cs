@@ -142,6 +142,6 @@ public class LotteryPanel : BasePanel
 
     public override void ShowMe()
     {
-
+        MusicMgr.Instance.PlayBKMusic("LotteryNormalBG");
     }
 }

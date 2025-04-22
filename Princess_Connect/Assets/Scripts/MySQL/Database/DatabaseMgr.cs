@@ -49,6 +49,7 @@ public class DatabaseMgr
     {
         if (conn != null)
         {
+            Debug.Log("关闭数据库连接");
             conn.Close();
             conn.Dispose();
             conn = null;
