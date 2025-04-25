@@ -1,8 +1,11 @@
+using LitJson;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BeginPanel : BasePanel
 {
@@ -26,6 +29,7 @@ public class BeginPanel : BasePanel
     // 更新玩家信息
     public override void UpdatePlayerInfo()
     {
+        #region 基本信息
         int level = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
         int nowExp = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "current_exp");
         int totalExp = PlayerDataMgr.Instance.SearchUserLevelConfig(level, "require_exp");
@@ -54,6 +58,14 @@ public class BeginPanel : BasePanel
         int missionCnt = MissionDataMgr.Instance.GetMissionAchieveCount(nowPlayerName);
         TMP_Text missionText = GetControl<TMP_Text>("CntNum");
         missionText.text = missionCnt > 99 ? "99+" : missionCnt.ToString();
+        #endregion
+        #region 称号展示
+        Transform Glory = this.transform.Find("PlayerData/Glory");
+        // 路径
+        string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
+        PlayerInfo playInfo = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath));
+        Glory.GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/Emblem/" + "icon_emblem_" + playInfo.now_emblem.ToString());
+        #endregion
     }
 
     public override void HideMe()
@@ -63,6 +75,9 @@ public class BeginPanel : BasePanel
 
     public override void ShowMe()
     {
-        MusicMgr.Instance.PlayBKMusic("NormalBG");
+        if (MusicMgr.Instance.GetNowBKMusicName() != "NormalBG")
+        {
+            MusicMgr.Instance.PlayBKMusic("NormalBG");
+        }
     }
 }

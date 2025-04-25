@@ -25,11 +25,18 @@ public class MenuPanel : BasePanel
             case "Item":
 
                 break;
-            case "Setting":
-                
+            case "Settings":
+                UIMgr.Instance.ShowPanel<MenuSettingPanel>(E_UILayer.System, (panel) =>
+                {
+
+                });
                 break;
             case "Designation":
-                
+                UIMgr.Instance.HidePanel<MenuPanel>();
+                UIMgr.Instance.ShowPanel<MenuGloryPanel>(E_UILayer.Bottom, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                });
                 break;
             case "BackToStart":
                 BackToStart();
@@ -63,7 +70,10 @@ public class MenuPanel : BasePanel
 
     public override void ShowMe()
     {
-        MusicMgr.Instance.PlayBKMusic("MenuBG");
+        if (MusicMgr.Instance.GetNowBKMusicName() != "MenuBG")
+        {
+            MusicMgr.Instance.PlayBKMusic("MenuBG");
+        }
     }
 
 }

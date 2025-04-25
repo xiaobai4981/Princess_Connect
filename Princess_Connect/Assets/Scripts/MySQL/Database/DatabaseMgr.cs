@@ -16,7 +16,7 @@ public class DatabaseMgr
     private string connStr;
     private DatabaseMgr()
     {
-        connStr = "Server = 127.0.0.1;port=3306;DataBase=princess_connect;UID=root;Pwd=dajiaxingkule123";
+        connStr = "Server = 127.0.0.1;port=3306;DataBase=princess_connect;UID=root;Pwd=dajiaxingkule123;Allow User Variables=True";
     }
 
     public static DatabaseMgr Instance

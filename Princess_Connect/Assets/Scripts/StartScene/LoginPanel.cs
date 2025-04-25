@@ -33,6 +33,7 @@ public class LoginPanel : BasePanel
         bool result = PlayerDataMgr.Instance.LoginUser(username, password);
         if (result)
         {
+            PlayerDataMgr.Instance.InitPlayerData(username);
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
             UIMgr.Instance.HidePanel<LoginPanel>(true);
             UIMgr.Instance.HidePanel<TipsPanel>(true);

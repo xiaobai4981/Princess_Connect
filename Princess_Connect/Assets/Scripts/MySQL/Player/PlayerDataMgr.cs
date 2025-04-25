@@ -1,11 +1,27 @@
+using LitJson;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.IO;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public struct PlayerInfo
+{
+    public string username;
+    public string password_any;
+    public int level;
+    public int current_exp;
+    public int current_stamina;
+    public int mana_cnt;
+    public int diamond_cnt;
+    public DateTime last_stamina_update;
+    public string inventory;
+    public int now_emblem;
+}
 public class PlayerDataMgr
 {
     // 数据库操作——用户部分
@@ -81,6 +97,52 @@ public class PlayerDataMgr
         }
     }
 
+    #region 初始化保存用户数据
+    public void InitPlayerData(string username)
+    {
+        try
+        {
+            string query = "SELECT username, password_any, level, current_exp, " +
+                "current_stamina, mana_cnt, diamond_cnt, last_stamina_update, inventory ->> '$' as inventory, " +
+                "now_emblem FROM player_data WHERE username = @username"; 
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.Add("@username", MySqlDbType.VarChar, 50).Value = username;
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (!reader.Read())
+                {
+                    Debug.LogWarning("未找到对应用户名的数据。");
+                    return;
+                }
+
+                // 处理可能为 NULL 的字段
+                PlayerInfo playerInfo = new PlayerInfo
+                {
+                    username = reader.GetString("username"),
+                    password_any = reader.GetString("password_any"),
+                    level = reader.GetInt32("level"),
+                    current_exp = reader.GetInt32("current_exp"),
+                    current_stamina = reader.GetInt32("current_stamina"),
+                    mana_cnt = reader.GetInt32("mana_cnt"),
+                    diamond_cnt = reader.GetInt32("diamond_cnt"),
+                    last_stamina_update = reader.GetDateTime("last_stamina_update"),
+                    inventory = reader.IsDBNull(reader.GetOrdinal("inventory")) ? "" : reader.GetString("inventory"),
+                    now_emblem = reader.IsDBNull(reader.GetOrdinal("now_emblem")) ? 0 : reader.GetInt32("now_emblem")
+                };
+
+                string jsonStr = JsonMapper.ToJson(playerInfo);
+                string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
+                File.WriteAllText(filePath, jsonStr);
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"初始化失败: {e.Message}\n堆栈跟踪：{e.StackTrace}");
+        }
+    }
+    #endregion
+
     // 查询用户的信息
     // 查询用户表的类型为 int 的信息
     public int SearchUserIntInfo(string username, string anInfo)
@@ -139,23 +201,6 @@ public class PlayerDataMgr
         {
             reader?.Close();
             // 根据conn的管理策略决定是否在这里关闭连接
-        }
-    }
-    // 查询用户仓库信息
-    public string SearchUserPlayerFactoryInfo(string username, string anInfo)
-    {
-        try
-        {
-            string query = $"SELECT {anInfo} FROM player_data WHERE username = @username";
-            MySqlCommand cmd = new MySqlCommand(query, conn);
-            cmd.Parameters.AddWithValue("@username", username);
-            string jsonString = cmd.ExecuteScalar() as string;
-            return jsonString;
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"Search failed: {e.Message}");
-            return null;
         }
     }
     // 查询玩家等级配置
@@ -220,5 +265,4 @@ public class PlayerDataMgr
             return false;
         }
     }
-
 }

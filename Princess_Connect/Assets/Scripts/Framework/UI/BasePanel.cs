@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -5,11 +6,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+
 public abstract class BasePanel : MonoBehaviour
 {
     protected string nowPlayerName;
     public RectTransform Exp;
     public RectTransform AB;
+
     // 记录现在的玩家
     public virtual void UpdatePlayerName(string nowPlayerName)
     {
