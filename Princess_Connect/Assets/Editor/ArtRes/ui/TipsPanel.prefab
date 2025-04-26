@@ -217,8 +217,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u786E\u5B9A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2eb9752c98bbe894dadb4b16df223b4f, type: 2}
-  m_sharedMaterial: {fileID: -9203350275795327683, guid: 2eb9752c98bbe894dadb4b16df223b4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
+  m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -248,7 +248,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -345,6 +345,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0313c795ff2bc446806d93ec2050035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Exp: {fileID: 0}
+  AB: {fileID: 0}
   tipsText: {fileID: 1206528513792237795}
 --- !u!1 &8768191222301484964
 GameObject:
@@ -534,8 +536,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8FD9\u91CC\u662F\u63D0\u793A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2eb9752c98bbe894dadb4b16df223b4f, type: 2}
-  m_sharedMaterial: {fileID: -9203350275795327683, guid: 2eb9752c98bbe894dadb4b16df223b4f, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
+  m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

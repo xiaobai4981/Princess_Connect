@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 6202084620103702556}
   - component: {fileID: 7795015072362607985}
   - component: {fileID: 5904226119922992453}
-  - component: {fileID: 5745606313846134044}
+  - component: {fileID: 2054565780543889078}
   m_Layer: 5
   m_Name: MenuGloryCard
   m_TagString: Untagged
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5745606313846134044
+--- !u!114 &2054565780543889078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,4 +224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d186aa7112e6d1e45af40abe6a2f2c3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChangeGloryBG: {fileID: 0}
+  cardButton: {fileID: 0}
+  cardImage: {fileID: 0}
+  OnCardClicked:
+    m_PersistentCalls:
+      m_Calls: []

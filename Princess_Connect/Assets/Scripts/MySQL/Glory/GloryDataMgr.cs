@@ -85,4 +85,59 @@ public class GloryDataMgr
             return null;
         }
     }
+
+    // 查询称号的描述和获得条件描述
+    public Dictionary<string, string> GetGloryDescription(int gloryId)
+    {
+        Dictionary<string, string> description = new Dictionary<string, string>();
+        try
+        {
+            string query = $"SELECT description, condition_desc FROM glory_template WHERE glory_id = @glory_id";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@glory_id", gloryId);
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    string desc = reader.GetString("description");
+                    string condDesc = reader.GetString("condition_desc");
+                    description.Add("description", desc);
+                    description.Add("condition_desc", condDesc);
+                }
+            }
+            return description;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Get description failed: {e.Message}");
+            return null;
+        }
+    }
+
+    // 更新用户的称号
+    public bool UpdateUserGlory(string username, int gloryId)
+    {
+        try
+        {
+            string query = $"UPDATE player_data SET now_emblem = {gloryId} WHERE username = @username";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+
+            int rows = cmd.ExecuteNonQuery();
+
+            if (rows == 0)
+            {
+                Debug.LogWarning($"No data found for username: {username}");
+                return false;
+            }
+
+            return true;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Update failed: {e.Message}");
+            return false;
+        }
+    }
 }

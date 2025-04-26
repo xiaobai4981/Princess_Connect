@@ -26,7 +26,7 @@ public class EditorResMgr : BaseManager<EditorResMgr>
             suffixName = ".prefab";
         else if (typeof(T) == typeof(Material))
             suffixName = ".mat";
-        else if (typeof(T) == typeof(Texture))
+        else if (typeof(T) == typeof(Texture) || typeof(T) == typeof(Sprite))
             suffixName = ".png";
         else if (typeof(T) == typeof(AudioClip))
             suffixName = ".mp3";

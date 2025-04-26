@@ -59,13 +59,6 @@ public class BeginPanel : BasePanel
         TMP_Text missionText = GetControl<TMP_Text>("CntNum");
         missionText.text = missionCnt > 99 ? "99+" : missionCnt.ToString();
         #endregion
-        #region 称号展示
-        Transform Glory = this.transform.Find("PlayerData/Glory");
-        // 路径
-        string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
-        PlayerInfo playInfo = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath));
-        Glory.GetComponent<Image>().sprite = Resources.Load<Sprite>("Textures/Emblem/" + "icon_emblem_" + playInfo.now_emblem.ToString());
-        #endregion
     }
 
     public override void HideMe()
@@ -75,6 +68,16 @@ public class BeginPanel : BasePanel
 
     public override void ShowMe()
     {
+        #region 称号展示
+        Transform Glory = this.transform.Find("PlayerData/Glory");
+        // 路径
+        string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
+        PlayerInfo playInfo = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath));
+        ABResMgr.Instance.LoadResAsync<Sprite>("emblem", $"icon_emblem_{playInfo.now_emblem}", (res) =>
+        {
+            Glory.GetComponent<Image>().sprite = res;
+        }, true);
+        #endregion
         if (MusicMgr.Instance.GetNowBKMusicName() != "NormalBG")
         {
             MusicMgr.Instance.PlayBKMusic("NormalBG");

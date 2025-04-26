@@ -5,49 +5,55 @@ using Unity.VisualScripting;
 
 
 [System.Serializable]
-public class ButtonData
+public class GloryCardData
 {
-    public Sprite buttonSprite;  // 按钮显示的图片
+    public Sprite cardSprite;  // 按钮显示的图片
     public int emblemId;  // 徽章ID
+    public bool isOwned;  // 是否拥有该卡牌
 
-    public ButtonData(int id, Sprite image)
+    public GloryCardData(int id, Sprite sprite, bool owned)
     {
         emblemId = id;
-        buttonSprite = image;
+        cardSprite = sprite;
+        isOwned = owned;
     }
 }
 public class MenuGloryCard : MonoBehaviour
 {
-    public UnityEvent<ButtonData> OnButtonClicked;
+    [SerializeField] private Button cardButton;
+    [SerializeField] private Image cardImage;
 
-    [SerializeField] private Button button;
-    [SerializeField] private Image buttonImage;
+    // 事件：点击时传递卡牌数据
+    public UnityEvent<GloryCardData> OnCardClicked = new UnityEvent<GloryCardData>();
 
-    private ButtonData _currentData;
+    private GloryCardData _cardData;
 
-    // 初始化按钮方法
-    public void Awake()
+    private void Awake()
     {
-        if (button == null) button = GetComponentInChildren<Button>();
-        if (buttonImage == null && button != null)
-            buttonImage = button.GetComponent<Image>();
+        if (cardButton == null) cardButton = this.transform.Find("CardButton").GetComponent<Button>();
+        if (cardImage == null) cardImage = GetComponent<Image>();
 
-        button?.onClick.AddListener(OnClick);
+        cardButton.onClick.AddListener(OnCardButtonClicked);
     }
-
-    // 初始化Panel按钮
-    public void Initialize(ButtonData data)
+    private void OnDestroy()
     {
-        _currentData = data;
+        cardButton.onClick.RemoveListener(OnCardButtonClicked);
+    }
+    public void Initialize(GloryCardData data)
+    {
+        _cardData = data;
 
-        if (buttonImage != null)
+        // 设置卡牌外观
+        if (cardImage != null)
         {
-            buttonImage.sprite = data.buttonSprite;
+            cardImage.sprite = data.cardSprite;
         }
+
     }
 
-    private void OnClick()
+    // 由按钮点击事件调用
+    public void OnCardButtonClicked()
     {
-        OnButtonClicked?.Invoke(_currentData);
+        OnCardClicked?.Invoke(_cardData);
     }
 }
