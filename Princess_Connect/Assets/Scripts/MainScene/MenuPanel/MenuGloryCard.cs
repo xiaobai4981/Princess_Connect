@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
-using Unity.VisualScripting;
 
 
 [System.Serializable]
@@ -31,7 +30,7 @@ public class MenuGloryCard : MonoBehaviour
     private void Awake()
     {
         if (cardButton == null) cardButton = this.transform.Find("CardButton").GetComponent<Button>();
-        if (cardImage == null) cardImage = GetComponent<Image>();
+        if (cardImage == null) cardImage = this.transform.Find("CardButton").GetComponent<Image>();
 
         cardButton.onClick.AddListener(OnCardButtonClicked);
     }
@@ -46,7 +45,8 @@ public class MenuGloryCard : MonoBehaviour
         // …Ë÷√ø®≈∆Õ‚π€
         if (cardImage != null)
         {
-            cardImage.sprite = data.cardSprite;
+            if (data.isOwned)
+                cardImage.sprite = data.cardSprite;
         }
 
     }

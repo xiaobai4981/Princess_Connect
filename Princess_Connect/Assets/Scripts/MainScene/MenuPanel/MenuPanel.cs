@@ -5,25 +5,16 @@ using UnityEngine.EventSystems;
 
 public class MenuPanel : BasePanel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     // ÷ÿ–¥Click
     protected override void ClickBtn(string btnName)
     {
         switch (btnName)
         {
             case "Item":
+                UIMgr.Instance.ShowPanel<MenuItemPanel>(E_UILayer.Bottom, (panel) =>
+                {
 
+                });
                 break;
             case "Settings":
                 UIMgr.Instance.ShowPanel<MenuSettingPanel>(E_UILayer.System, (panel) =>

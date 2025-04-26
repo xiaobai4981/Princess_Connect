@@ -6,7 +6,7 @@ using UnityEngine;
 
 public struct PlayerInventoryInfo
 {
-    public Dictionary<string, int> item { get; set; }
+    public Dictionary<string, Dictionary<string, int>> Item { get; set; }
     public List<int> glory { get; set; }
 }
 
@@ -104,6 +104,35 @@ public class GloryDataMgr
                     string condDesc = reader.GetString("condition_desc");
                     description.Add("description", desc);
                     description.Add("condition_desc", condDesc);
+                }
+            }
+            return description;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Get description failed: {e.Message}");
+            return null;
+        }
+    }
+
+    // 查询道具的名称和描述
+    public Dictionary<string, string> GetItemDescription(int equipmentId)
+    {
+        Dictionary<string, string> description = new Dictionary<string, string>();
+        try
+        {
+            string query = $"SELECT name, description FROM equipment_template WHERE equipment_id = @equipment_id";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@equipment_id", equipmentId);
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    string name = reader.GetString("name");
+                    string desc = reader.GetString("description");
+                    description.Add("name", name);
+                    description.Add("description", desc);
                 }
             }
             return description;

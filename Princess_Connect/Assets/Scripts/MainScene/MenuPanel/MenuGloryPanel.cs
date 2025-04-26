@@ -42,7 +42,7 @@ public class MenuGloryPanel : BasePanel
         // 当前的称号展示
         string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
         playerInfo = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath));
-        // 模拟获取玩家拥有的卡牌ID（实际应从服务器获取）
+        // 获取玩家拥有的卡牌ID
         FetchPlayerOwnedCards(() => {
             PrepareCardDatas(playerInfo);
             GenerateAllCards();
@@ -123,10 +123,6 @@ public class MenuGloryPanel : BasePanel
         {
             GameObject cardObj = GameObject.Instantiate(res, contentParent, false);
             Transform cardBtn = cardObj.transform.Find("CardButton");
-            if (data.isOwned)
-            {
-                cardBtn.GetComponent<Button>().image.sprite = data.cardSprite;
-            }
             MenuGloryCard card = cardObj.GetComponent<MenuGloryCard>();
             card.Initialize(data);
             card.OnCardClicked.AddListener(OnCardSelected);

@@ -22,6 +22,7 @@ public class BottomBtnPanel : BasePanel
             {
                 UIMgr.Instance.HidePanel<MenuPanel>();
                 UIMgr.Instance.HidePanel<MenuGloryPanel>(true);
+                UIMgr.Instance.HidePanel<MenuItemPanel>(true);
                 UIMgr.Instance.HidePanel<MenuSettingPanel>();
             } 
         }
