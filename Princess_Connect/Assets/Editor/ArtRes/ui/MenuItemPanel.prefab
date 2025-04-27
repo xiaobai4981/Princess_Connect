@@ -1187,6 +1187,7 @@ MonoBehaviour:
   Exp: {fileID: 0}
   AB: {fileID: 0}
   externalDisplayImage: {fileID: 898684281463267142}
+  externalImageNum: {fileID: 2467607577190759628}
   itemName: {fileID: 1043091311122548034}
   itemDescription: {fileID: 3539619784896124744}
   contentParent: {fileID: 739605859989137257}
@@ -1466,8 +1467,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 13, y: -107}
-  m_SizeDelta: {x: 438.1, y: 50}
+  m_AnchoredPosition: {x: 3, y: -184}
+  m_SizeDelta: {x: 438.1, y: 198.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &217823470275797684
 CanvasRenderer:
@@ -1497,7 +1498,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8FD9\u662F\u5F53\u524D\u9053\u5177\u7684\u8BE6\u7EC6\u4FE1\u606F"
+  m_text: "\u8FD9\u662F\u8BE5\u9053\u5177\u7684\u8BF4\u660E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
@@ -1532,7 +1533,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1870,7 +1871,7 @@ GameObject:
   - component: {fileID: 1840596524521300564}
   - component: {fileID: 7614737785740593442}
   m_Layer: 5
-  m_Name: MemoryPiecesBtn
+  m_Name: UnitMaterialBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

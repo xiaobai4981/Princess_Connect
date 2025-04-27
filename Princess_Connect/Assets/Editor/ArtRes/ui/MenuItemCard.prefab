@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -225,8 +225,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b200526a4e960e45b6e59646df2d396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Exp: {fileID: 0}
-  AB: {fileID: 0}
+  itemButton: {fileID: 0}
+  itemIcon: {fileID: 0}
+  OnItemClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3265548902919925236
 GameObject:
   m_ObjectHideFlags: 0

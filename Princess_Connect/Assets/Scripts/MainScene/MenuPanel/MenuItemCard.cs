@@ -29,8 +29,8 @@ public class MenuItemCard : MonoBehaviour
     private ItemCardData _itemData;
     private void Awake()
     {
-        if (itemButton == null) itemButton = this.transform.Find("CardButton").GetComponent<Button>();
-        if (itemIcon == null) itemIcon = this.transform.Find("CardButton").GetComponent<Image>();
+        if (itemButton == null) itemButton = this.transform.Find("ItemBtn").GetComponent<Button>();
+        if (itemIcon == null) itemIcon = this.transform.Find("ItemBtn").GetComponent<Image>();
 
         itemButton.onClick.AddListener(OnCardButtonClicked);
     }

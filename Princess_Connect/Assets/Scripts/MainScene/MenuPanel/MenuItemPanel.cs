@@ -90,10 +90,11 @@ public class MenuItemPanel : BasePanel
             }
         }
     }
- #endregion
-#region 外部控制组件
+    #endregion
+    #region 外部控制组件
     // 道具图片
     [SerializeField] private Image externalDisplayImage;
+    [SerializeField] private TMP_Text externalImageNum;
     // 道具的名字
     [SerializeField] private TMP_Text itemName;
     // 道具的描述
@@ -103,7 +104,7 @@ public class MenuItemPanel : BasePanel
     // Content
     public Transform contentParent;
     // 记录所有的道具
-    private Dictionary<string, Dictionary<string, int>> allItems;
+    private Dictionary<string, ItemInfo> allItems = new Dictionary<string, ItemInfo>();
     // 暂存按钮数据
     private List<ItemCardData> cardDatas = new List<ItemCardData>();
     void Start()
@@ -111,7 +112,11 @@ public class MenuItemPanel : BasePanel
         // 得到当前玩家的仓库信息
         string playerInventory = GloryDataMgr.Instance.SearchUserPlayerFactoryInfo(nowPlayerName, "inventory");
         playerInventoryInfo = JsonMapper.ToObject<PlayerInventoryInfo>(playerInventory);
-        allItems = playerInventoryInfo.Item;
+        // 读取道具数据
+        foreach (string itemIdStr in playerInventoryInfo.itemDic.Keys)
+        {
+            allItems.Add(itemIdStr, playerInventoryInfo.itemDic[itemIdStr]);
+        }
         FetchPlayerOwnedCards(() => {
             PrepareCardDatas("item");
             GenerateAllCards();
@@ -142,25 +147,28 @@ public class MenuItemPanel : BasePanel
         foreach (string cardIdStr in allItems.Keys)
         {
             int itemId = int.Parse(cardIdStr);
-            // 判断道具类型是否匹配
-            var itemData = allItems[cardIdStr].Single();
-            if (itemData.Key == nowItemType)
+            // 每个dic有两条，第一条是道具类型，第二条是道具数量
+            string itemType = allItems[cardIdStr].type;
+            int itemNum = allItems[cardIdStr].num;
+            if (itemType == nowItemType)
             {
                 Sprite itemSprite = null;
-                ABResMgr.Instance.LoadResAsync<Sprite>("item", $"icon_item_{itemId}", (res) =>
+                string fileName = nowItemType != "unit_material"? $"icon_{nowItemType}_{itemId}" : $"{nowItemType}_no_frame_{itemId}";
+                ABResMgr.Instance.LoadResAsync<Sprite>(nowItemType, fileName, (res) =>
                 {
                     itemSprite = res;
                 }, isSync);
                 cardDatas.Add(new ItemCardData(
                     itemId,
-                    itemData.Value,
+                    itemNum,
                     itemSprite
                 ));
             }
             if (cardDatas.Count == 1)
             {
                 externalDisplayImage.sprite = cardDatas[0].itemIcon;
-                Dictionary<string, string> description = GloryDataMgr.Instance.GetGloryDescription(itemId);
+                externalImageNum.text = "x" + cardDatas[0].itemNum.ToString();
+                Dictionary<string, string> description = GloryDataMgr.Instance.GetItemDescription(itemId);
                 itemName.text = description["name"];
                 itemDescription.text = description["description"];
             }
@@ -185,7 +193,7 @@ public class MenuItemPanel : BasePanel
         {
             GameObject cardObj = GameObject.Instantiate(res, contentParent, false);
             // 按钮初始化
-            Transform cardBtn = cardObj.transform.Find("CardButton");
+            Transform cardBtn = cardObj.transform.Find("ItemBtn");
             // 按钮绑定图片
             Button btn = cardBtn.GetComponent<Button>();
             btn.image.sprite = data.itemIcon;
@@ -202,10 +210,11 @@ public class MenuItemPanel : BasePanel
     {
         if (externalDisplayImage != null)
         {
-            // 获取更改称号的描述和条件描述
-            Dictionary<string, string> descriptions = GloryDataMgr.Instance.GetGloryDescription(data.itemId);
+            // 获取更改道具的描述和条件描述
+            Dictionary<string, string> descriptions = GloryDataMgr.Instance.GetItemDescription(data.itemId);
             // 更改外部控制量信息
             externalDisplayImage.sprite = data.itemIcon;
+            externalImageNum.text = "x" + data.itemNum.ToString();
             itemName.text = descriptions["name"];
             itemDescription.text = descriptions["description"];
         }
@@ -238,10 +247,10 @@ public class MenuItemPanel : BasePanel
                     GenerateAllCards();
                 });
                 break;
-            case "MemoryPiecesBtn":
-                SetActiveButton("MemoryPiecesBtn");
+            case "UnitMaterialBtn":
+                SetActiveButton("UnitMaterialBtn");
                 FetchPlayerOwnedCards(() => {
-                    PrepareCardDatas("memory_pieces");
+                    PrepareCardDatas("unit_material");
                     GenerateAllCards();
                 });
                 break;
@@ -250,6 +259,10 @@ public class MenuItemPanel : BasePanel
                 UIMgr.Instance.ShowPanel<MenuPanel>();
                 break;
         }
+    }
+    public override void UpdatePlayerName(string nowPlayerName)
+    {
+        this.nowPlayerName = nowPlayerName;
     }
     public override void HideMe()
     {

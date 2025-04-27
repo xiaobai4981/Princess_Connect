@@ -11,9 +11,10 @@ public class MenuPanel : BasePanel
         switch (btnName)
         {
             case "Item":
+                UIMgr.Instance.HidePanel<MenuPanel>();
                 UIMgr.Instance.ShowPanel<MenuItemPanel>(E_UILayer.Bottom, (panel) =>
                 {
-
+                    panel.UpdatePlayerName(nowPlayerName);
                 });
                 break;
             case "Settings":

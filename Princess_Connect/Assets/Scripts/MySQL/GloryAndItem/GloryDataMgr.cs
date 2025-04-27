@@ -4,10 +4,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct ItemInfo
+{
+    public int num;
+    public string type;
+}
 public struct PlayerInventoryInfo
 {
-    public Dictionary<string, Dictionary<string, int>> Item { get; set; }
-    public List<int> glory { get; set; }
+    public Dictionary<string, ItemInfo> itemDic;
+    public List<int> glory;
 }
 
 public class GloryDataMgr
