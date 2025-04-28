@@ -196,6 +196,7 @@ public class CharacterPanel : BasePanel
     private void OnCardSelected(CharacterFactoryCardData data)
     {
         // todo: 角色卡片点击事件
+        UIMgr.Instance.HidePanel<CharacterPanel>(true);
     }
 
     private void ClearAllCards()

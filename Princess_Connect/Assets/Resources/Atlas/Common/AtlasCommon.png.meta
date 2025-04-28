@@ -5113,7 +5113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_238
+      name: AtlasCommon_NextCharacter
       rect:
         serializedVersion: 2
         x: 1848
@@ -11610,7 +11610,6 @@ TextureImporter:
       AtlasCommon_235: 1540893806
       AtlasCommon_236: 712009395
       AtlasCommon_237: -1730671176
-      AtlasCommon_238: -1538176128
       AtlasCommon_239: 1306888068
       AtlasCommon_24: -73254408
       AtlasCommon_240: -947913776
@@ -12002,6 +12001,7 @@ TextureImporter:
       AtlasCommon_Misson: 1361416086
       AtlasCommon_MissonBG: -316237827
       AtlasCommon_MissonCnt: -1965531910
+      AtlasCommon_NextCharacter: -1538176128
       AtlasCommon_NormalBack: -1015257540
       AtlasCommon_OtherNormalBG_Normal: -1789696862
       AtlasCommon_Player: -307145133
