@@ -6,7 +6,7 @@ public class NormalBtnChange : MonoBehaviour,
     IPointerDownHandler, IPointerUpHandler,
     IPointerExitHandler // 处理鼠标移出时松开的情况
 {
-    [SerializeField] float pressedScale = 0.9f;
+    [SerializeField] float pressedScale = 0.6f;
     [SerializeField] float scaleSpeed = 10f;
 
     private Vector3 originalScale;

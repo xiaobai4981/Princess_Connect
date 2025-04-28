@@ -35,7 +35,7 @@ public class MenuSettingPanel : BasePanel
         switch (sliderName)
         {
             case "BGSlider":
-                MusicMgr.Instance.ChangeBKMusicValue(value);
+                MusicMgr.Instance.ChangeBKMusicValue((value * 1.0f) / 10);
                 BGValueNum.text = value.ToString();
                 break;
             case "SoundSlider":
