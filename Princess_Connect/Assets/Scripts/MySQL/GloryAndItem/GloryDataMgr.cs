@@ -174,4 +174,6 @@ public class GloryDataMgr
             return false;
         }
     }
+
+    // 更新用户的仓库信息
 }

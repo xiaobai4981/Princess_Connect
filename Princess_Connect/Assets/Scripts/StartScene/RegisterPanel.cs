@@ -23,7 +23,6 @@ public class RegisterPanel : BasePanel
     {
         
     }
-
     // 注册操作
     private void Resgister()
     {
@@ -52,7 +51,7 @@ public class RegisterPanel : BasePanel
             });
             return;
         }
-
+        
         // 确认密码为空
         if (rePassword == "")
         {
@@ -76,11 +75,13 @@ public class RegisterPanel : BasePanel
         bool result = PlayerDataMgr.Instance.RegisterUser(username, password);
         if (result)
         {
+            // 新用户注册成功，将用户默认拥有的道具和角色自动添加
             Dictionary<string, object> columnUpdates = new Dictionary<string, object>
             {
                 { "last_stamina_update", System.DateTime.Now },
             };
             PlayerDataMgr.Instance.ModifyUserIntInfo(username, columnUpdates, false);
+
             // 关闭注册界面
             UIMgr.Instance.HidePanel<RegisterPanel>();
             UIMgr.Instance.ShowPanel<TipsPanel>(E_UILayer.Top, (panel) =>
