@@ -33,7 +33,10 @@ public class LoginPanel : BasePanel
         bool result = PlayerDataMgr.Instance.LoginUser(username, password);
         if (result)
         {
+            // 登录成功，初始化玩家数据和玩家角色信息
             PlayerDataMgr.Instance.InitPlayerData(username);
+            CharacterDataMgr.Instance.InitUserCharacterData(username);
+
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
             UIMgr.Instance.HidePanel<LoginPanel>(true);
             UIMgr.Instance.HidePanel<TipsPanel>(true);
