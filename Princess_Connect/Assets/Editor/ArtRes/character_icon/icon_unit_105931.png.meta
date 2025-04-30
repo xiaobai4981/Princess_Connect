@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9e6a94859d1b2e94b8e998a83b1a0ed5
+guid: 5d20f455faeee7e4cb7ea3c455a6b690
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -149,5 +149,5 @@ TextureImporter:
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
-  assetBundleName: emblem
+  assetBundleName: 
   assetBundleVariant: 

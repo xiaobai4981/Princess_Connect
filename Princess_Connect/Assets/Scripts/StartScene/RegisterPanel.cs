@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using TMPro;
 using UnityEngine;
 
@@ -75,13 +76,21 @@ public class RegisterPanel : BasePanel
         bool result = PlayerDataMgr.Instance.RegisterUser(username, password);
         if (result)
         {
-            // 新用户注册成功，将用户默认拥有的道具和角色自动添加
+#region 新用户注册成功，将用户默认拥有的道具和角色自动添加
+            // 体力更新时间设为新用户注册时间
             Dictionary<string, object> columnUpdates = new Dictionary<string, object>
             {
                 { "last_stamina_update", System.DateTime.Now },
             };
             PlayerDataMgr.Instance.ModifyUserIntInfo(username, columnUpdates, false);
-
+            // 添加默认道具
+            string defaultInventory = File.ReadAllText("Assets/Resources/Configs/NewPlayerInventoryInit.json");
+            string defaultCharacterEquipment = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterEquipment.json");
+            string defaultCharacterSkillLevel = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterSkillLevel.json");
+            GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(username, defaultInventory);
+            // 添加默认角色
+            AddDefaultRole(username, new List<int>{ 1002, 1011, 1058, 1059, 1060}, defaultCharacterEquipment, defaultCharacterSkillLevel);
+            #endregion
             // 关闭注册界面
             UIMgr.Instance.HidePanel<RegisterPanel>();
             UIMgr.Instance.ShowPanel<TipsPanel>(E_UILayer.Top, (panel) =>
@@ -103,6 +112,15 @@ public class RegisterPanel : BasePanel
     {
         UIMgr.Instance.HidePanel<RegisterPanel>();
         UIMgr.Instance.ShowPanel<LoginPanel>();
+    }
+
+    private void AddDefaultRole(string username, List<int> roleIds, string defaultCharacterEquipment, string defaultCharacterSkillLevel)
+    {
+        foreach (int roleId in roleIds)
+        {
+            CharacterDataMgr.Instance.AddUserPlayerInfo(username, roleId);
+            CharacterDataMgr.Instance.InitPlayerCharacter(username, roleId, defaultCharacterEquipment, defaultCharacterSkillLevel);
+        }
     }
 
     public override void HideMe()

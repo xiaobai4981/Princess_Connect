@@ -176,4 +176,29 @@ public class GloryDataMgr
     }
 
     // 更新用户的仓库信息
+    public bool UpdateUserPlayerFactoryInfo(string username, string inventoryInfo)
+    {
+        try
+        {
+            string query = $"UPDATE player_data SET inventory = @inventoryInfo WHERE username = @username";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@inventoryInfo", inventoryInfo);
+                cmd.Parameters.AddWithValue("@username", username);
+
+                int result = cmd.ExecuteNonQuery();
+                if (result == 0)
+                {
+                    Debug.LogWarning($"No data found for username: {username}");
+                    return false;
+                }
+                return true;
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Update factory failed: {e.Message}");
+            return false;
+        }
+    }
 }
