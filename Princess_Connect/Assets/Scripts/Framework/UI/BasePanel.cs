@@ -9,9 +9,16 @@ using UnityEngine.UI;
 
 public abstract class BasePanel : MonoBehaviour
 {
+    protected int nowCharacterId;
     protected string nowPlayerName;
     public RectTransform Exp;
     public RectTransform AB;
+
+    // 记录现在的角色
+    public virtual void UpdateCharacterId(int nowCharacterId)
+    {
+
+    }
 
     // 记录现在的玩家
     public virtual void UpdatePlayerName(string nowPlayerName)

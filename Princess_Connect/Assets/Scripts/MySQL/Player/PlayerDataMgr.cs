@@ -131,9 +131,15 @@ public class PlayerDataMgr
                     now_emblem = reader.IsDBNull(reader.GetOrdinal("now_emblem")) ? 0 : reader.GetInt32("now_emblem")
                 };
 
+                // 将玩家数据保存到本地
                 string jsonStr = JsonMapper.ToJson(playerInfo);
                 string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
                 File.WriteAllText(filePath, jsonStr);
+                // 将玩家仓库数据保存到本地
+                PlayerInventoryInfo playerInventoryInfo = JsonMapper.ToObject<PlayerInventoryInfo>(playerInfo.inventory); ;
+                string jsonInventoryStr = JsonMapper.ToJson(playerInventoryInfo);
+                string inventoryPath = Path.Combine(Application.persistentDataPath, "player_inventory_data.json");
+                File.WriteAllText(inventoryPath, jsonInventoryStr);
             }
         }
         catch (Exception e)

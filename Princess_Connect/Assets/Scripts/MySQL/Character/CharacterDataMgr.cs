@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 // 角色在仓库中的信息
 public struct CharacterFactoryData
@@ -62,6 +63,7 @@ public class PlayerCharacterData
     public int current_rank;
     public int current_likb;
     public CharacterStats current_stats;
+    public List<List<int>> rank_requirements;
     public List<int> equipment_slots;
     public SkillsConfig skills_config; // 根据实际数据结构调整
     public Dictionary<string, int> skills_level;
@@ -105,7 +107,8 @@ public class CharacterDataMgr
         try
         {
             string query = @"SELECT character_id, character_name, level, current_exp, current_star, 
-                current_rank, current_likb, current_stats ->> '$' as current_stats, equipment_slots ->> '$' as equipment_slots, 
+                current_rank, current_likb, current_stats ->> '$' as current_stats, 
+                rank_requirements ->> '$' as rank_requirements, equipment_slots ->> '$' as equipment_slots, 
                 skills_config ->> '$' as skills_config, skills_level ->> '$' as skills_level, character_type 
                 FROM player_character WHERE username = @username";
             using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -132,6 +135,12 @@ public class CharacterDataMgr
                         {
                             string statsJson = reader.GetString("current_stats");
                             character.current_stats = JsonMapper.ToObject<CharacterStats>(statsJson);
+                        }
+
+                        if (!reader.IsDBNull("rank_requirements"))
+                        {
+                            string rankJson = reader.GetString("rank_requirements");
+                            character.rank_requirements = JsonMapper.ToObject<List<List<int>>>(rankJson);
                         }
 
                         if (!reader.IsDBNull("equipment_slots"))
@@ -227,7 +236,7 @@ public class CharacterDataMgr
             string otherQuery = $"UPDATE player_character target " +
                 $"JOIN character_template source ON target.character_id = source.character_id " +
                 $"SET target.character_name = source.name, target.character_type = source.character_type, " +
-                $"target.current_stats = source.base_stats, target.skills_config = source.skills_config " +
+                $"target.current_stats = source.base_stats, target.skills_config = source.skills_config , target.rank_requirements = source.rank_requirements " +
                 $"WHERE target.username = @username AND source.character_id = @characterId";
             MySqlCommand otherCmd = new MySqlCommand(otherQuery, conn);
             otherCmd.Parameters.AddWithValue("@username", username);
@@ -277,9 +286,6 @@ public class CharacterDataMgr
             return null;
         }
     }
-
-    // 获取角色基本信息
-
 
     // 更改对应玩家角色仓库的角色信息
 

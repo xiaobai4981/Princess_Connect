@@ -6,15 +6,13 @@ using UnityEngine.UI;
 
 public class CharacterPanel : BasePanel
 {
+    private string nowPushBtn = "all";
     #region 按钮初始化
     // 按钮背景的字典
     private Dictionary<string, Button> buttonDataDict;
     private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
     private bool isFirst = true;
-    void OnEnable()
-    {
-        InitializeButtons("AllBtn");
-    }
+
     // 初始化按钮
     private void InitializeButtons(string defaultBtnName)
     {
@@ -92,32 +90,16 @@ public class CharacterPanel : BasePanel
     private List<CharacterFactoryData> allCharacter = new List<CharacterFactoryData>();
     // 暂存按钮数据
     private List<CharacterFactoryCardData> cardDatas = new List<CharacterFactoryCardData>();
+    void OnEnable()
+    {
+        allCharacter = CharacterDataMgr.Instance.GetCharacterFactoryData(nowPlayerName);
+        Refresh();
+    }
     void Start()
     {
-        // 得到当前玩家的角色仓库信息
+        InitializeButtons("AllBtn");
         allCharacter = CharacterDataMgr.Instance.GetCharacterFactoryData(nowPlayerName);
-        FetchPlayerOwnedCards(() => {
-            PrepareCardDatas("all");
-            GenerateAllCards();
-        });
-    }
-    private void FetchPlayerOwnedCards(System.Action onComplete)
-    {
-        // 模拟网络请求延迟
-        Invoke(() => {
-            onComplete?.Invoke();
-        }, 0.3f);
-    }
-    // 辅助方法：模拟延迟回调
-    private void Invoke(System.Action action, float delay)
-    {
-        StartCoroutine(InvokeRoutine(action, delay));
-    }
-
-    private System.Collections.IEnumerator InvokeRoutine(System.Action action, float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        action?.Invoke();
+        Refresh();
     }
     // 类型不同的道具仓库卡牌初始化
     private void PrepareCardDatas(string nowCharacterType, bool isSync = false)
@@ -196,7 +178,12 @@ public class CharacterPanel : BasePanel
     private void OnCardSelected(CharacterFactoryCardData data)
     {
         // todo: 角色卡片点击事件
-        UIMgr.Instance.HidePanel<CharacterPanel>(true);
+        UIMgr.Instance.HidePanel<CharacterPanel>(false);
+        UIMgr.Instance.ShowPanel<CharacterDevelopPanel>(E_UILayer.Bottom, (panel) =>
+        {
+            panel.UpdatePlayerName(nowPlayerName);
+            panel.UpdateCharacterId(data.characterId);
+        });
     }
 
     private void ClearAllCards()
@@ -214,34 +201,32 @@ public class CharacterPanel : BasePanel
         {
             case "AllBtn":
                 SetActiveButton("AllBtn");
-                FetchPlayerOwnedCards(() => {
-                    PrepareCardDatas("all");
-                    GenerateAllCards();
-                });
+                nowPushBtn = "all";
+                Refresh();
                 break;
             case "VanguardBtn":
                 SetActiveButton("VanguardBtn");
-                FetchPlayerOwnedCards(() => {
-                    PrepareCardDatas("vanguard");
-                    GenerateAllCards();
-                });
+                nowPushBtn = "vanguard";
+                Refresh();
                 break;
             case "CenterBtn":
                 SetActiveButton("CenterBtn");
-                FetchPlayerOwnedCards(() => {
-                    PrepareCardDatas("center");
-                    GenerateAllCards();
-                });
+                nowPushBtn = "center";
+                Refresh();
                 break;
             case "DefenderBtn":
                 SetActiveButton("DefenderBtn");
-                FetchPlayerOwnedCards(() => {
-                    PrepareCardDatas("defender");
-                    GenerateAllCards();
-                });
+                nowPushBtn = "defender";
+                Refresh();
                 break;
         }
     }
+    public void Refresh()
+    {
+        PrepareCardDatas(nowPushBtn);
+        GenerateAllCards();
+    }
+
     public override void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
@@ -249,7 +234,7 @@ public class CharacterPanel : BasePanel
 
     public override void HideMe()
     {
-
+        
     }
 
     public override void ShowMe()
