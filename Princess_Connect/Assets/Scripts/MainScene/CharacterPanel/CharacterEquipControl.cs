@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class CharacterEquipControl : BasePanel
 {
-    private int currentCharacterId;
-
     // 更新当前的人物id
-    public void UpdateCharacterId(int id)
+    public override void UpdateCharacterId(int nowCharacterId)
     {
-        currentCharacterId = id;
+        this.nowCharacterId = nowCharacterId;
     }
     public override void HideMe()
     {

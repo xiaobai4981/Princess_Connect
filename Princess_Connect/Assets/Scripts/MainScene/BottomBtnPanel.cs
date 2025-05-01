@@ -15,7 +15,15 @@ public class BottomBtnPanel : BasePanel
     {
         // todo 每个面板的隐藏操作，有些面板里面的小面板需要移除
         { typeof(BeginPanel), () => UIMgr.Instance.HidePanel<BeginPanel>() },
-        { typeof(CharacterPanel), () => UIMgr.Instance.HidePanel<CharacterPanel>(true) },
+        { typeof(CharacterPanel), () => {
+                UIMgr.Instance.HidePanel<CharacterEquipControl>(true);
+                //UIMgr.Instance.HidePanel<CharacterMaterialControl>(true);
+                //UIMgr.Instance.HidePanel<CharacterSkillControl>(true);
+                //UIMgr.Instance.HidePanel<CharacterStarControl>(true);
+                //UIMgr.Instance.HidePanel<CharacterDetailControl>(true);
+                UIMgr.Instance.HidePanel<CharacterDevelopPanel>(true);
+                UIMgr.Instance.HidePanel<CharacterPanel>(true);
+            } },
         { typeof(ADVPanel), () => UIMgr.Instance.HidePanel<ADVPanel>() },   
         { typeof(LotteryPanel), () => UIMgr.Instance.HidePanel<LotteryPanel>() },
         { typeof(MenuPanel), () => 

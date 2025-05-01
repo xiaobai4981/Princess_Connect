@@ -71,7 +71,7 @@ public class PlayerCharacterData
 }
 public class PlayerCharacterCollection
 {
-    public Dictionary<int, PlayerCharacterData> characters;
+    public Dictionary<string, PlayerCharacterData> characters;
 }
 #endregion
 
@@ -102,7 +102,7 @@ public class CharacterDataMgr
     {
         PlayerCharacterCollection playerCharacterCollection = new PlayerCharacterCollection
         {
-            characters = new Dictionary<int, PlayerCharacterData>()
+            characters = new Dictionary<string, PlayerCharacterData>()
         };
         try
         {
@@ -162,7 +162,7 @@ public class CharacterDataMgr
                         }
 
                         // 添加到字典，以character_id为键
-                        playerCharacterCollection.characters[character.character_id] = character;
+                        playerCharacterCollection.characters[character.character_id.ToString()] = character;
                     }
                 }
             }
