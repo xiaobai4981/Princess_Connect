@@ -358,6 +358,25 @@ public class CharacterDataMgr
         }
     }
 
+    // 查询角色等级配置表
+    public int SearchCharacterLevelConfig(int level)
+    {
+        try
+        {
+            string query = $"SELECT require_exp FROM character_level_config WHERE level = @level";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@level", level);
+
+            int res = Convert.ToInt32(cmd.ExecuteScalar());
+            return res;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Search failed: {e.Message}");
+            return -1;
+        }
+    }
+
     // 更改对应玩家角色仓库的角色信息
 
 

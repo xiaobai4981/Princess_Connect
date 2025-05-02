@@ -55,13 +55,6 @@ public class DatabaseMgr
             conn = null;
         }
     }
-
-    // 加载玩家等级配置表
-
-
-    // 加载角色等级配置表
-
-
     // 加载关卡配置表
 
 

@@ -33,9 +33,11 @@ public class CharacterDevelopPanel : BasePanel
         SwitchPanel<CharacterEquipControl>();
         UpdateCharacterInfo();
         EventCenter.Instance.AddEventListener<string>(E_EventType.E_Character_Develop_Update, UpdateCharacterInfo);
+        EventCenter.Instance.AddEventListener(E_EventType.E_UpLoadDataBeforeQuit, UpLoadData);
     }
     private void OnDestroy()
     {
+        EventCenter.Instance.RemoveEventListener(E_EventType.E_UpLoadDataBeforeQuit, UpLoadData);
         EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_Character_Develop_Update, UpdateCharacterInfo);
     }
     public void UpdateCharacterInfo(string animName = "init")
@@ -132,7 +134,7 @@ public class CharacterDevelopPanel : BasePanel
         { typeof(CharacterEquipControl), () => UIMgr.Instance.HidePanel<CharacterEquipControl>(true) },
         { typeof(CharacterMaterialControl), () => UIMgr.Instance.HidePanel<CharacterMaterialControl>(true) },
         //{ typeof(CharacterSkillControl), () => UIMgr.Instance.HidePanel<CharacterSkillControl>(true) },
-        //{ typeof(CharacterStarControl), () => UIMgr.Instance.HidePanel<CharacterStarControl>(true) },
+        { typeof(CharacterStarControl), () => UIMgr.Instance.HidePanel<CharacterStarControl>(true) },
         //{ typeof(CharacterDetailControl), () => UIMgr.Instance.HidePanel<CharacterDetailControl>(true) }
     };
 
@@ -258,9 +260,9 @@ public class CharacterDevelopPanel : BasePanel
             //case "SkillBtn":
             //    SwitchPanel<CharacterSkillControl>();
             //    break;
-            //case "StarBtn":
-            //    SwitchPanel<CharacterStarControl>();
-            //    break;
+            case "StarBtn":
+                SwitchPanel<CharacterStarControl>();
+                break;
             //case "DetailBtn":
             //    SwitchPanel<CharacterDetailontrol>();
             //    break;
@@ -294,7 +296,13 @@ public class CharacterDevelopPanel : BasePanel
     {
         this.nowPlayerName = nowPlayerName;
     }
+
     public override void HideMe()
+    {
+        UpLoadData();
+    }
+
+    public void UpLoadData()
     {
         // 上传更改的信息
         // 角色信息
@@ -307,7 +315,7 @@ public class CharacterDevelopPanel : BasePanel
         string inventoryData = File.ReadAllText(filePath1);
         GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(nowPlayerName, inventoryData);
     }
-
+    
     public override void ShowMe()
     {
         

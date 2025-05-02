@@ -20,9 +20,9 @@ public enum E_EventType
     /// </summary>
     E_Player_GetReward,
     /// <summary>
-    /// 测试用事件 —— 参数：无
+    /// 关闭游戏前上传数据事件 —— 参数：无
     /// </summary>
-    E_Test,
+    E_UpLoadDataBeforeQuit,
     /// <summary>
     /// 场景切换时进度变化获取
     /// </summary>
