@@ -5,8 +5,12 @@ using UnityEngine;
 /// <summary>
 /// 事件类型 枚举
 /// </summary>
-public enum E_EventType 
+public enum E_EventType
 {
+    /// <summary>
+    /// 角色养成页面数据更新事件 —— 参数：string
+    /// </summary>
+    E_Character_Develop_Update,
     /// <summary>
     /// 怪物死亡事件 —— 参数：Monster
     /// </summary>

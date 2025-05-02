@@ -22,18 +22,18 @@ public struct CharacterFactoryData
 public class CharacterStats
 {
     public int stand_pos;
-    public int ce;
-    public int likb;
-    public int atk;
-    public int physical_def;
-    public int magical_def;
-    public int hp;
-    public int crit;
-    public int dod;
-    public int hp_recover_per_wave;
-    public int tp_recover_per_wave;
-    public int tp_get;
-    public int hit_rate;
+    public int ce { set; get; }
+    public int likb { set; get; }
+    public int atk { set; get; }
+    public int physical_def { set; get; }
+    public int magical_def { set; get; }
+    public int hp { set; get; }
+    public int crit { set; get; }
+    public int dod { set; get; }
+    public int hp_recover_per_wave { set; get; }
+    public int tp_recover_per_wave { set; get; }
+    public int tp_get { set; get; }
+    public int hit_rate { set; get; }
     public string attack_type;
     public int atk_cap;
 }
@@ -43,7 +43,7 @@ public class SkillConfig
     public string name;
     public string description;
     // 这个就是要继续配置的字段
-    public string effect;
+    public string effect { set; get; }
 }
 public class SkillsConfig
 {
@@ -52,21 +52,32 @@ public class SkillsConfig
     public SkillConfig skill_1;
     public SkillConfig skill_2;
 }
+
+public class RankRequirements
+{
+    public List<List<int>> rank_requirements;
+}
+
+public class EquipmentSlots
+{
+    public List<int> equipment_slot;
+}
+
 // 接收数据库查询结果的结构体
 public class PlayerCharacterData
 {
     public int character_id;
     public string character_name;
-    public int level;
-    public int current_exp;
-    public int current_star;
-    public int current_rank;
-    public int current_likb;
-    public CharacterStats current_stats;
-    public List<List<int>> rank_requirements;
-    public List<int> equipment_slots;
+    public int level { set; get; }
+    public int current_exp { set; get; }
+    public int current_star { set; get; }
+    public int current_rank { set; get; }
+    public int current_likb { set; get; }
+    public CharacterStats current_stats { set; get; }
+    public RankRequirements rank_requirements;
+    public EquipmentSlots equipment_slots { set; get; }
     public SkillsConfig skills_config; // 根据实际数据结构调整
-    public Dictionary<string, int> skills_level;
+    public Dictionary<string, int> skills_level { set; get; }
     public string character_type;
 }
 public class PlayerCharacterCollection
@@ -140,13 +151,13 @@ public class CharacterDataMgr
                         if (!reader.IsDBNull("rank_requirements"))
                         {
                             string rankJson = reader.GetString("rank_requirements");
-                            character.rank_requirements = JsonMapper.ToObject<List<List<int>>>(rankJson);
+                            character.rank_requirements = JsonMapper.ToObject<RankRequirements>(rankJson);
                         }
 
                         if (!reader.IsDBNull("equipment_slots"))
                         {
                             string slotsJson = reader.GetString("equipment_slots");
-                            character.equipment_slots = JsonMapper.ToObject<List<int>>(slotsJson);
+                            character.equipment_slots = JsonMapper.ToObject<EquipmentSlots>(slotsJson);
                         }
 
                         if (!reader.IsDBNull("skills_level"))
@@ -174,6 +185,66 @@ public class CharacterDataMgr
         string jsonStr = JsonMapper.ToJson(playerCharacterCollection);
         string filePath = Path.Combine(Application.persistentDataPath, "player_character_data.json");
         File.WriteAllText(filePath, jsonStr);
+    }
+
+    // 上传玩家角色信息
+    public void UploadUserCharacterData(string username, int characterId, PlayerCharacterData playerCharacterData)
+    {
+        // 准备数据
+        // 提取基础字段
+        int level = playerCharacterData.level;
+        int currentExp = playerCharacterData.current_exp;
+        int currentStar = playerCharacterData.current_star;
+        int currentRank = playerCharacterData.current_rank;
+        int currentLikb = playerCharacterData.current_likb;
+        // 将复杂对象序列化为JSON字符串
+        string currentStatsJson = JsonMapper.ToJson(playerCharacterData.current_stats);
+        string rankRequirementsJson = JsonMapper.ToJson(playerCharacterData.rank_requirements);
+        string equipmentSlotsJson = JsonMapper.ToJson(playerCharacterData.equipment_slots);
+        string skillsConfigJson = JsonMapper.ToJson(playerCharacterData.skills_config);
+        string skillsLevelJson = JsonMapper.ToJson(playerCharacterData.skills_level);
+        try
+        {
+            string updateSql = @"
+                UPDATE player_character SET 
+                    level = @level, 
+                    current_exp = @currentExp, 
+                    current_star = @currentStar, 
+                    current_rank = @currentRank, 
+                    current_likb = @currentLikb, 
+                    current_stats = @currentStats, 
+                    rank_requirements = @rankRequirements, 
+                    equipment_slots = @equipmentSlots, 
+                    skills_config = @skillsConfig, 
+                    skills_level = @skillsLevel 
+                    WHERE username = @username AND character_id = @characterId";
+            using (MySqlCommand updateCmd = new MySqlCommand(updateSql, conn))
+            {
+                updateCmd.Parameters.AddWithValue("@level", level);
+                updateCmd.Parameters.AddWithValue("@currentExp", currentExp);
+                updateCmd.Parameters.AddWithValue("@currentStar", currentStar);
+                updateCmd.Parameters.AddWithValue("@currentRank", currentRank);
+                updateCmd.Parameters.AddWithValue("@currentLikb", currentLikb);
+                updateCmd.Parameters.AddWithValue("@currentStats", currentStatsJson);
+                updateCmd.Parameters.AddWithValue("@rankRequirements", rankRequirementsJson);
+                updateCmd.Parameters.AddWithValue("@equipmentSlots", equipmentSlotsJson);
+                updateCmd.Parameters.AddWithValue("@skillsConfig", skillsConfigJson);
+                updateCmd.Parameters.AddWithValue("@skillsLevel", skillsLevelJson);
+                updateCmd.Parameters.AddWithValue("@username", username);
+                updateCmd.Parameters.AddWithValue("@characterId", characterId);
+                int rows = updateCmd.ExecuteNonQuery();
+                if (rows == 0)
+                {
+                    Debug.LogWarning($"No data update for characterId: {characterId}");
+                    return;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine($"更新数据库时出错: {e.Message}");
+            throw;
+        }
     }
 
     // 添加角色到对应玩家角色仓库

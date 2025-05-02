@@ -90,11 +90,6 @@ public class CharacterPanel : BasePanel
     private List<CharacterFactoryData> allCharacter = new List<CharacterFactoryData>();
     // ÔÝ´æ°´Å¥Êý¾Ý
     private List<CharacterFactoryCardData> cardDatas = new List<CharacterFactoryCardData>();
-    void OnEnable()
-    {
-        allCharacter = CharacterDataMgr.Instance.GetCharacterFactoryData(nowPlayerName);
-        Refresh();
-    }
     void Start()
     {
         InitializeButtons("AllBtn");
@@ -239,6 +234,8 @@ public class CharacterPanel : BasePanel
 
     public override void ShowMe()
     {
+        allCharacter = CharacterDataMgr.Instance.GetCharacterFactoryData(nowPlayerName);
+        Refresh();
         if (MusicMgr.Instance.GetNowBKMusicName() != "CharacterBG")
             MusicMgr.Instance.PlayBKMusic("CharacterBG");
     }

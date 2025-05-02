@@ -32,12 +32,16 @@ public class CharacterDevelopPanel : BasePanel
     {
         SwitchPanel<CharacterEquipControl>();
         UpdateCharacterInfo();
-        //EventCenter.Instance.AddEventListener("UpdateCharacterInfo", UpdateCharacterInfo);
+        EventCenter.Instance.AddEventListener<string>(E_EventType.E_Character_Develop_Update, UpdateCharacterInfo);
     }
-    public void UpdateCharacterInfo()
+    private void OnDestroy()
+    {
+        EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_Character_Develop_Update, UpdateCharacterInfo);
+    }
+    public void UpdateCharacterInfo(string animName = "init")
     {
         RefreshPanel();
-        PlayCharacterAnim();
+        PlayCharacterAnim(animName);
     }
     private void RefreshPanel()
     {
@@ -92,29 +96,32 @@ public class CharacterDevelopPanel : BasePanel
         }, true);
     }
 
-    private void PlayCharacterAnim(string animName = "init")
+    private void PlayCharacterAnim(string animName)
     {
         string spineType;
         int spineNum = nowPlayerCharacterData.current_star == 6 && CharacterSpineFileConfig.charactersSpineInfo[nowCharacterId].normalSpineNum.Count > 1 ? 1 : 0;
         string spineAssetPath = CharacterSpineFileConfig.charactersSpineInfo[nowCharacterId].skeletonDataAssetPath[spineNum];
         string normalSpineNum = CharacterSpineFileConfig.charactersSpineInfo[nowCharacterId].normalSpineNum[spineNum];
-        characterSkel.Clear();
-        characterSkel.skeletonDataAsset = Resources.Load<SkeletonDataAsset>(spineAssetPath);
-        characterSkel.Initialize(true);
 
         if (animName == "init") 
         {
+            characterSkel.Clear();
+            characterSkel.skeletonDataAsset = Resources.Load<SkeletonDataAsset>(spineAssetPath);
+            characterSkel.Initialize(true);
             spineType = "_landing";
         }
         else
         {
             spineType = "_" + animName;
         }
-        // 播放land动画（不循环）
-        var landTrack = characterSkel.AnimationState.SetAnimation(0, normalSpineNum + spineType, false);
-
-        // land动画结束后播放idle动画（循环）
-        characterSkel.AnimationState.AddAnimation(0, normalSpineNum + "_idle", true, landTrack.AnimationEnd);
+        // 播放初始动画（不循环）
+        var originTrack = characterSkel.AnimationState.SetAnimation(0, normalSpineNum + spineType, false);
+        if (animName != "init")
+        {
+            characterSkel.AnimationState.AddAnimation(0, normalSpineNum + spineType + "_return", false, originTrack.AnimationEnd);
+        }
+        // 初始动画结束后播放idle动画（循环）
+        characterSkel.AnimationState.AddAnimation(0, normalSpineNum + "_idle", true, originTrack.AnimationEnd);
     }
     #endregion
 
@@ -279,11 +286,26 @@ public class CharacterDevelopPanel : BasePanel
     // 更新当前的人物id
     public override void UpdateCharacterId(int id)
     {
-        nowCharacterId = id;
+        this.nowCharacterId = id;
+    }
+
+    // 更新当前的玩家
+    public override void UpdatePlayerName(string nowPlayerName)
+    {
+        this.nowPlayerName = nowPlayerName;
     }
     public override void HideMe()
     {
-        
+        // 上传更改的信息
+        // 角色信息
+        string filePath = Path.Combine(Application.persistentDataPath, "player_character_data.json");
+        PlayerCharacterCollection playerCharacterCollection = JsonMapper.ToObject<PlayerCharacterCollection>(File.ReadAllText(filePath));
+        nowPlayerCharacterData = playerCharacterCollection.characters[nowCharacterId.ToString()];
+        CharacterDataMgr.Instance.UploadUserCharacterData(nowPlayerName, nowCharacterId, nowPlayerCharacterData);
+        // 仓库信息
+        string filePath1 = Path.Combine(Application.persistentDataPath, "player_inventory_data.json");
+        string inventoryData = File.ReadAllText(filePath1);
+        GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(nowPlayerName, inventoryData);
     }
 
     public override void ShowMe()

@@ -9,7 +9,7 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public struct PlayerInfo
+public class PlayerInfo
 {
     public string username;
     public string password_any;

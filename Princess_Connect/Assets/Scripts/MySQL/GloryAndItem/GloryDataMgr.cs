@@ -6,13 +6,13 @@ using UnityEngine;
 
 public struct ItemInfo
 {
-    public int num;
+    public int num { set; get; }
     public string type;
 }
 public struct PlayerInventoryInfo
 {
-    public Dictionary<string, ItemInfo> itemDic;
-    public List<int> glory;
+    public Dictionary<string, ItemInfo> itemDic { set; get; }
+    public List<int> glory { set; get; }
 }
 
 public class GloryDataMgr
@@ -145,6 +145,34 @@ public class GloryDataMgr
         catch (Exception e)
         {
             Debug.LogError($"Get description failed: {e.Message}");
+            return null;
+        }
+    }
+
+    // 查询用户的buff信息
+    public string GetItemBuff(int equipmentId)
+    {
+        try
+        {
+            string query = $"SELECT JSON_UNQUOTE(JSON_EXTRACT(config_data, '$')) FROM equipment_template WHERE equipment_id = @equipmentId";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@equipmentId", equipmentId);
+
+                object result = cmd.ExecuteScalar();
+
+                if (result == null || result == DBNull.Value)
+                {
+                    Debug.LogWarning($"No data found for equipmentId: {equipmentId}");
+                    return null;
+                }
+
+                return result.ToString();
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Search failed: {e.Message}");
             return null;
         }
     }
