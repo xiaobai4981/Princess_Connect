@@ -11,7 +11,7 @@ public class CharacterSpineInfo
 }
 
 
-public class CharacterSpineFileConfig
+public static class CharacterSpineFileConfig
 {
     public static readonly Dictionary<int, CharacterSpineInfo> charactersSpineInfo = new Dictionary<int, CharacterSpineInfo>()
     {

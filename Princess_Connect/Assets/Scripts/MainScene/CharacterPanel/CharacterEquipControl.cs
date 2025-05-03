@@ -59,7 +59,10 @@ public class CharacterEquipControl : BasePanel
             {
                 equip_nums.Add(playerInventoryInfo.itemDic[equip_id.ToString()].num);
             }
-            equip_nums.Add(0);
+            else
+            {
+                equip_nums.Add(0);
+            }
         }
         // ≥ı ºªØ∞¥≈•
         for (int i = 0; i < equipBtns.Length; i++)

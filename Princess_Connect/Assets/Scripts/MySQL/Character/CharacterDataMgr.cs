@@ -37,13 +37,22 @@ public class CharacterStats
     public string attack_type;
     public int atk_cap;
 }
-// 技能配置（数据库未配置完备，是个demo版本）
+// 技能配置
+public class Effect
+{
+    public string type;
+    public string target;
+    public string formula;
+    public string text;
+    public string buffWhat; // 这个字段在某些effect中存在，某些中没有
+}
+
 public class SkillConfig
 {
+    public string id;
     public string name;
     public string description;
-    // 这个就是要继续配置的字段
-    public string effect { set; get; }
+    public List<Effect> effect;
 }
 public class SkillsConfig
 {
@@ -51,6 +60,7 @@ public class SkillsConfig
     public SkillConfig s_ub_skill;
     public SkillConfig skill_1;
     public SkillConfig skill_2;
+    public SkillConfig ex_skill;
 }
 
 public class RankRequirements

@@ -17,10 +17,10 @@ public class BottomBtnPanel : BasePanel
         { typeof(BeginPanel), () => UIMgr.Instance.HidePanel<BeginPanel>() },
         { typeof(CharacterPanel), () => {
                 UIMgr.Instance.HidePanel<CharacterEquipControl>(true);
-                //UIMgr.Instance.HidePanel<CharacterMaterialControl>(true);
-                //UIMgr.Instance.HidePanel<CharacterSkillControl>(true);
-                //UIMgr.Instance.HidePanel<CharacterStarControl>(true);
-                //UIMgr.Instance.HidePanel<CharacterDetailControl>(true);
+                UIMgr.Instance.HidePanel<CharacterMaterialControl>(true);
+                UIMgr.Instance.HidePanel<CharacterSkillControl>(true);
+                UIMgr.Instance.HidePanel<CharacterStarControl>(true);
+                UIMgr.Instance.HidePanel<CharacterDetailControl>(true);
                 UIMgr.Instance.HidePanel<CharacterDevelopPanel>(true);
                 UIMgr.Instance.HidePanel<CharacterPanel>(true);
             } },

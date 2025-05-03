@@ -172,7 +172,6 @@ public class CharacterPanel : BasePanel
     }
     private void OnCardSelected(CharacterFactoryCardData data)
     {
-        // todo: 角色卡片点击事件
         UIMgr.Instance.HidePanel<CharacterPanel>(false);
         UIMgr.Instance.ShowPanel<CharacterDevelopPanel>(E_UILayer.Bottom, (panel) =>
         {

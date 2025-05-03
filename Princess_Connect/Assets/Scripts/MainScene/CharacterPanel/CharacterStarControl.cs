@@ -171,7 +171,7 @@ public class CharacterStarControl : BasePanel
         nowPlayerInfo.mana_cnt -= CharacterStarUpConfig.characterStarUpConfig.starUpConfigs[nowStar].needMana;
         string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
         File.WriteAllText(filePath, JsonMapper.ToJson(nowPlayerInfo));
-        PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { {"mana_cnt", nowPlayerInfo.mana_cnt } }, true);
+        PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { {"mana_cnt", nowPlayerInfo.mana_cnt } }, false);
         // 文件更新和保存
         // player_character_data.json
         playerCharacterCollection.characters[nowCharacterId.ToString()] = nowPlayerCharacterData;

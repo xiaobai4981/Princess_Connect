@@ -6121,7 +6121,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_285
+      name: AtlasCommon2_NormalBack
       rect:
         serializedVersion: 2
         x: 1132
@@ -7318,7 +7318,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_343
+      name: AtlasCommon2_SkillBG
       rect:
         serializedVersion: 2
         x: 818
@@ -7327,7 +7327,7 @@ TextureImporter:
         height: 148
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 20, y: 30, z: 20, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -11105,7 +11105,6 @@ TextureImporter:
       AtlasCommon2_282: 1226588200
       AtlasCommon2_283: -1617907298
       AtlasCommon2_284: -547848158
-      AtlasCommon2_285: -1279872801
       AtlasCommon2_286: 1058425093
       AtlasCommon2_287: -1695962005
       AtlasCommon2_288: -1492883654
@@ -11167,7 +11166,6 @@ TextureImporter:
       AtlasCommon2_34: -1521720650
       AtlasCommon2_341: 706948151
       AtlasCommon2_342: -2006564672
-      AtlasCommon2_343: 465725714
       AtlasCommon2_344: 808130300
       AtlasCommon2_345: -1179237038
       AtlasCommon2_346: -1406110635
@@ -11410,6 +11408,8 @@ TextureImporter:
       AtlasCommon2_CharacterRankOne: -919397612
       AtlasCommon2_CharacterRankThree: -769278291
       AtlasCommon2_CharacterRankTwo: 1838419200
+      AtlasCommon2_NormalBack: -1279872801
+      AtlasCommon2_SkillBG: 465725714
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

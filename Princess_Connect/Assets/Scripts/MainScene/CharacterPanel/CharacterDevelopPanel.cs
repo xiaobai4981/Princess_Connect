@@ -133,9 +133,9 @@ public class CharacterDevelopPanel : BasePanel
         // todo 每个面板的隐藏操作，有些面板里面的小面板需要移除
         { typeof(CharacterEquipControl), () => UIMgr.Instance.HidePanel<CharacterEquipControl>(true) },
         { typeof(CharacterMaterialControl), () => UIMgr.Instance.HidePanel<CharacterMaterialControl>(true) },
-        //{ typeof(CharacterSkillControl), () => UIMgr.Instance.HidePanel<CharacterSkillControl>(true) },
+        { typeof(CharacterSkillControl), () => UIMgr.Instance.HidePanel<CharacterSkillControl>(true) },
         { typeof(CharacterStarControl), () => UIMgr.Instance.HidePanel<CharacterStarControl>(true) },
-        //{ typeof(CharacterDetailControl), () => UIMgr.Instance.HidePanel<CharacterDetailControl>(true) }
+        { typeof(CharacterDetailControl), () => UIMgr.Instance.HidePanel<CharacterDetailControl>(true) }
     };
 
     #region 初始化按钮
@@ -257,15 +257,15 @@ public class CharacterDevelopPanel : BasePanel
             case "MaterialBtn":
                 SwitchPanel<CharacterMaterialControl>();
                 break;
-            //case "SkillBtn":
-            //    SwitchPanel<CharacterSkillControl>();
-            //    break;
+            case "SkillBtn":
+                SwitchPanel<CharacterSkillControl>();
+                break;
             case "StarBtn":
                 SwitchPanel<CharacterStarControl>();
                 break;
-            //case "DetailBtn":
-            //    SwitchPanel<CharacterDetailontrol>();
-            //    break;
+            case "DetailBtn":
+                SwitchPanel<CharacterDetailControl>();
+                break;
         }
     }
     // 切换面板的操作
