@@ -74,7 +74,7 @@ public class CharacterDevelopPanel : BasePanel
         // 更新角色头像和框架
         // 加载角色卡片图片
         string rankNum;
-        if (nowPlayerCharacterData.current_star <= 3)
+        if (nowPlayerCharacterData.current_star < 3)
         {
             rankNum = "11";
         }

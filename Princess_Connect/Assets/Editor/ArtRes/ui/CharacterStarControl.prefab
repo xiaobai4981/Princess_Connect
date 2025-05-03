@@ -890,7 +890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u8FD9\u662F\u8BB0\u5FC6\u788E\u7247\u7684\u4ECB\u7ECD"
+  m_text: "\u8FD9\u662F\u8BB0\u5FC6\u788E\u7247\u7684\u540D\u5B57"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
@@ -2544,15 +2544,17 @@ MonoBehaviour:
   - {fileID: 7520728572525250802}
   - {fileID: 7029066456193608646}
   - {fileID: 8466933729323503543}
+  starSprite: {fileID: -1646155084, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
   characterPiece: {fileID: 2286368422913308929}
   characterPiecesDesc: {fileID: 4666963482923261425}
   piecesNeedFill: {fileID: 3521389857218569789}
-  PiecesNeedText: {fileID: 5584115060637124444}
+  piecesNeedText: {fileID: 5584115060637124444}
   princessOrbNeed: {fileID: 9126075942094854925}
-  princessOrb: {fileID: 7568182763338167534}
+  princessOrb: {fileID: 5237887284697707889}
   princessOrbDesc: {fileID: 1015950889377881220}
   princessOrbNeedFill: {fileID: 9028420307122515335}
   princessOrbNeedText: {fileID: 3396191828011811956}
+  manaNeedText: {fileID: 7120336272808546071}
   starUpBtn: {fileID: 8388244613797251151}
 --- !u!1 &9116535290361215198
 GameObject:

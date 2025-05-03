@@ -30,8 +30,8 @@ public class CharacterMaterialControl : BasePanel
     private void UpdatequipBtns()
     {
         characterLevel.text = nowPlayerCharacterData.level.ToString();
-        EXPNum.text = "x" + playerInventoryInfo.itemDic["20001"].num.ToString();
-        LikbNum.text = "x" + playerInventoryInfo.itemDic["50003"].num.ToString();
+        EXPNum.text = "x" + (playerInventoryInfo.itemDic.ContainsKey("20001")? playerInventoryInfo.itemDic["20001"].num.ToString(): "0");
+        LikbNum.text = "x" + (playerInventoryInfo.itemDic.ContainsKey("50003") ? playerInventoryInfo.itemDic["50003"].num.ToString() : "0");
         int totalExp = CharacterDataMgr.Instance.SearchCharacterLevelConfig(nowPlayerCharacterData.level);
         ExpFill.sizeDelta = new Vector2((float)nowPlayerCharacterData.current_exp / (float)totalExp * 400f, ExpFill.sizeDelta.y);
         NextLevel.text = (totalExp - nowPlayerCharacterData.current_exp).ToString();
