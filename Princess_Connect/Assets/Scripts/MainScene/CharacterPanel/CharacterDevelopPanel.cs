@@ -130,7 +130,6 @@ public class CharacterDevelopPanel : BasePanel
     // 保存页面的类型
     private static readonly Dictionary<Type, Action> PanelHiders = new Dictionary<Type, Action>()
     {
-        // todo 每个面板的隐藏操作，有些面板里面的小面板需要移除
         { typeof(CharacterEquipControl), () => UIMgr.Instance.HidePanel<CharacterEquipControl>(true) },
         { typeof(CharacterMaterialControl), () => UIMgr.Instance.HidePanel<CharacterMaterialControl>(true) },
         { typeof(CharacterSkillControl), () => UIMgr.Instance.HidePanel<CharacterSkillControl>(true) },

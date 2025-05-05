@@ -33,9 +33,11 @@ public class LoginPanel : BasePanel
         bool result = PlayerDataMgr.Instance.LoginUser(username, password);
         if (result)
         {
-            // 登录成功，初始化玩家数据和玩家角色信息
+            // 登录成功，初始化玩家数据和玩家角色信息,并把任务配置载入本地
             PlayerDataMgr.Instance.InitPlayerData(username);
             CharacterDataMgr.Instance.InitUserCharacterData(username);
+            MissionDataMgr.Instance.GetQuestConfig();
+            QuestListener.Instance.UpdateQuestProgress(username);
 
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
             UIMgr.Instance.HidePanel<LoginPanel>(true);

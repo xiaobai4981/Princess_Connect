@@ -76,7 +76,7 @@ public class RegisterPanel : BasePanel
         bool result = PlayerDataMgr.Instance.RegisterUser(username, password);
         if (result)
         {
-#region 新用户注册成功，将用户默认拥有的道具和角色自动添加
+            #region 新用户注册成功，将用户默认拥有的道具、角色还有任务自动添加还有任务自动添加
             // 体力更新时间设为新用户注册时间
             Dictionary<string, object> columnUpdates = new Dictionary<string, object>
             {
@@ -87,9 +87,14 @@ public class RegisterPanel : BasePanel
             string defaultInventory = File.ReadAllText("Assets/Resources/Configs/NewPlayerInventoryInit.json");
             string defaultCharacterEquipment = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterEquipment.json");
             string defaultCharacterSkillLevel = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterSkillLevel.json");
+            string defaultPlayerQuestProgress = File.ReadAllText("Assets/Resources/Configs/NewPlayerQuestProgress.json");
             GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(username, defaultInventory);
             // 添加默认角色
             AddDefaultRole(username, new List<int>{ 1002, 1011, 1058, 1059, 1060}, defaultCharacterEquipment, defaultCharacterSkillLevel);
+            // todo 添加默认任务
+            AddDefaultQuest(username, new List<int>{1001, 1002, 1003, 1004, 1005, 2001, 2002, 2003, 3001, 3002, 3003,
+                                                    4001, 4002, 4003, 4004, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 
+                                                    4012, 4013, 4014, 4015, 4016, 4017, 4018, 4019, 4020, 4021, 4022, 4023}, defaultPlayerQuestProgress);
             #endregion
             // 关闭注册界面
             UIMgr.Instance.HidePanel<RegisterPanel>();
@@ -120,6 +125,14 @@ public class RegisterPanel : BasePanel
         {
             CharacterDataMgr.Instance.AddUserPlayerInfo(username, roleId);
             CharacterDataMgr.Instance.InitPlayerCharacter(username, roleId, defaultCharacterEquipment, defaultCharacterSkillLevel);
+        }
+    }
+
+    private void AddDefaultQuest(string username, List<int> questIds, string defaultPlayerQuestProgress)
+    {
+        foreach (int questId in questIds)
+        {
+            MissionDataMgr.Instance.AddUserQuest(username, questId, defaultPlayerQuestProgress);
         }
     }
 

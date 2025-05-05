@@ -8,6 +8,22 @@ using UnityEngine;
 public enum E_EventType
 {
     /// <summary>
+    /// 任务确认事件 —— 参数：string
+    /// </summary>
+    E_Quest_Confirm,
+    /// <summary>
+    /// 每日任务强化技能更新事件 —— 参数：string
+    /// </summary>
+    E_SkillUp_Quest_Update,
+    /// <summary>
+    /// 每日任务普通扭蛋更新事件 —— 参数：string
+    /// </summary>
+    E_Lottery_Quest_Update,
+    /// <summary>
+    /// 普通任务更新事件 —— 参数：string
+    /// </summary>
+    E_Normal_Quest_Update,
+    /// <summary>
     /// 角色养成页面数据更新事件 —— 参数：string
     /// </summary>
     E_Character_Develop_Update,

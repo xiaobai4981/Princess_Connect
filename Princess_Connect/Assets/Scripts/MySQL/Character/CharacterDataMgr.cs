@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Common;
 using System.IO;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -387,7 +388,23 @@ public class CharacterDataMgr
         }
     }
 
-    // 更改对应玩家角色仓库的角色信息
+    // 查询玩家是否拥有指定角色
+    public bool SearchCharacterInPlayer(string username, int characterId)
+    {
+        try
+        {
+            string query = $"SELECT COUNT(*) FROM player_character WHERE username = @username AND character_id = @characterId";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@character_id", characterId);
 
-
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Search failed: {e.Message}");
+            return false;
+        }
+    }
 }

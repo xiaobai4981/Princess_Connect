@@ -9,17 +9,6 @@ using UnityEngine.UI;
 
 public class BeginPanel : BasePanel
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     // 记录现在的玩家
     public override void UpdatePlayerName(string nowPlayerName)
     {
@@ -29,7 +18,11 @@ public class BeginPanel : BasePanel
     // 更新玩家信息
     public override void UpdatePlayerInfo()
     {
-        #region 基本信息
+        UpdateBeginPanelInfo();
+    }
+
+    public void UpdateBeginPanelInfo()
+    {
         int level = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "level");
         int nowExp = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "current_exp");
         int totalExp = PlayerDataMgr.Instance.SearchUserLevelConfig(level, "require_exp");
@@ -45,7 +38,7 @@ public class BeginPanel : BasePanel
         // 体力更新
         int addAB = PlayerDataMgr.Instance.SearchUserLastStaminaUpdateInfo(nowPlayerName, "last_stamina_update") * 2;
         nowAB = nowAB + addAB > totalAB ? totalAB : nowAB + addAB;
-        AB.sizeDelta = new Vector2((float)nowAB / (float)totalAB * 250f, Exp.sizeDelta.y);
+        AB.sizeDelta = new Vector2((float)nowAB / (float)totalAB * 250f, AB.sizeDelta.y);
         TMP_Text ABText = GetControl<TMP_Text>("ABText");
         ABText.text = nowAB.ToString() + "/" + totalAB.ToString();
         // 玛娜更新
@@ -58,16 +51,6 @@ public class BeginPanel : BasePanel
         int missionCnt = MissionDataMgr.Instance.GetMissionAchieveCount(nowPlayerName);
         TMP_Text missionText = GetControl<TMP_Text>("CntNum");
         missionText.text = missionCnt > 99 ? "99+" : missionCnt.ToString();
-        #endregion
-    }
-
-    public override void HideMe()
-    {
-        
-    }
-
-    public override void ShowMe()
-    {
         #region 称号展示
         Transform Glory = this.transform.Find("PlayerData/Glory");
         // 路径
@@ -78,6 +61,29 @@ public class BeginPanel : BasePanel
             Glory.GetComponent<Image>().sprite = res;
         }, true);
         #endregion
+    }
+
+    protected override void ClickBtn(string btnName)
+    {
+        switch (btnName)
+        {
+            case "MissonBtn":
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                UIMgr.Instance.ShowPanel<BeginQuestPanel>(E_UILayer.Bottom, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                });
+                break;
+        }
+    }
+
+    public override void HideMe()
+    {
+        
+    }
+
+    public override void ShowMe()
+    {
         if (MusicMgr.Instance.GetNowBKMusicName() != "NormalBG")
         {
             MusicMgr.Instance.PlayBKMusic("NormalBG");

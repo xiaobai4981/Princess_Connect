@@ -21,6 +21,7 @@ public class PlayerInfo
     public DateTime last_stamina_update;
     public string inventory;
     public int now_emblem;
+    public int clear_stage_times;
 }
 public class PlayerDataMgr
 {
@@ -104,7 +105,7 @@ public class PlayerDataMgr
         {
             string query = "SELECT username, password_any, level, current_exp, " +
                 "current_stamina, mana_cnt, diamond_cnt, last_stamina_update, inventory ->> '$' as inventory, " +
-                "now_emblem FROM player_data WHERE username = @username"; 
+                "now_emblem, clear_stage_times FROM player_data WHERE username = @username"; 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.Add("@username", MySqlDbType.VarChar, 50).Value = username;
 
@@ -128,7 +129,8 @@ public class PlayerDataMgr
                     diamond_cnt = reader.GetInt32("diamond_cnt"),
                     last_stamina_update = reader.GetDateTime("last_stamina_update"),
                     inventory = reader.IsDBNull(reader.GetOrdinal("inventory")) ? "" : reader.GetString("inventory"),
-                    now_emblem = reader.IsDBNull(reader.GetOrdinal("now_emblem")) ? 0 : reader.GetInt32("now_emblem")
+                    now_emblem = reader.IsDBNull(reader.GetOrdinal("now_emblem")) ? 0 : reader.GetInt32("now_emblem"),
+                    clear_stage_times = reader.IsDBNull(reader.GetOrdinal("clear_stage_times")) ? 0 : reader.GetInt32("clear_stage_times")
                 };
 
                 // 将玩家数据保存到本地

@@ -14,7 +14,10 @@ public class BottomBtnPanel : BasePanel
     private static readonly Dictionary<Type, Action> PanelHiders = new Dictionary<Type, Action>() 
     {
         // todo 每个面板的隐藏操作，有些面板里面的小面板需要移除
-        { typeof(BeginPanel), () => UIMgr.Instance.HidePanel<BeginPanel>() },
+        { typeof(BeginPanel), () => {
+                UIMgr.Instance.HidePanel<BeginPanel>();
+                UIMgr.Instance.HidePanel<BeginQuestPanel>(true);
+            } },
         { typeof(CharacterPanel), () => {
                 UIMgr.Instance.HidePanel<CharacterEquipControl>(true);
                 UIMgr.Instance.HidePanel<CharacterMaterialControl>(true);
