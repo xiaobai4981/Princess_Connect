@@ -17,7 +17,6 @@ public class QuestListener : MonoBehaviour
         playerData = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath1));
         string filePath2 = Path.Combine(Application.persistentDataPath, "player_character_data.json");
         playerCharacterCollection = JsonMapper.ToObject<PlayerCharacterCollection>(File.ReadAllText(filePath2));
-        EventCenter.Instance.AddEventListener<string>(E_EventType.E_Normal_Quest_Update, UpdateQuestProgress);
         EventCenter.Instance.AddEventListener<string>(E_EventType.E_Lottery_Quest_Update, UpdateLotteryProgress);
         EventCenter.Instance.AddEventListener<string>(E_EventType.E_SkillUp_Quest_Update, UpdateSkillUpProgress);
         if (instance != null)
@@ -30,7 +29,6 @@ public class QuestListener : MonoBehaviour
     }
     private void OnDestroy()
     {
-        EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_Normal_Quest_Update, UpdateQuestProgress);
         EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_Lottery_Quest_Update, UpdateLotteryProgress);
         EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_SkillUp_Quest_Update, UpdateSkillUpProgress);
         if (instance == this)
@@ -42,12 +40,15 @@ public class QuestListener : MonoBehaviour
     // 更新当前玩家的任务进度
     public void UpdateQuestProgress(string nowPlayerName)
     {
+        string filePath = Path.Combine(Application.persistentDataPath, "quest_config.json");
+        questConfig = JsonMapper.ToObject<QuestConfig>(File.ReadAllText(filePath));
+        string filePath1 = Path.Combine(Application.persistentDataPath, "player_data.json");
+        playerData = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath1));
+        string filePath2 = Path.Combine(Application.persistentDataPath, "player_character_data.json");
+        playerCharacterCollection = JsonMapper.ToObject<PlayerCharacterCollection>(File.ReadAllText(filePath2));
         foreach (var quest in questConfig.quests)
         {
             QuestProgress questProgress = new QuestProgress();
-            questProgress.now_progress = 0;
-            questProgress.complete_progress = 100;
-
             JsonData jsonData = JsonMapper.ToObject(quest.unlock_condition);
             // 每日任务
             if (quest.quest_id > 1000 && quest.quest_id < 2000)
@@ -163,7 +164,7 @@ public class QuestListener : MonoBehaviour
                     {
                         int nowStar = playerCharacterCollection.characters[jsonData["character_id"].ToString()].current_star;
                         int needStar = (int)jsonData["star"];
-                        bool isClear = nowStar <= needStar;
+                        bool isClear = nowStar >= needStar;
                         string status = MissionDataMgr.Instance.GetPlayerQuestAnInfo(nowPlayerName, quest.quest_id, "status");
                         if (status == "in_progress")
                         {

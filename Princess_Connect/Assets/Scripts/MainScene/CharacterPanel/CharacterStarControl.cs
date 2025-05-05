@@ -180,6 +180,7 @@ public class CharacterStarControl : BasePanel
         File.WriteAllText(Path.Combine(Application.persistentDataPath, "player_inventory_data.json"), JsonMapper.ToJson(playerInventoryInfo));
         // ´¥·¢¸üÐÂ
         UpdateBtns();
+        QuestListener.Instance.UpdateQuestProgress(nowPlayerName);
         EventCenter.Instance.EventTrigger<string>(E_EventType.E_Character_Develop_Update, "joy_long");
     }
 

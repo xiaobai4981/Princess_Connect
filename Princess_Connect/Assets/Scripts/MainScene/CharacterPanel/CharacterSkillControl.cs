@@ -246,6 +246,7 @@ public class CharacterSkillControl : BasePanel
         // 触发更新
         UpdateBtns();
         EventCenter.Instance.EventTrigger<string>(E_EventType.E_Character_Develop_Update, "joy_short");
+        EventCenter.Instance.EventTrigger<string>(E_EventType.E_SkillUp_Quest_Update, nowPlayerName);
     }
 
     // 更新当前的人物id
