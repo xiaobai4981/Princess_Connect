@@ -27,7 +27,12 @@ public class BottomBtnPanel : BasePanel
                 UIMgr.Instance.HidePanel<CharacterDevelopPanel>(true);
                 UIMgr.Instance.HidePanel<CharacterPanel>(true);
             } },
-        { typeof(ADVPanel), () => UIMgr.Instance.HidePanel<ADVPanel>() },   
+        { typeof(ADVPanel), () => {
+                UIMgr.Instance.HidePanel<ADVPanel>(); 
+                UIMgr.Instance.HidePanel<ADVMainPanel>(true);
+                UIMgr.Instance.HidePanel<ADVSearchPanel>(true);
+                UIMgr.Instance.HidePanel<ADVArenaPanel>(true);
+            } },   
         { typeof(LotteryPanel), () => {
             UIMgr.Instance.HidePanel<LotteryPanel>();
             UIMgr.Instance.HidePanel<LotteryResultPanel>(true);

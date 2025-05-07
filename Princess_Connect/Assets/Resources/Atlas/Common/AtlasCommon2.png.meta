@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_6
+      name: AtlasCommon2_ADVTop
       rect:
         serializedVersion: 2
         x: 779
@@ -271,7 +271,7 @@ TextureImporter:
         height: 30
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 25, y: 0, z: 5, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -850,7 +850,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_34
+      name: AtlasCommon2_ADVFullRewardIcon
       rect:
         serializedVersion: 2
         x: 934
@@ -4315,7 +4315,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_199
+      name: AtlasCommon2_ADVItemIcon
       rect:
         serializedVersion: 2
         x: 1171
@@ -4546,7 +4546,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_210
+      name: AtlasCommon2_ADVMonsterIcon
       rect:
         serializedVersion: 2
         x: 1401
@@ -4777,7 +4777,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon2_221
+      name: AtlasCommon2_ADVDetailBlock
       rect:
         serializedVersion: 2
         x: 1579
@@ -11009,7 +11009,6 @@ TextureImporter:
       AtlasCommon2_196: 223631962
       AtlasCommon2_197: 451974152
       AtlasCommon2_198: 1350063091
-      AtlasCommon2_199: -331217293
       AtlasCommon2_2: 909711634
       AtlasCommon2_20: -1301893105
       AtlasCommon2_200: -117280262
@@ -11023,7 +11022,6 @@ TextureImporter:
       AtlasCommon2_208: -871927985
       AtlasCommon2_209: 1152890525
       AtlasCommon2_21: 333248536
-      AtlasCommon2_210: 1105750294
       AtlasCommon2_211: 1287785251
       AtlasCommon2_212: -466253580
       AtlasCommon2_213: 711505157
@@ -11035,7 +11033,6 @@ TextureImporter:
       AtlasCommon2_219: 282980906
       AtlasCommon2_22: -937452917
       AtlasCommon2_220: 1373256511
-      AtlasCommon2_221: -556297384
       AtlasCommon2_222: -357934975
       AtlasCommon2_223: 196866080
       AtlasCommon2_224: -1260166859
@@ -11163,7 +11160,6 @@ TextureImporter:
       AtlasCommon2_337: -2029780986
       AtlasCommon2_338: -1140928981
       AtlasCommon2_339: 663404148
-      AtlasCommon2_34: -1521720650
       AtlasCommon2_341: 706948151
       AtlasCommon2_342: -2006564672
       AtlasCommon2_344: 808130300
@@ -11359,7 +11355,6 @@ TextureImporter:
       AtlasCommon2_57: 289977516
       AtlasCommon2_58: -283785574
       AtlasCommon2_59: 1893430523
-      AtlasCommon2_6: 533563532
       AtlasCommon2_60: 1921885490
       AtlasCommon2_61: 653357297
       AtlasCommon2_62: 151177592
@@ -11403,6 +11398,11 @@ TextureImporter:
       AtlasCommon2_97: 435046225
       AtlasCommon2_98: 2122064738
       AtlasCommon2_99: 907032615
+      AtlasCommon2_ADVDetailBlock: -556297384
+      AtlasCommon2_ADVFullRewardIcon: -1521720650
+      AtlasCommon2_ADVItemIcon: -331217293
+      AtlasCommon2_ADVMonsterIcon: 1105750294
+      AtlasCommon2_ADVTop: 533563532
       AtlasCommon2_CharacterRankFive: -1400240097
       AtlasCommon2_CharacterRankFour: -991916978
       AtlasCommon2_CharacterRankOne: -919397612

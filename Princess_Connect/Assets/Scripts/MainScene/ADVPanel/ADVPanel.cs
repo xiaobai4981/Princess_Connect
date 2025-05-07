@@ -4,21 +4,44 @@ using UnityEngine;
 
 public class ADVPanel : BasePanel
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     public override void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
+    }
+
+    protected override void ClickBtn(string btnName)
+    {
+        switch (btnName)
+        {
+            case "MainBtn":
+                UIMgr.Instance.HidePanel<ADVPanel>();
+                UIMgr.Instance.ShowPanel<ADVMainPanel>(E_UILayer.Middle, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdatePlayerInfo();
+                });
+                break;
+            case "SearchBtn":
+                UIMgr.Instance.HidePanel<ADVPanel>();
+                UIMgr.Instance.ShowPanel<ADVSearchPanel>(E_UILayer.Middle, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdatePlayerInfo();
+                });
+                break;
+            case "ArenaBtn":
+                UIMgr.Instance.HidePanel<ADVPanel>();
+                UIMgr.Instance.ShowPanel<ADVArenaPanel>(E_UILayer.Middle, (panel) =>
+                {
+                    panel.UpdatePlayerName(nowPlayerName);
+                });
+                break;
+
+        }
     }
 
     public override void HideMe()

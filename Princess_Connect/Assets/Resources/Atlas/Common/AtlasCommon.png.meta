@@ -8305,7 +8305,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasCommon_390
+      name: AtlasCommon_ADVMainBottom
       rect:
         serializedVersion: 2
         x: 1046
@@ -9700,7 +9700,7 @@ TextureImporter:
         height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 30, y: 30, z: 30, w: 30}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -11760,7 +11760,6 @@ TextureImporter:
       AtlasCommon_387: 1198897647
       AtlasCommon_388: 219281837
       AtlasCommon_389: 1721460465
-      AtlasCommon_390: -1586534212
       AtlasCommon_391: -1919754318
       AtlasCommon_392: 778699141
       AtlasCommon_393: -1663596993
@@ -11946,6 +11945,7 @@ TextureImporter:
       AtlasCommon_AB_Fill: 1289364539
       AtlasCommon_ADVArenaBtn: -1360443750
       AtlasCommon_ADVBG_Selected: 1230020996
+      AtlasCommon_ADVMainBottom: -1586534212
       AtlasCommon_ADVMainBtn: 1885733195
       AtlasCommon_ADVSearchBG: -2145816125
       AtlasCommon_ADVSearchImg: 1638418498
