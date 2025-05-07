@@ -14,46 +14,12 @@ public class BeginQuestPanel : BasePanel
         DateTime now = DateTime.Now;
         DateTime midnightTonight = now.Date.AddDays(1);
         TimeSpan timeUntilMidnight = midnightTonight - now;
-        int totalSeconds = (int)timeUntilMidnight.TotalSeconds;
         if (timeUntilMidnight == TimeSpan.Zero)
         {
-            for (int i = 1001; i <= 1005; i++)
+            if (nowPushBtn == "daily")
             {
-                PlayerQuestInfo playerQuestInfo = new PlayerQuestInfo();
-                if (i == 1002)
-                {
-                    playerQuestInfo.progress_data.now_progress = 0;
-                    playerQuestInfo.progress_data.complete_progress = 10;
-                    playerQuestInfo.status = "in_progress";
-                    playerQuestInfo.last_updated = now;
-                }
-                else if (i == 1003)
-                {
-                    playerQuestInfo.progress_data.now_progress = 0;
-                    playerQuestInfo.progress_data.complete_progress = 20;
-                    playerQuestInfo.status = "in_progress";
-                    playerQuestInfo.last_updated = now;
-                }
-                else
-                {
-                    if (i == 1001)
-                    {
-                        playerQuestInfo.progress_data.now_progress = 1;
-                        playerQuestInfo.progress_data.complete_progress = 1;
-                        playerQuestInfo.status = "completed";
-                        playerQuestInfo.last_updated = now;
-                    }
-                    else
-                    {
-                        playerQuestInfo.progress_data.now_progress = 0;
-                        playerQuestInfo.progress_data.complete_progress = 1;
-                        playerQuestInfo.status = "in_progress";
-                        playerQuestInfo.last_updated = now;
-                    }
-                }
-                MissionDataMgr.Instance.UpdateUserQuest(nowPlayerName, i, playerQuestInfo);
+                Refresh();
             }
-            Refresh();
         }
         string timeStr = timeUntilMidnight.ToString("hh\\:mm\\:ss");
         dailyTimeLimit.text = timeStr;

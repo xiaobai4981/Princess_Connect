@@ -91,7 +91,7 @@ public class RegisterPanel : BasePanel
             GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(username, defaultInventory);
             // 添加默认角色
             AddDefaultRole(username, new List<int>{ 1002, 1011, 1058, 1059, 1060}, defaultCharacterEquipment, defaultCharacterSkillLevel);
-            // todo 添加默认任务
+            // 添加默认任务
             AddDefaultQuest(username, new List<int>{1001, 1002, 1003, 1004, 1005, 2001, 2002, 2003, 3001, 3002, 3003,
                                                     4001, 4002, 4003, 4004, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 
                                                     4012, 4013, 4014, 4015, 4016, 4017, 4018, 4019, 4020, 4021, 4022, 4023}, defaultPlayerQuestProgress);

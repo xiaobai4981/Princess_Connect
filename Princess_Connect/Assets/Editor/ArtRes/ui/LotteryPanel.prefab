@@ -894,7 +894,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u83B7\u53D6\u9053\u5177\u6216\u8BB0\u5FC6\u788E\u7247\uFF01"
+  m_text: "\u83B7\u53D6\u9053\u5177\u6216\u88C5\u5907\uFF01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
@@ -928,8 +928,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2270,8 +2270,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 35, y: 81.5}
-  m_SizeDelta: {x: 427.9, y: 50}
+  m_AnchoredPosition: {x: 27, y: 61}
+  m_SizeDelta: {x: 598.67, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7266257577952558370
 CanvasRenderer:
@@ -2301,7 +2301,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u767D\u91D1\u626D\u86CB\u4EC5\u80FD\u83B7\u53D6"
+  m_text: "    \u767D\u91D1\u626D\u86CB\u4EC5\u80FD\u83B7\u53D6\n\u5DF2\u83B7\u5F97\u7684\u89D2\u8272\u5C06\u53D8\u4E3A\u8BB0\u5FC6\u788E\u7247\uFF01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
@@ -2336,7 +2336,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u6BCF\u592912\u70B9\u65F6\u91CD\u7F6E"
+  m_text: "\u6BCF\u59290\u70B9\u65F6\u91CD\u7F6E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
   m_sharedMaterial: {fileID: 4210335725194641662, guid: 50b21447501b57645b74b26ab2770a7f, type: 2}
@@ -4723,6 +4723,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Exp: {fileID: 8796538061175635021}
   AB: {fileID: 657154960222879801}
+  playerDiamondHave: {fileID: 7698074406586608334}
+  timeLimit: {fileID: 3295298935165640294}
+  NormalBtn: {fileID: 2594443066498424479}
+  OneTime: {fileID: 4505908526053680131}
+  TenTimes: {fileID: 814313568239864604}
   CharacterLot: {fileID: 3300315210518521909}
   NormalLot: {fileID: 897906309769212613}
 --- !u!1 &6396331752073456792

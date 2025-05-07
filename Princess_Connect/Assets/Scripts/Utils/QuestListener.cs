@@ -1,4 +1,5 @@
 using LitJson;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -27,6 +28,51 @@ public class QuestListener : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject); // 跨场景不销毁
     }
+    private void Update()
+    {
+        DateTime now = DateTime.Now;
+        DateTime midnightTonight = now.Date.AddDays(1);
+        TimeSpan timeUntilMidnight = midnightTonight - now;
+        if (timeUntilMidnight == TimeSpan.Zero)
+        {
+            for (int i = 1001; i <= 1005; i++)
+            {
+                PlayerQuestInfo playerQuestInfo = new PlayerQuestInfo();
+                if (i == 1002)
+                {
+                    playerQuestInfo.progress_data.now_progress = 0;
+                    playerQuestInfo.progress_data.complete_progress = 10;
+                    playerQuestInfo.status = "in_progress";
+                    playerQuestInfo.last_updated = now;
+                }
+                else if (i == 1003)
+                {
+                    playerQuestInfo.progress_data.now_progress = 0;
+                    playerQuestInfo.progress_data.complete_progress = 20;
+                    playerQuestInfo.status = "in_progress";
+                    playerQuestInfo.last_updated = now;
+                }
+                else
+                {
+                    if (i == 1001)
+                    {
+                        playerQuestInfo.progress_data.now_progress = 1;
+                        playerQuestInfo.progress_data.complete_progress = 1;
+                        playerQuestInfo.status = "completed";
+                        playerQuestInfo.last_updated = now;
+                    }
+                    else
+                    {
+                        playerQuestInfo.progress_data.now_progress = 0;
+                        playerQuestInfo.progress_data.complete_progress = 1;
+                        playerQuestInfo.status = "in_progress";
+                        playerQuestInfo.last_updated = now;
+                    }
+                }
+                MissionDataMgr.Instance.UpdateUserQuest(playerData.username, i, playerQuestInfo);
+            }
+        }
+    }
     private void OnDestroy()
     {
         EventCenter.Instance.RemoveEventListener<string>(E_EventType.E_Lottery_Quest_Update, UpdateLotteryProgress);
@@ -40,6 +86,8 @@ public class QuestListener : MonoBehaviour
     // 更新当前玩家的任务进度
     public void UpdateQuestProgress(string nowPlayerName)
     {
+        PlayerDataMgr.Instance.InitPlayerData(playerData.username);
+        CharacterDataMgr.Instance.InitUserCharacterData(playerData.username);
         string filePath = Path.Combine(Application.persistentDataPath, "quest_config.json");
         questConfig = JsonMapper.ToObject<QuestConfig>(File.ReadAllText(filePath));
         string filePath1 = Path.Combine(Application.persistentDataPath, "player_data.json");
