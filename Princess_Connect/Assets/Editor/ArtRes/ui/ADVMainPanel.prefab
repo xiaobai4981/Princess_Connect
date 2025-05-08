@@ -3235,6 +3235,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Exp: {fileID: 38073826538127290}
   AB: {fileID: 5807920378657033974}
+  stageOneStarBtn1:
+  - {fileID: 5315277845040494918}
+  - {fileID: 4819957208319486172}
+  - {fileID: 7803975056829551151}
+  stageOneStarBtn2:
+  - {fileID: 7990703893786975239}
+  - {fileID: 41545193925437975}
+  - {fileID: 5792324189022661405}
+  stageOneStarBtn3:
+  - {fileID: 1995353099645538182}
+  - {fileID: 5478046431884239243}
+  - {fileID: 2536746349589256914}
+  star: {fileID: -1646155084, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
 --- !u!1 &6641575236497313925
 GameObject:
   m_ObjectHideFlags: 0

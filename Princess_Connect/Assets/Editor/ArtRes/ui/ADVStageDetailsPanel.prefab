@@ -549,8 +549,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1850367082, guid: c9d4221bcdc634e41843c46674481662, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -1850367082, guid: 269d2fe722bd4564db667c56de62244e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 3087188056946525165}
   - component: {fileID: 2986925486440468080}
   m_Layer: 5
-  m_Name: MonsterOne (4)
+  m_Name: MonsterFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1315,8 +1315,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1850367082, guid: c9d4221bcdc634e41843c46674481662, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -1850367082, guid: 269d2fe722bd4564db667c56de62244e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1526,8 +1526,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1850367082, guid: c9d4221bcdc634e41843c46674481662, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -1850367082, guid: 269d2fe722bd4564db667c56de62244e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1871,8 +1871,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1850367082, guid: c9d4221bcdc634e41843c46674481662, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -1850367082, guid: 269d2fe722bd4564db667c56de62244e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2215,8 +2215,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1850367082, guid: c9d4221bcdc634e41843c46674481662, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: -1850367082, guid: 269d2fe722bd4564db667c56de62244e, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4385,6 +4385,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Exp: {fileID: 0}
   AB: {fileID: 0}
+  stageNameText: {fileID: 4942957738093766896}
+  nowStamina: {fileID: 6263397491286914125}
+  costStamina: {fileID: 978463590684548262}
+  starCount:
+  - {fileID: 5722311297328041838}
+  - {fileID: 8879849089313685926}
+  - {fileID: 751825213840465692}
+  star: {fileID: -1646155084, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
+  monsterBlock:
+  - {fileID: 4446068909889174180}
+  - {fileID: 9023429644591527654}
+  - {fileID: 1325381056114595161}
+  - {fileID: 4009089211916612186}
+  - {fileID: 818122363651163956}
+  itemBlock:
+  - {fileID: 4497705294499001546}
+  - {fileID: 208633899042256953}
+  - {fileID: 3339241073695340679}
+  - {fileID: 6242216118316953531}
+  - {fileID: 8922961569062501492}
+  fullRFewardBlock:
+  - {fileID: 5315931254209150928}
+  - {fileID: 7130625577155551359}
+  - {fileID: 2326652842953697112}
+  - {fileID: 364652686033287558}
+  - {fileID: 8062580493937428768}
 --- !u!1 &8062580493937428768
 GameObject:
   m_ObjectHideFlags: 0

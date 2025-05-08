@@ -38,6 +38,8 @@ public class LoginPanel : BasePanel
             CharacterDataMgr.Instance.InitUserCharacterData(username);
             MissionDataMgr.Instance.GetQuestConfig();
             QuestListener.Instance.UpdateQuestProgress(username);
+            StageDataMgr.Instance.GetAllStages();
+
 
             SceneMgr.Instance.LoadSceneAsyn("MainScene");
             UIMgr.Instance.HidePanel<LoginPanel>(true);

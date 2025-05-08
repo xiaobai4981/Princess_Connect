@@ -13,7 +13,7 @@ public class BottomBtnPanel : BasePanel
     // 保存页面的类型
     private static readonly Dictionary<Type, Action> PanelHiders = new Dictionary<Type, Action>() 
     {
-        // todo 每个面板的隐藏操作，有些面板里面的小面板需要移除
+        // 每个面板的隐藏操作，有些面板里面的小面板需要移除
         { typeof(BeginPanel), () => {
                 UIMgr.Instance.HidePanel<BeginPanel>();
                 UIMgr.Instance.HidePanel<BeginQuestPanel>(true);
@@ -34,8 +34,8 @@ public class BottomBtnPanel : BasePanel
                 UIMgr.Instance.HidePanel<ADVArenaPanel>(true);
             } },   
         { typeof(LotteryPanel), () => {
-            UIMgr.Instance.HidePanel<LotteryPanel>();
-            UIMgr.Instance.HidePanel<LotteryResultPanel>(true);
+                UIMgr.Instance.HidePanel<LotteryPanel>();
+                UIMgr.Instance.HidePanel<LotteryResultPanel>(true);
             } },
         { typeof(MenuPanel), () => 
             {
