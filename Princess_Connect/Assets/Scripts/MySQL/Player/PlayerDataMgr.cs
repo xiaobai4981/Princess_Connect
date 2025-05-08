@@ -235,7 +235,7 @@ public class PlayerDataMgr
         if (columnUpdates == null || columnUpdates.Count == 0)
             return false;
         // 列名白名单（防止 SQL 注入）
-        var allowedColumns = new HashSet<string> { "level", "current_exp", "current_stamina", "mana_cnt", "diamond_cnt", "last_stamina_update" , "inventory"}; // 示例列
+        var allowedColumns = new HashSet<string> { "level", "current_exp", "current_stamina", "mana_cnt", "diamond_cnt", "last_stamina_update" , "inventory", "arena_deploy", "clear_stage_times"};
         var invalidColumns = columnUpdates.Keys.Where(col => !allowedColumns.Contains(col)).ToList();
         if (invalidColumns.Any())
         {

@@ -267,6 +267,7 @@ public class CharacterDataMgr
             string checkQuery = "SELECT COUNT(*) FROM player_character WHERE username = @username AND character_id = @character_id";
             MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn);
             checkCmd.Parameters.AddWithValue("@username", username);
+            checkCmd.Parameters.AddWithValue("@character_id", characterId);
 
             int count = Convert.ToInt32(checkCmd.ExecuteScalar());
             if (count > 0)

@@ -1,0 +1,139 @@
+
+200500.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armB1
+  rotate: false
+  xy: 185, 73
+  size: 55, 66
+  orig: 680, 680
+  offset: 301, 244
+  index: -1
+armB2
+  rotate: false
+  xy: 396, 247
+  size: 59, 50
+  orig: 680, 680
+  offset: 285, 222
+  index: -1
+armF1
+  rotate: false
+  xy: 185, 4
+  size: 52, 65
+  orig: 680, 680
+  offset: 345, 232
+  index: -1
+armF2
+  rotate: false
+  xy: 251, 183
+  size: 59, 50
+  orig: 680, 680
+  offset: 335, 205
+  index: -1
+body
+  rotate: false
+  xy: 268, 301
+  size: 221, 207
+  orig: 680, 680
+  offset: 260, 240
+  index: -1
+handB
+  rotate: false
+  xy: 268, 237
+  size: 60, 60
+  orig: 680, 680
+  offset: 253, 188
+  index: -1
+handF
+  rotate: false
+  xy: 332, 237
+  size: 60, 60
+  orig: 680, 680
+  offset: 303, 171
+  index: -1
+head
+  rotate: false
+  xy: 4, 4
+  size: 177, 240
+  orig: 680, 680
+  offset: 157, 252
+  index: -1
+headJaw
+  rotate: true
+  xy: 396, 214
+  size: 29, 56
+  orig: 680, 680
+  offset: 275, 254
+  index: -1
+legB1
+  rotate: false
+  xy: 459, 241
+  size: 49, 56
+  orig: 680, 680
+  offset: 400, 242
+  index: -1
+legB2
+  rotate: false
+  xy: 241, 8
+  size: 37, 34
+  orig: 680, 680
+  offset: 402, 235
+  index: -1
+legB3
+  rotate: false
+  xy: 244, 89
+  size: 48, 47
+  orig: 680, 680
+  offset: 403, 207
+  index: -1
+legB4
+  rotate: false
+  xy: 456, 198
+  size: 49, 39
+  orig: 680, 680
+  offset: 386, 188
+  index: -1
+legF1
+  rotate: true
+  xy: 314, 189
+  size: 44, 61
+  orig: 680, 680
+  offset: 443, 232
+  index: -1
+legF2
+  rotate: true
+  xy: 296, 97
+  size: 39, 29
+  orig: 680, 680
+  offset: 447, 229
+  index: -1
+legF3
+  rotate: true
+  xy: 251, 140
+  size: 39, 51
+  orig: 680, 680
+  offset: 458, 198
+  index: -1
+legF4
+  rotate: false
+  xy: 244, 46
+  size: 49, 39
+  orig: 680, 680
+  offset: 442, 177
+  index: -1
+shadow
+  rotate: false
+  xy: 4, 248
+  size: 260, 260
+  orig: 260, 260
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 185, 143
+  size: 62, 101
+  orig: 680, 680
+  offset: 450, 284
+  index: -1

@@ -1,0 +1,139 @@
+
+200501.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armB1
+  rotate: false
+  xy: 255, 309
+  size: 27, 29
+  orig: 340, 340
+  offset: 151, 126
+  index: -1
+armB2
+  rotate: false
+  xy: 328, 382
+  size: 29, 27
+  orig: 340, 340
+  offset: 141, 109
+  index: -1
+armF1
+  rotate: false
+  xy: 69, 106
+  size: 26, 31
+  orig: 340, 340
+  offset: 171, 119
+  index: -1
+armF2
+  rotate: false
+  xy: 359, 382
+  size: 29, 27
+  orig: 340, 340
+  offset: 166, 101
+  index: -1
+body
+  rotate: false
+  xy: 134, 287
+  size: 119, 122
+  orig: 340, 340
+  offset: 125, 98
+  index: -1
+handB
+  rotate: false
+  xy: 33, 106
+  size: 34, 31
+  orig: 340, 340
+  offset: 125, 93
+  index: -1
+handF
+  rotate: false
+  xy: 255, 377
+  size: 34, 32
+  orig: 340, 340
+  offset: 151, 85
+  index: -1
+head
+  rotate: true
+  xy: 2, 139
+  size: 138, 117
+  orig: 340, 340
+  offset: 79, 117
+  index: -1
+headJaw
+  rotate: false
+  xy: 2, 41
+  size: 24, 39
+  orig: 340, 340
+  offset: 129, 122
+  index: -1
+legB1
+  rotate: false
+  xy: 255, 340
+  size: 26, 35
+  orig: 340, 340
+  offset: 200, 113
+  index: -1
+legB2
+  rotate: false
+  xy: 390, 391
+  size: 19, 18
+  orig: 340, 340
+  offset: 201, 117
+  index: -1
+legB3
+  rotate: false
+  xy: 97, 113
+  size: 21, 24
+  orig: 340, 340
+  offset: 201, 103
+  index: -1
+legB4
+  rotate: false
+  xy: 33, 84
+  size: 29, 20
+  orig: 340, 340
+  offset: 191, 94
+  index: -1
+legF1
+  rotate: true
+  xy: 291, 384
+  size: 25, 35
+  orig: 340, 340
+  offset: 222, 110
+  index: -1
+legF2
+  rotate: false
+  xy: 64, 89
+  size: 20, 15
+  orig: 340, 340
+  offset: 223, 114
+  index: -1
+legF3
+  rotate: true
+  xy: 255, 288
+  size: 19, 26
+  orig: 340, 340
+  offset: 229, 98
+  index: -1
+legF4
+  rotate: true
+  xy: 2, 10
+  size: 29, 19
+  orig: 340, 340
+  offset: 219, 89
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 279
+  size: 130, 130
+  orig: 130, 130
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 2, 82
+  size: 29, 55
+  orig: 340, 340
+  offset: 226, 140
+  index: -1

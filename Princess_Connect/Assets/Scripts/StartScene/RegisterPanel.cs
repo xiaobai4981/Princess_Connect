@@ -88,13 +88,17 @@ public class RegisterPanel : BasePanel
             string defaultCharacterEquipment = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterEquipment.json");
             string defaultCharacterSkillLevel = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterSkillLevel.json");
             string defaultPlayerQuestProgress = File.ReadAllText("Assets/Resources/Configs/NewPlayerQuestProgress.json");
+            string defaultPleyerArena = File.ReadAllText("Assets/Resources/Configs/NewPlayerArena.json");
             GloryDataMgr.Instance.UpdateUserPlayerFactoryInfo(username, defaultInventory);
+            PlayerDataMgr.Instance.ModifyUserIntInfo(username, new Dictionary<string, object>() { { "arena_deploy", defaultPleyerArena } }, false);
             // 添加默认角色
             AddDefaultRole(username, new List<int>{ 1002, 1011, 1058, 1059, 1060}, defaultCharacterEquipment, defaultCharacterSkillLevel);
             // 添加默认任务
             AddDefaultQuest(username, new List<int>{1001, 1002, 1003, 1004, 1005, 2001, 2002, 2003, 3001, 3002, 3003,
                                                     4001, 4002, 4003, 4004, 4005, 4006, 4007, 4008, 4009, 4010, 4011, 
                                                     4012, 4013, 4014, 4015, 4016, 4017, 4018, 4019, 4020, 4021, 4022, 4023}, defaultPlayerQuestProgress);
+            // 添加默认关卡配置
+            AddDefaultStage(username, new List<int> { 1001, 1002, 1003, 2001 });
             #endregion
             // 关闭注册界面
             UIMgr.Instance.HidePanel<RegisterPanel>();
@@ -116,7 +120,10 @@ public class RegisterPanel : BasePanel
     private void BackToLogin()
     {
         UIMgr.Instance.HidePanel<RegisterPanel>();
-        UIMgr.Instance.ShowPanel<LoginPanel>();
+        UIMgr.Instance.ShowPanel<LoginPanel>(E_UILayer.Middle, (panel) =>
+        {
+            panel.ClearInputField();
+        });
     }
 
     private void AddDefaultRole(string username, List<int> roleIds, string defaultCharacterEquipment, string defaultCharacterSkillLevel)
@@ -133,6 +140,14 @@ public class RegisterPanel : BasePanel
         foreach (int questId in questIds)
         {
             MissionDataMgr.Instance.AddUserQuest(username, questId, defaultPlayerQuestProgress);
+        }
+    }
+
+    private void AddDefaultStage(string username, List<int> stageIds)
+    {
+        foreach (int stageId in stageIds)
+        {
+            StageDataMgr.Instance.AddUserStage(username, stageId);
         }
     }
 

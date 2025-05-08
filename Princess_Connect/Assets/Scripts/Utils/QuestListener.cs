@@ -17,7 +17,6 @@ public class QuestListener : MonoBehaviour
         string filePath1 = Path.Combine(Application.persistentDataPath, "player_data.json");
         playerData = JsonMapper.ToObject<PlayerInfo>(File.ReadAllText(filePath1));
         string filePath2 = Path.Combine(Application.persistentDataPath, "player_character_data.json");
-        playerCharacterCollection = JsonMapper.ToObject<PlayerCharacterCollection>(File.ReadAllText(filePath2));
         EventCenter.Instance.AddEventListener<string>(E_EventType.E_Lottery_Quest_Update, UpdateLotteryProgress);
         EventCenter.Instance.AddEventListener<string>(E_EventType.E_SkillUp_Quest_Update, UpdateSkillUpProgress);
         if (instance != null)
@@ -86,7 +85,7 @@ public class QuestListener : MonoBehaviour
     // 更新当前玩家的任务进度
     public void UpdateQuestProgress(string nowPlayerName)
     {
-        PlayerDataMgr.Instance.InitPlayerData(playerData.username);
+        PlayerDataMgr.Instance.InitPlayerData(nowPlayerName);
         CharacterDataMgr.Instance.InitUserCharacterData(playerData.username);
         string filePath = Path.Combine(Application.persistentDataPath, "quest_config.json");
         questConfig = JsonMapper.ToObject<QuestConfig>(File.ReadAllText(filePath));

@@ -71,6 +71,12 @@ public class LoginPanel : BasePanel
 
         });
     }
+    public void ClearInputField()
+    {
+        GetControl<TMP_InputField>("PasswordInput").text = "";
+        GetControl<TMP_InputField>("AccountInput").text = "";
+    }
+
     public override void HideMe()
     {
         
@@ -78,6 +84,6 @@ public class LoginPanel : BasePanel
 
     public override void ShowMe()
     {
-        
+
     }
 }

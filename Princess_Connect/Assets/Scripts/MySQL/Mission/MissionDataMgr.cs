@@ -132,6 +132,7 @@ public class MissionDataMgr
             string checkQuery = "SELECT COUNT(*) FROM player_quests WHERE username = @username AND quest_id = @quest_id";
             MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn);
             checkCmd.Parameters.AddWithValue("@username", playerName);
+            checkCmd.Parameters.AddWithValue("@quest_id", quest_id);
 
             int count = Convert.ToInt32(checkCmd.ExecuteScalar());
             if (count > 0)

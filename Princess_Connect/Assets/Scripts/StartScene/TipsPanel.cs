@@ -32,7 +32,10 @@ public class TipsPanel : BasePanel
     public void BackToLogin()
     {
         UIMgr.Instance.HidePanel<TipsPanel>();
-        UIMgr.Instance.ShowPanel<LoginPanel>();
+        UIMgr.Instance.ShowPanel<LoginPanel>(E_UILayer.Middle, (panel) =>
+        {
+            panel.ClearInputField();
+        });
     }
 
     public override void HideMe()

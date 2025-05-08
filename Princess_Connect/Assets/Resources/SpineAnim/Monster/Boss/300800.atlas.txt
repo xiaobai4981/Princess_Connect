@@ -1,0 +1,139 @@
+
+300800.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+armB1
+  rotate: false
+  xy: 745, 845
+  size: 55, 67
+  orig: 680, 680
+  offset: 301, 243
+  index: -1
+armB2
+  rotate: false
+  xy: 871, 937
+  size: 57, 47
+  orig: 680, 680
+  offset: 284, 224
+  index: -1
+armF1
+  rotate: false
+  xy: 106, 617
+  size: 53, 71
+  orig: 680, 680
+  offset: 349, 233
+  index: -1
+armF2
+  rotate: true
+  xy: 745, 785
+  size: 58, 49
+  orig: 680, 680
+  offset: 335, 209
+  index: -1
+body
+  rotate: false
+  xy: 503, 742
+  size: 240, 242
+  orig: 680, 680
+  offset: 246, 224
+  index: -1
+handB
+  rotate: false
+  xy: 2, 493
+  size: 65, 65
+  orig: 680, 680
+  offset: 249, 183
+  index: -1
+handF
+  rotate: false
+  xy: 745, 914
+  size: 68, 70
+  orig: 680, 680
+  offset: 297, 165
+  index: -1
+head
+  rotate: false
+  xy: 2, 690
+  size: 237, 294
+  orig: 680, 680
+  offset: 122, 257
+  index: -1
+headJaw
+  rotate: false
+  xy: 69, 495
+  size: 33, 63
+  orig: 680, 680
+  offset: 273, 248
+  index: -1
+legB1
+  rotate: false
+  xy: 815, 920
+  size: 54, 64
+  orig: 680, 680
+  offset: 396, 234
+  index: -1
+legB2
+  rotate: false
+  xy: 745, 749
+  size: 37, 34
+  orig: 680, 680
+  offset: 402, 235
+  index: -1
+legB3
+  rotate: false
+  xy: 106, 566
+  size: 49, 49
+  orig: 680, 680
+  offset: 403, 206
+  index: -1
+legB4
+  rotate: true
+  xy: 2, 364
+  size: 57, 45
+  orig: 680, 680
+  offset: 383, 181
+  index: -1
+legF1
+  rotate: false
+  xy: 2, 423
+  size: 45, 68
+  orig: 680, 680
+  offset: 447, 229
+  index: -1
+legF2
+  rotate: false
+  xy: 241, 693
+  size: 41, 29
+  orig: 680, 680
+  offset: 451, 233
+  index: -1
+legF3
+  rotate: true
+  xy: 930, 942
+  size: 42, 54
+  orig: 680, 680
+  offset: 464, 199
+  index: -1
+legF4
+  rotate: false
+  xy: 161, 637
+  size: 60, 51
+  orig: 680, 680
+  offset: 439, 168
+  index: -1
+shadow
+  rotate: false
+  xy: 241, 724
+  size: 260, 260
+  orig: 260, 260
+  offset: 0, 0
+  index: -1
+tail
+  rotate: false
+  xy: 2, 560
+  size: 102, 128
+  orig: 680, 680
+  offset: 456, 270
+  index: -1
