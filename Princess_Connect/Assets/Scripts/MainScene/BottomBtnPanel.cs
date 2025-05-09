@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class BottomBtnPanel : BasePanel
 {
+    private Dictionary<string, bool> buttonAnimState = new Dictionary<string, bool>();
+
     // 控制按钮动画的字典
     private Dictionary<string, ButtonData> buttonDataDict;
     private Dictionary<Button, Sprite> originalSprites = new Dictionary<Button, Sprite>();
@@ -213,11 +215,36 @@ public class BottomBtnPanel : BasePanel
 
     public override void HideMe()
     {
-
+        foreach (Transform child in transform)
+        {
+            Animator anim = child.Find(child.name + "Img")?.GetComponent<Animator>();
+            if (anim != null)
+            {
+                if (buttonAnimState.ContainsKey(anim.name))
+                {
+                    buttonAnimState[anim.name] = anim.GetBool("isPressed");
+                }
+                else
+                {
+                    buttonAnimState.Add(anim.name, anim.GetBool("isPressed"));
+                }
+                anim.enabled = false;
+                // 重置动画状态
+                anim.Rebind();
+            }
+        }
     }
 
     public override void ShowMe()
     {
-
+        foreach (Transform child in transform)
+        {
+            Animator anim = child.Find(child.name + "Img")?.GetComponent<Animator>();
+            if (anim != null)
+            {
+                anim.SetBool("isPressed", (buttonAnimState.ContainsKey(anim.name)? buttonAnimState[anim.name] : false));
+                anim.enabled = true;
+            }
+        }
     }
 }

@@ -73,7 +73,7 @@ public class UIMgr : BaseManager<UIMgr>
     private UIMgr()
     {
         //2d游戏中可省略
-        ////动态创建唯一的Canvas和EventSystem（摄像机）
+        //动态创建唯一的Canvas和EventSystem（摄像机）
         //uiCamera = GameObject.Instantiate(ResMgr.Instance.Load<GameObject>("UI/UICamera")).GetComponent<Camera>();
         ////ui摄像机过场景不移除 专门用来渲染UI面板
         //GameObject.DontDestroyOnLoad(uiCamera.gameObject);
@@ -81,7 +81,7 @@ public class UIMgr : BaseManager<UIMgr>
         //动态创建Canvas
         uiCanvas = GameObject.Instantiate(ResMgr.Instance.Load<GameObject>("UI/Canvas")).GetComponent<Canvas>();
         //设置使用的UI摄像机
-        uiCanvas.worldCamera = uiCamera;
+        //uiCanvas.worldCamera = uiCamera;
         //过场景不移除
         GameObject.DontDestroyOnLoad(uiCanvas.gameObject);
 

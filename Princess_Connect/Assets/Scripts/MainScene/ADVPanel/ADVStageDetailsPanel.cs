@@ -11,6 +11,7 @@ public class ADVStageDetailsPanel : BasePanel
     private int nowStageIndex;
     private PlayerInfo nowPlayerInfo;
     private StageDatas stageDatas;
+
     private Dictionary<int, string> stageName = new Dictionary<int, string>()
     {
         {1001, "Ö÷Ïß¹Ø¿¨ 1 - 1"},
@@ -26,6 +27,7 @@ public class ADVStageDetailsPanel : BasePanel
     public GameObject[] starCount;
     public Sprite star;
     public GameObject[] monsterBlock;
+    private List<int> monsterList = new List<int>();
     public GameObject[] itemBlock;
     public GameObject[] fullRFewardBlock;
 
@@ -35,9 +37,13 @@ public class ADVStageDetailsPanel : BasePanel
         string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
         string jsonStr = File.ReadAllText(filePath);
         nowPlayerInfo = JsonMapper.ToObject<PlayerInfo>(jsonStr);
+
         string filePath1 = Path.Combine(Application.persistentDataPath, "stage_config_data.json");
         string jsonStr1 = File.ReadAllText(filePath1);
         stageDatas = JsonMapper.ToObject<StageDatas>(jsonStr1);
+
+        
+
         UpdateUI();
     }
 
@@ -60,6 +66,7 @@ public class ADVStageDetailsPanel : BasePanel
         {
             int rankNum = stageData.config_data.monsters[i].rank;
             int monsterNum = stageData.config_data.monsters[i].monster_id;
+            monsterList.Add(monsterNum);
             ABResMgr.Instance.LoadResAsync<Sprite>("monster", $"icon_unit_{monsterNum}", (res)=>{
                 monsterBlock[i].GetComponent<Image>().sprite = res;
             } , true);
@@ -116,6 +123,7 @@ public class ADVStageDetailsPanel : BasePanel
                 UIMgr.Instance.ShowPanel<ADVTeamSelectPanel>(E_UILayer.System, (panel) =>
                 {
                     panel.UpdatePlayerName(nowPlayerName);
+                    panel.UpdateInfo(monsterList, stageDatas.stage_datas[nowStageIndex.ToString()]);
                 });
                 break;
             case "CancelBtn":

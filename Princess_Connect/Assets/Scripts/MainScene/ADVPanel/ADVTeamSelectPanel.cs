@@ -12,6 +12,7 @@ public class ADVTeamSelectPanel : BasePanel
     public GameObject[] allSelected;
     public Sprite defaultCharacterSprite;
     public Sprite defaultRankSprite;
+    private int ce = 0;
     public TMP_Text ceCount;
 
     
@@ -19,9 +20,13 @@ public class ADVTeamSelectPanel : BasePanel
     private List<bool> selectedList = new List<bool>();
 
     // 战斗场景需要的数据
-    private StageData stageData;
-    private int nowStageIndex;
+    private List<CharacterFactoryTeamCardDataInBattle> characterTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
+    private StageData nowStageData;
     private List<CharacterFactoryTeamCardData> selectedIndex;
+    private List<int> monsterList = new List<int>();
+    // 竞技场
+    private List<int> arenaList = new List<int>();
+    private string arenaPlayerName;
     #region 按钮初始化
     // 按钮背景的字典
     private Dictionary<string, Button> buttonDataDict;
@@ -205,12 +210,24 @@ public class ADVTeamSelectPanel : BasePanel
             selectedList[data.id] = true;
             // 降序排序
             selectedIndex.Sort((a, b) => b.characterData.current_stats.stand_pos.CompareTo(a.characterData.current_stats.stand_pos));
+            ce += data.characterData.current_stats.ce;
+            ceCount.text = ce.ToString();
             Refresh();
         }
     }
 
     private void Update()
     {
+        if (selectedIndex.Count > 0)
+        {
+            this.transform.Find("BeginBtn").GetComponent<Image>().color = Color.white;
+            this.transform.Find("BeginBtn").GetComponent<Button>().interactable = true;
+        }
+        else
+        {
+            this.transform.Find("BeginBtn").GetComponent<Image>().color = Color.gray;
+            this.transform.Find("BeginBtn").GetComponent<Button>().interactable = false;
+        }
         for (int i = 0; i < selectedIndex.Count; i++)
         {
             allSelected[i].GetComponent<Image>().sprite = selectedIndex[i].characterSprite;
@@ -297,6 +314,8 @@ public class ADVTeamSelectPanel : BasePanel
 
     private void SelectedIndexChange(int index)
     {
+        ce -= selectedIndex[index].characterData.current_stats.ce;
+        ceCount.text = ce.ToString();
         selectedList[selectedIndex[index].id] = false;
         selectedIndex.RemoveAt(index);
         Refresh();
@@ -304,11 +323,28 @@ public class ADVTeamSelectPanel : BasePanel
 
     private void LinkToBattle()
     {
-        // todo 战斗场景初始化
+        // 战斗场景初始化
         // 需要传递到战斗场景的数据
-        //private StageData stageData;
-        //private int nowStageIndex;
-        //private List<CharacterFactoryTeamCardData> selectedIndex;
+        foreach (CharacterFactoryTeamCardData data in selectedIndex)
+        {
+            CharacterFactoryTeamCardDataInBattle characterFactoryTeamCardDataInBattle = new CharacterFactoryTeamCardDataInBattle();
+            characterFactoryTeamCardDataInBattle.nowTp = 0;
+            characterFactoryTeamCardDataInBattle.nowHp = data.characterData.current_stats.hp;
+            characterFactoryTeamCardDataInBattle.characterFactoryTeamCardData = data;
+            characterTeamCardDataInBattle.Add(characterFactoryTeamCardDataInBattle);
+        }
+        // todo 竞技场数据后续需要优化
+        GameBattleData.battleInitData = new BattleInitData
+        {
+            playerTeam = characterTeamCardDataInBattle,
+            stageData = nowStageData,
+            isArena = false
+        };
+        UIMgr.Instance.ShowPanel<BattleControlPanel>(E_UILayer.Middle, (panel) =>
+        {
+            panel.UpdatePlayerName(nowPlayerName);
+            panel.UpdateCharacterTeamCardData(characterTeamCardDataInBattle);
+        });
         // 关闭所有的面板
         UIMgr.Instance.HidePanel<BeginPanel>();
         UIMgr.Instance.HidePanel<BeginQuestPanel>(true);
@@ -325,8 +361,9 @@ public class ADVTeamSelectPanel : BasePanel
         UIMgr.Instance.HidePanel<ADVMainPanel>(true);
         UIMgr.Instance.HidePanel<ADVSearchPanel>(true);
         UIMgr.Instance.HidePanel<ADVArenaPanel>(true);
-        UIMgr.Instance.HidePanel<ADVPanel>(true);
-        UIMgr.Instance.HidePanel<BottomBtnPanel>(true);
+        UIMgr.Instance.HidePanel<ADVPanel>();
+        UIMgr.Instance.HidePanel<BottomBtnPanel>();
+        SceneMgr.Instance.LoadSceneAsyn("BattleScene");
 
     }
 
@@ -334,6 +371,17 @@ public class ADVTeamSelectPanel : BasePanel
     {
         PrepareCardDatas(nowPushBtn);
         GenerateAllCards();
+    }
+
+    public void UpdateInfo(List<int> monsterList, StageData stageData)
+    {
+        this.monsterList = monsterList;
+        this.nowStageData = stageData;
+    }
+    public void UpdateArenaInfo(List<int> arenaList, string arenaPlayerName)
+    {
+        this.arenaList = arenaList;
+        this.arenaPlayerName = arenaPlayerName;
     }
 
     public override void UpdatePlayerName(string nowPlayerName)

@@ -44,7 +44,7 @@ public abstract class BasePanel : MonoBehaviour
         // 体力更新
         int addAB = PlayerDataMgr.Instance.SearchUserLastStaminaUpdateInfo(nowPlayerName, "last_stamina_update") * 2;
         nowAB = nowAB + addAB > totalAB? totalAB : nowAB + addAB;
-        AB.sizeDelta = new Vector2((float)nowAB / (float)totalAB * 250f, Exp.sizeDelta.y);
+        AB.sizeDelta = new Vector2((float)nowAB / (float)totalAB * 250f, AB.sizeDelta.y);
         TMP_Text ABText = GetControl<TMP_Text>("ABText");
         ABText.text = nowAB.ToString() + "/" + totalAB.ToString();
         // 玛娜更新
