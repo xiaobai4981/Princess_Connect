@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5599315790853748176}
   - component: {fileID: 6797834122760757656}
   - component: {fileID: 3048973414768491909}
+  - component: {fileID: 7960672850025488440}
   m_Layer: 0
   m_Name: 200501
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MonoBehaviour:
       calculateTangents: 0
       addNormals: 0
       immutableTriangles: 0
+--- !u!114 &7960672850025488440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354749707001826898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa860f58e9e5e8458889ea7ef2d216b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonGraphic: {fileID: 3048973414768491909}

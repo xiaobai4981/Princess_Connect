@@ -1619,7 +1619,7 @@ GameObject:
   - component: {fileID: 1024516560206118662}
   - component: {fileID: 1002928269344981421}
   m_Layer: 5
-  m_Name: WaveText
+  m_Name: TimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5274,6 +5274,7 @@ MonoBehaviour:
   - {fileID: 2813453244184461046}
   - {fileID: 2765469866580338985}
   star: {fileID: -1646155084, guid: 434042833e2edd44aaed8ef45aa0ec53, type: 3}
+  timeText: {fileID: 1002928269344981421}
 --- !u!1 &7147309033527986868
 GameObject:
   m_ObjectHideFlags: 0

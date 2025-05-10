@@ -22,7 +22,7 @@ public class BattleMenuPanel : BasePanel
     private void BackToBattle()
     {
         // todo 重新开始计时和角色打斗
-
+        BattleManager.Instance.isBattleActive = true;
         // 关闭自己
         UIMgr.Instance.HidePanel<BattleMenuPanel>(true);
     }

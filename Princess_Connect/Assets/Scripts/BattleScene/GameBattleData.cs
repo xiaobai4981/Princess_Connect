@@ -9,9 +9,8 @@ public static class GameBattleData
 public class BattleInitData
 {
     public List<CharacterFactoryTeamCardDataInBattle> playerTeam;
-
+    public List<MonsterData> enemyTeam;
+    public List<CharacterFactoryTeamCardDataInBattle> arenaEnemyTeam;
     public StageData stageData;
-    public List<int> arenaPlayerTeam;
-    public string arenaPlayerName;
     public bool isArena;
 }

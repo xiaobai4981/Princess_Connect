@@ -73,7 +73,7 @@ public class MusicMgr : BaseManager<MusicMgr>
         ABResMgr.Instance.LoadResAsync<AudioClip>("music", name, (clip) =>
         {
             bkMusic.clip = clip;
-            bkMusic.loop = true;
+            bkMusic.loop = !(name == "AttackWin");
             bkMusic.volume = bkMusicValue;
             bkMusic.Play();
         });

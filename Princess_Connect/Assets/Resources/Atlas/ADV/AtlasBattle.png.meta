@@ -556,7 +556,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_20
+      name: AtlasBattle_Damage1
       rect:
         serializedVersion: 2
         x: 265
@@ -745,7 +745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_29
+      name: AtlasBattle_Damage8
       rect:
         serializedVersion: 2
         x: 416
@@ -1186,7 +1186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_50
+      name: AtlasBattle_Damage9
       rect:
         serializedVersion: 2
         x: 0
@@ -1480,7 +1480,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_64
+      name: AtlasBattle_Damage5
       rect:
         serializedVersion: 2
         x: 490
@@ -1501,7 +1501,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_65
+      name: AtlasBattle_Damage6
       rect:
         serializedVersion: 2
         x: 547
@@ -1559,27 +1559,6 @@ TextureImporter:
       bones: []
       spriteID: a8bc6a6e1bf669b4da564c9a47c0fbeb
       internalID: 425586566
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_68
-      rect:
-        serializedVersion: 2
-        x: 739
-        y: 737
-        width: 125
-        height: 148
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f066b2162914b845a46efad9c515096
-      internalID: -1377309741
       vertices: []
       indices: 
       edges: []
@@ -1669,7 +1648,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_73
+      name: AtlasBattle_Damage0
       rect:
         serializedVersion: 2
         x: 60
@@ -1753,7 +1732,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_77
+      name: AtlasBattle_Damage2
       rect:
         serializedVersion: 2
         x: 277
@@ -2278,7 +2257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_102
+      name: AtlasBattle_Damage7
       rect:
         serializedVersion: 2
         x: 268
@@ -2656,7 +2635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_120
+      name: AtlasBattle_Damage3
       rect:
         serializedVersion: 2
         x: 310
@@ -3748,48 +3727,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_172
-      rect:
-        serializedVersion: 2
-        x: 130
-        y: 258
-        width: 38
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd1b909852e400c44b85a3d1723209c6
-      internalID: -890490529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_173
-      rect:
-        serializedVersion: 2
-        x: 171
-        y: 259
-        width: 41
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 629e7cbe8b72ad84a941bb4f7ca85193
-      internalID: -1421705677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasBattle_174
       rect:
         serializedVersion: 2
@@ -4042,7 +3979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_186
+      name: AtlasBattle_Miss
       rect:
         serializedVersion: 2
         x: 759
@@ -4125,6 +4062,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: AtlasBattle_Damage4
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 811
+        width: 63
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc6aa8c4de93b444b32a5f4d7348cbd
+      internalID: -271927606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasBattle_Cirit
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 258
+        width: 78
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5256c5b9ba3079d41acb9d3538672f54
+      internalID: -2136011644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -4141,7 +4120,6 @@ TextureImporter:
       AtlasBattle_10: -559921797
       AtlasBattle_100: 769495522
       AtlasBattle_101: 1261366343
-      AtlasBattle_102: -1712308140
       AtlasBattle_103: -372786173
       AtlasBattle_104: 1089957400
       AtlasBattle_105: -757560129
@@ -4161,7 +4139,6 @@ TextureImporter:
       AtlasBattle_118: 615526661
       AtlasBattle_119: 1856744611
       AtlasBattle_12: 784127045
-      AtlasBattle_120: 16372322
       AtlasBattle_121: -2051670074
       AtlasBattle_122: -1929482073
       AtlasBattle_123: -1431851027
@@ -4232,13 +4209,11 @@ TextureImporter:
       AtlasBattle_183: 1200856979
       AtlasBattle_184: -1205922032
       AtlasBattle_185: -1259247005
-      AtlasBattle_186: -976216624
       AtlasBattle_187: 1757253243
       AtlasBattle_188: -2225762
       AtlasBattle_189: 458637861
       AtlasBattle_19: 1572311805
       AtlasBattle_2: 1246019959
-      AtlasBattle_20: -1890280587
       AtlasBattle_21: -407403253
       AtlasBattle_22: 478558232
       AtlasBattle_24: 1378259667
@@ -4246,7 +4221,6 @@ TextureImporter:
       AtlasBattle_26: 451090898
       AtlasBattle_27: 1998320025
       AtlasBattle_28: 1958805142
-      AtlasBattle_29: -459301707
       AtlasBattle_3: -2099825054
       AtlasBattle_30: -32923517
       AtlasBattle_31: 660731092
@@ -4269,7 +4243,6 @@ TextureImporter:
       AtlasBattle_48: 1938888117
       AtlasBattle_49: -1225998437
       AtlasBattle_5: -738806666
-      AtlasBattle_50: -1653825968
       AtlasBattle_51: -1444946524
       AtlasBattle_52: -1179424960
       AtlasBattle_53: 482041467
@@ -4284,8 +4257,6 @@ TextureImporter:
       AtlasBattle_61: -241649552
       AtlasBattle_62: 1427751035
       AtlasBattle_63: -54858422
-      AtlasBattle_64: -1729749697
-      AtlasBattle_65: -769785730
       AtlasBattle_66: 457266574
       AtlasBattle_67: 425586566
       AtlasBattle_68: -1377309741
@@ -4294,11 +4265,9 @@ TextureImporter:
       AtlasBattle_70: 936557292
       AtlasBattle_71: 415991724
       AtlasBattle_72: 1887021410
-      AtlasBattle_73: -916519170
       AtlasBattle_74: -1969170868
       AtlasBattle_75: 1502392141
       AtlasBattle_76: 1732224386
-      AtlasBattle_77: 1526268020
       AtlasBattle_78: -859204643
       AtlasBattle_79: 873252555
       AtlasBattle_8: -1971950778
@@ -4324,6 +4293,18 @@ TextureImporter:
       AtlasBattle_98: 593173879
       AtlasBattle_99: 607924202
       AtlasBattle_BtnBg: 1906200107
+      AtlasBattle_Cirit: -2136011644
+      AtlasBattle_Damage0: -916519170
+      AtlasBattle_Damage1: -1890280587
+      AtlasBattle_Damage2: 1526268020
+      AtlasBattle_Damage3: 16372322
+      AtlasBattle_Damage4: -271927606
+      AtlasBattle_Damage5: -1729749697
+      AtlasBattle_Damage6: -769785730
+      AtlasBattle_Damage7: -1712308140
+      AtlasBattle_Damage8: -459301707
+      AtlasBattle_Damage9: -1653825968
+      AtlasBattle_Miss: -976216624
       AtlasBattle_Time: 1666186158
       AtlasBattle_WaveTipsBG: 856267145
   mipmapLimitGroupName: 

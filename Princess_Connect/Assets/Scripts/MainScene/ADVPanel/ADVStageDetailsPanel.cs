@@ -42,8 +42,6 @@ public class ADVStageDetailsPanel : BasePanel
         string jsonStr1 = File.ReadAllText(filePath1);
         stageDatas = JsonMapper.ToObject<StageDatas>(jsonStr1);
 
-        
-
         UpdateUI();
     }
 

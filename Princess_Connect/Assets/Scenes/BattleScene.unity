@@ -259,6 +259,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 336dc973d94d74c47ae64b7fba4e1482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allyPositions:
+  - {x: -799, y: -164, z: 0}
+  - {x: -616, y: -200, z: 0}
+  - {x: -455, y: -121, z: 0}
+  - {x: -338, y: -213, z: 0}
+  - {x: -186, y: -144, z: 0}
+  enemyPositions:
+  - {x: 799, y: -164, z: 0}
+  - {x: 616, y: -200, z: 0}
+  - {x: 455, y: -121, z: 0}
+  - {x: 338, y: -213, z: 0}
+  - {x: 186, y: -144, z: 0}
+  battleDuration: 90
+  battleTimer: 0
+  isBattleActive: 0
+  allies: []
+  enemies: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

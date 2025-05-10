@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,19 @@ public class CharacterFactoryTeamCardDataInBattle
     public int nowTp;
 }
 
+public class EnemyFactoryTeamCardDataInBattle
+{
+    
+}
+
 public class BattleControlPanel : BasePanel
 {
+    // 战斗场景的背景图
+    private Sprite BG;
+
     public GameObject[] characterUBControls;
     public Sprite star;
+    public TMP_Text timeText;
     private List<CharacterFactoryTeamCardDataInBattle> characterTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
 
     private void Start()
@@ -50,12 +60,27 @@ public class BattleControlPanel : BasePanel
         }
     }
 
+    private void Update()
+    {
+        // 更新时间
+        if (BattleManager.Instance != null)
+        {
+            int min = (int)((BattleManager.Instance.battleDuration - BattleManager.Instance.battleTimer) / 60);
+            int sec = (int)((BattleManager.Instance.battleDuration - BattleManager.Instance.battleTimer) % 60);
+            timeText.text = $"{min}" + ":" + $"{sec}";
+        }
+        
+        // todo 更新HP和TP
+
+    }
+
     protected override void ClickBtn(string btnName)
     {
         switch (btnName)
         {
             case "MenuBtn":
                 // todo 停止计时和角色打斗
+                BattleManager.Instance.isBattleActive = false;
                 // 打开面板
                 UIMgr.Instance.ShowPanel<BattleMenuPanel>(E_UILayer.System);
                 break;

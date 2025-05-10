@@ -18,12 +18,16 @@ public class ADVTeamSelectPanel : BasePanel
     
     private PlayerCharacterCollection playerCharacterCollection;
     private List<bool> selectedList = new List<bool>();
+    private List<int> monsterList = new List<int>();
 
     // 战斗场景需要的数据
     private List<CharacterFactoryTeamCardDataInBattle> characterTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
+    // 竞技场需要的数据
+    private List<CharacterFactoryTeamCardDataInBattle> arenaTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
+    private List<MonsterData> monsterDatas = new List<MonsterData>();
     private StageData nowStageData;
     private List<CharacterFactoryTeamCardData> selectedIndex;
-    private List<int> monsterList = new List<int>();
+   
     // 竞技场
     private List<int> arenaList = new List<int>();
     private string arenaPlayerName;
@@ -333,19 +337,39 @@ public class ADVTeamSelectPanel : BasePanel
             characterFactoryTeamCardDataInBattle.characterFactoryTeamCardData = data;
             characterTeamCardDataInBattle.Add(characterFactoryTeamCardDataInBattle);
         }
-        // todo 竞技场数据后续需要优化
-        GameBattleData.battleInitData = new BattleInitData
+        string filePath = Path.Combine(Application.persistentDataPath, "monster_config.json");
+        MonsterConfig allMonsterDatas = JsonMapper.ToObject<MonsterConfig>(File.ReadAllText(filePath));
+        foreach (int monsterId in monsterList)
         {
-            playerTeam = characterTeamCardDataInBattle,
-            stageData = nowStageData,
-            isArena = false
-        };
+            if (allMonsterDatas.monsters.ContainsKey(monsterId.ToString()))
+            {
+                monsterDatas.Add(allMonsterDatas.monsters[monsterId.ToString()]);
+            }
+        }
+        // todo 竞技场数据后续需要优化
+        // 普通模式初始化
+        if (monsterDatas.Count > 0)
+        {
+            GameBattleData.battleInitData = new BattleInitData
+            {
+                playerTeam = characterTeamCardDataInBattle,
+                enemyTeam = monsterDatas,
+                stageData = nowStageData,
+                isArena = false
+            };
+        }
+        // 竞技场初始化
+        else
+        {
+
+        }
+        
         UIMgr.Instance.ShowPanel<BattleControlPanel>(E_UILayer.Middle, (panel) =>
         {
             panel.UpdatePlayerName(nowPlayerName);
             panel.UpdateCharacterTeamCardData(characterTeamCardDataInBattle);
         });
-        // 关闭所有的面板
+        #region 关闭所有的面板
         UIMgr.Instance.HidePanel<BeginPanel>();
         UIMgr.Instance.HidePanel<BeginQuestPanel>(true);
 
@@ -364,7 +388,7 @@ public class ADVTeamSelectPanel : BasePanel
         UIMgr.Instance.HidePanel<ADVPanel>();
         UIMgr.Instance.HidePanel<BottomBtnPanel>();
         SceneMgr.Instance.LoadSceneAsyn("BattleScene");
-
+        #endregion
     }
 
     public void Refresh()

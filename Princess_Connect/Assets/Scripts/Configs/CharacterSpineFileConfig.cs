@@ -70,6 +70,18 @@ public static class CharacterSpineFileConfig
             normalSpineNum = new List<string>(){"07"},
             fightSpineNum = new List<string>(){"106001"},
             eventSpineNum = "000000"
+        } },
+        {200400, new CharacterSpineInfo(){
+            normalSpineNum = new List<string>(){"200400"},
+        } },
+        {200500, new CharacterSpineInfo(){
+            normalSpineNum = new List<string>(){"200500"},
+        } },
+        {200501, new CharacterSpineInfo(){
+            normalSpineNum = new List<string>(){"200501"},
+        } },
+        {300800, new CharacterSpineInfo(){
+            normalSpineNum = new List<string>(){"300800"},
         } }
     };
 }
