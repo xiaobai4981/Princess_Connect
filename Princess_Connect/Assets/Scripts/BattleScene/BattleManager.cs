@@ -260,6 +260,14 @@ public class BattleManager : MonoBehaviour
                     if (ally.isAlive) ally.PlayWinAnim();
                 }
                 MusicMgr.Instance.PlayBKMusic("AttackWin");
+                UIMgr.Instance.ShowPanel<BattleResultPanel>(E_UILayer.System, (panel) => {
+                    panel.UpdatePlayerName(GameBattleData.nowPlayerName);
+                    panel.InputResult(1, allies.Count, enemies.Count);
+                    if (!GameBattleData.battleInitData.isArena)
+                    {
+                        panel.UpdateStageNum(GameBattleData.battleInitData.stageId);
+                    }
+                });
                 break;
 
             case BattleResult.Lose:
@@ -269,6 +277,14 @@ public class BattleManager : MonoBehaviour
                     if (enemy.isAlive) enemy.PlayIdleAnim();
                 }
                 MusicMgr.Instance.PlayBKMusic("AttackLose");
+                UIMgr.Instance.ShowPanel<BattleResultPanel>(E_UILayer.System, (panel) => {
+                    panel.UpdatePlayerName(GameBattleData.nowPlayerName);
+                    panel.InputResult(0, allies.Count, enemies.Count);
+                    if (!GameBattleData.battleInitData.isArena)
+                    {
+                        panel.UpdateStageNum(GameBattleData.battleInitData.stageId);
+                    }
+                });
                 break;
 
             case BattleResult.Timeout:
@@ -281,6 +297,14 @@ public class BattleManager : MonoBehaviour
                 {
                     if (enemy.isAlive) enemy.PlayIdleAnim();
                 }
+                UIMgr.Instance.ShowPanel<BattleResultPanel>(E_UILayer.System, (panel) => {
+                    panel.UpdatePlayerName(GameBattleData.nowPlayerName);
+                    panel.InputResult(2, allies.Count, enemies.Count);
+                    if (!GameBattleData.battleInitData.isArena)
+                    {
+                        panel.UpdateStageNum(GameBattleData.battleInitData.stageId);
+                    }
+                });
                 break;
         }
         Debug.Log($"Battle Ended: {result}");

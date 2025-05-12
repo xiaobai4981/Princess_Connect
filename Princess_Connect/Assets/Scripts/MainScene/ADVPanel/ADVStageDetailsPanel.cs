@@ -122,6 +122,7 @@ public class ADVStageDetailsPanel : BasePanel
                 {
                     panel.UpdatePlayerName(nowPlayerName);
                     panel.UpdateInfo(monsterList, stageDatas.stage_datas[nowStageIndex.ToString()]);
+                    panel.UpdateNowStageIndex(nowStageIndex);
                 });
                 break;
             case "CancelBtn":

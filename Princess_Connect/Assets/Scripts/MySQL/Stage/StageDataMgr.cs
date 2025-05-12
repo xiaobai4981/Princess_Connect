@@ -145,13 +145,14 @@ public class StageDataMgr
     }
 
     // 更新玩家的关卡信息
-    public bool UpdateStageStar(string username, int starCnt)
+    public bool UpdateStageStar(string username, int stage_id, int starCnt)
     {
         try
         {
-            string query = $"UPDATE player_stages SET star = {starCnt} WHERE username = @username";
+            string query = $"UPDATE player_stages SET star = {starCnt} WHERE username = @username AND stage_id = @stage_id";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@stage_id", stage_id);
 
             int rows = cmd.ExecuteNonQuery();
 

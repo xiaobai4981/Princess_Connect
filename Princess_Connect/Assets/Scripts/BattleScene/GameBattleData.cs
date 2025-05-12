@@ -4,6 +4,7 @@ using UnityEngine;
 
 public static class GameBattleData 
 {
+    public static string nowPlayerName;
     public static BattleInitData battleInitData;
 }
 public class BattleInitData
@@ -12,5 +13,6 @@ public class BattleInitData
     public List<MonsterData> enemyTeam;
     public List<CharacterFactoryTeamCardDataInBattle> arenaEnemyTeam;
     public StageData stageData;
+    public int stageId;
     public bool isArena;
 }

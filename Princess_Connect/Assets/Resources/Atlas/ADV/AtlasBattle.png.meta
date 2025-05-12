@@ -3496,7 +3496,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_161
+      name: AtlasBattle_BattleLose
       rect:
         serializedVersion: 2
         x: 564
@@ -3748,48 +3748,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AtlasBattle_175
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 120
-        width: 246
-        height: 100
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 216f5a60162dcc44ab62e85a7b4e8ae0
-      internalID: -818563450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_176
-      rect:
-        serializedVersion: 2
-        x: 516
-        y: 124
-        width: 145
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab4f84755946c45498126db186ca7ba5
-      internalID: -2033458334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: AtlasBattle_177
       rect:
         serializedVersion: 2
@@ -3827,90 +3785,6 @@ TextureImporter:
       bones: []
       spriteID: 2fd5dd6e3d635664fb323971751f3397
       internalID: -725693723
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_179
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 0
-        width: 120
-        height: 118
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9fbaea09a9753a488ff0a5f6edc770b
-      internalID: 1166101214
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_180
-      rect:
-        serializedVersion: 2
-        x: 392
-        y: 2
-        width: 107
-        height: 116
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4557818e7538b146b205df423182068
-      internalID: -191293315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_181
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 1
-        width: 121
-        height: 116
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7996a291a618444e9706eaad61d59df
-      internalID: 727886933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AtlasBattle_182
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 0
-        width: 121
-        height: 117
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2b69dff6b56218d4fbe893976e615ff4
-      internalID: 439673180
       vertices: []
       indices: 
       edges: []
@@ -4092,7 +3966,7 @@ TextureImporter:
         width: 78
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4100,6 +3974,48 @@ TextureImporter:
       bones: []
       spriteID: 5256c5b9ba3079d41acb9d3538672f54
       internalID: -2136011644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasBattle_BattleWin
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 0
+        width: 499
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eefd440781b7dc4085ea3a7900ea148
+      internalID: 1981634347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AtlasBattle_BattleTimeUp
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 120
+        width: 404
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a42f0b6050f03f43a97be25e394d488
+      internalID: 548450956
       vertices: []
       indices: 
       edges: []
@@ -4182,7 +4098,6 @@ TextureImporter:
       AtlasBattle_159: -1177824816
       AtlasBattle_16: -1441743384
       AtlasBattle_160: 1314844326
-      AtlasBattle_161: 357784166
       AtlasBattle_162: -1948849519
       AtlasBattle_163: 1223192916
       AtlasBattle_164: 1937816308
@@ -4292,6 +4207,9 @@ TextureImporter:
       AtlasBattle_97: -1259185698
       AtlasBattle_98: 593173879
       AtlasBattle_99: 607924202
+      AtlasBattle_BattleLose: 357784166
+      AtlasBattle_BattleTimeUp: 548450956
+      AtlasBattle_BattleWin: 1981634347
       AtlasBattle_BtnBg: 1906200107
       AtlasBattle_Cirit: -2136011644
       AtlasBattle_Damage0: -916519170

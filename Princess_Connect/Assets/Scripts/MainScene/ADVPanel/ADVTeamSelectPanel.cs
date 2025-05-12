@@ -14,8 +14,9 @@ public class ADVTeamSelectPanel : BasePanel
     public Sprite defaultRankSprite;
     private int ce = 0;
     public TMP_Text ceCount;
+    private int nowStageIndex;
 
-    
+
     private PlayerCharacterCollection playerCharacterCollection;
     private List<bool> selectedList = new List<bool>();
     private List<int> monsterList = new List<int>();
@@ -350,11 +351,13 @@ public class ADVTeamSelectPanel : BasePanel
         // 普通模式初始化
         if (monsterDatas.Count > 0)
         {
+            GameBattleData.nowPlayerName = nowPlayerName;
             GameBattleData.battleInitData = new BattleInitData
             {
                 playerTeam = characterTeamCardDataInBattle,
                 enemyTeam = monsterDatas,
                 stageData = nowStageData,
+                stageId = nowStageIndex,
                 isArena = false
             };
         }
@@ -369,6 +372,7 @@ public class ADVTeamSelectPanel : BasePanel
                 characterFactoryTeamCardDataInBattle.characterFactoryTeamCardData = data;
                 arenaTeamCardDataInBattle.Add(characterFactoryTeamCardDataInBattle);
             }
+            GameBattleData.nowPlayerName = nowPlayerName;
             GameBattleData.battleInitData = new BattleInitData
             {
                 playerTeam = characterTeamCardDataInBattle,
@@ -418,6 +422,11 @@ public class ADVTeamSelectPanel : BasePanel
     public void UpdateArenaInfo(List<CharacterFactoryTeamCardData> arenaList)
     {
         this.arenaList = arenaList;
+    }
+
+    public void UpdateNowStageIndex(int nowStageIndex)
+    {
+        this.nowStageIndex = nowStageIndex;
     }
 
     public override void UpdatePlayerName(string nowPlayerName)
