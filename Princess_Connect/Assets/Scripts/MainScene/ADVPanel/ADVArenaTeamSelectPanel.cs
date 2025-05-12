@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ADVTeamSelectPanel : BasePanel
+public class ADVArenaTeamSelectPanel : BasePanel
 {
     private string nowPushBtn = "all";
     public GameObject[] allSelected;
@@ -15,22 +15,12 @@ public class ADVTeamSelectPanel : BasePanel
     private int ce = 0;
     public TMP_Text ceCount;
 
-    
+
     private PlayerCharacterCollection playerCharacterCollection;
     private List<bool> selectedList = new List<bool>();
-    private List<int> monsterList = new List<int>();
 
-    // 战斗场景需要的数据
-    private List<CharacterFactoryTeamCardDataInBattle> characterTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
-    // 竞技场需要的数据
-    private List<CharacterFactoryTeamCardDataInBattle> arenaTeamCardDataInBattle = new List<CharacterFactoryTeamCardDataInBattle>();
-
-    private List<MonsterData> monsterDatas = new List<MonsterData>();
-    private StageData nowStageData;
     private List<CharacterFactoryTeamCardData> selectedIndex;
-   
-    // 竞技场
-    private List<CharacterFactoryTeamCardData> arenaList = new List<CharacterFactoryTeamCardData>();
+
     #region 按钮初始化
     // 按钮背景的字典
     private Dictionary<string, Button> buttonDataDict;
@@ -307,10 +297,10 @@ public class ADVTeamSelectPanel : BasePanel
                 }
                 break;
             case "BeginBtn":
-                LinkToBattle();
+                TeamSetting();
                 break;
             case "CancelBtn":
-                UIMgr.Instance.HidePanel<ADVTeamSelectPanel>(true);
+                UIMgr.Instance.HidePanel<ADVArenaTeamSelectPanel>(true);
                 break;
         }
 
@@ -325,99 +315,22 @@ public class ADVTeamSelectPanel : BasePanel
         Refresh();
     }
 
-    private void LinkToBattle()
+    private void TeamSetting()
     {
-        // 战斗场景初始化
-        // 需要传递到战斗场景的数据
-        foreach (CharacterFactoryTeamCardData data in selectedIndex)
+        ArenaConfig arenaList = new ArenaConfig() { arena_deploy = new List<int>() };
+        for (int i = 0; i < selectedIndex.Count; i++)
         {
-            CharacterFactoryTeamCardDataInBattle characterFactoryTeamCardDataInBattle = new CharacterFactoryTeamCardDataInBattle();
-            characterFactoryTeamCardDataInBattle.nowTp = 0;
-            characterFactoryTeamCardDataInBattle.nowHp = data.characterData.current_stats.hp;
-            characterFactoryTeamCardDataInBattle.characterFactoryTeamCardData = data;
-            characterTeamCardDataInBattle.Add(characterFactoryTeamCardDataInBattle);
+            arenaList.arena_deploy.Add(selectedIndex[i].characterData.character_id);
         }
-        string filePath = Path.Combine(Application.persistentDataPath, "monster_config.json");
-        MonsterConfig allMonsterDatas = JsonMapper.ToObject<MonsterConfig>(File.ReadAllText(filePath));
-        foreach (int monsterId in monsterList)
-        {
-            if (allMonsterDatas.monsters.ContainsKey(monsterId.ToString()))
-            {
-                monsterDatas.Add(allMonsterDatas.monsters[monsterId.ToString()]);
-            }
-        }
-        // todo 竞技场数据后续需要优化
-        // 普通模式初始化
-        if (monsterDatas.Count > 0)
-        {
-            GameBattleData.battleInitData = new BattleInitData
-            {
-                playerTeam = characterTeamCardDataInBattle,
-                enemyTeam = monsterDatas,
-                stageData = nowStageData,
-                isArena = false
-            };
-        }
-        // 竞技场初始化
-        else
-        {
-            foreach (CharacterFactoryTeamCardData data in arenaList)
-            {
-                CharacterFactoryTeamCardDataInBattle characterFactoryTeamCardDataInBattle = new CharacterFactoryTeamCardDataInBattle();
-                characterFactoryTeamCardDataInBattle.nowTp = 0;
-                characterFactoryTeamCardDataInBattle.nowHp = data.characterData.current_stats.hp;
-                characterFactoryTeamCardDataInBattle.characterFactoryTeamCardData = data;
-                arenaTeamCardDataInBattle.Add(characterFactoryTeamCardDataInBattle);
-            }
-            GameBattleData.battleInitData = new BattleInitData
-            {
-                playerTeam = characterTeamCardDataInBattle,
-                arenaEnemyTeam = arenaTeamCardDataInBattle,
-                isArena = true
-            };
-        }
-        
-        UIMgr.Instance.ShowPanel<BattleControlPanel>(E_UILayer.Middle, (panel) =>
-        {
-            panel.UpdatePlayerName(nowPlayerName);
-            panel.UpdateCharacterTeamCardData(characterTeamCardDataInBattle);
-        });
-        #region 关闭所有的面板
-        UIMgr.Instance.HidePanel<BeginPanel>();
-        UIMgr.Instance.HidePanel<BeginQuestPanel>(true);
-
-        UIMgr.Instance.HidePanel<LotteryPanel>();
-        UIMgr.Instance.HidePanel<LotteryResultPanel>(true);
-
-        UIMgr.Instance.HidePanel<MenuPanel>();
-        UIMgr.Instance.HidePanel<MenuGloryPanel>(true);
-        UIMgr.Instance.HidePanel<MenuItemPanel>(true);
-
-        UIMgr.Instance.HidePanel<ADVTeamSelectPanel>(true);
-        UIMgr.Instance.HidePanel<ADVStageDetailsPanel>(true);
-        UIMgr.Instance.HidePanel<ADVMainPanel>(true);
-        UIMgr.Instance.HidePanel<ADVSearchPanel>(true);
-        UIMgr.Instance.HidePanel<ADVArenaPanel>(true);
-        UIMgr.Instance.HidePanel<ADVPanel>();
-        UIMgr.Instance.HidePanel<BottomBtnPanel>();
-        SceneMgr.Instance.LoadSceneAsyn("BattleScene");
-        #endregion
+        string json = JsonMapper.ToJson(arenaList);
+        PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { { "arena_deploy", json } }, false);
+        UIMgr.Instance.HidePanel<ADVArenaTeamSelectPanel>(true);
     }
 
     public void Refresh()
     {
         PrepareCardDatas(nowPushBtn);
         GenerateAllCards();
-    }
-
-    public void UpdateInfo(List<int> monsterList, StageData stageData)
-    {
-        this.monsterList = monsterList;
-        this.nowStageData = stageData;
-    }
-    public void UpdateArenaInfo(List<CharacterFactoryTeamCardData> arenaList)
-    {
-        this.arenaList = arenaList;
     }
 
     public override void UpdatePlayerName(string nowPlayerName)

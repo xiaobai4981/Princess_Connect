@@ -117,7 +117,11 @@ public class BattleManager : MonoBehaviour
         // 竞技场模式
         else
         {
-
+            // 生成敌方单位
+            for (int i = 0; i < battleInitData.arenaEnemyTeam.Count; i++)
+            {
+                CreateEnemy(i, battleInitData.isArena);
+            }
         }
     }
 
@@ -151,13 +155,27 @@ public class BattleManager : MonoBehaviour
 
     private void CreateEnemy(int index, bool isArena)
     {
-        var data = battleInitData.enemyTeam[index];
+        
         if (isArena)
         {
-
+            var arenaDatga = battleInitData.arenaEnemyTeam[index];
+            string resName = GetCharacterPrefabName(arenaDatga);
+            ABResMgr.Instance.LoadResAsync<GameObject>("character_prefab", resName, (obj) =>
+            {
+                GameObject characterInstance = Instantiate(obj);
+                characterInstance.transform.SetParent(monsterPrefab.transform);
+                characterInstance.transform.localPosition = enemyPositions[index];
+                characterInstance.transform.localScale = new Vector3(-0.7f, 0.7f, 1);
+                BattleUnit unit = characterInstance.GetComponent<BattleUnit>();
+                unit.onMoveComplete += () => unitsMovingCount--;
+                unitsMovingCount++;
+                unit.Initialize(false, arenaDatga);
+                enemies.Add(unit);
+            }, true);
         }
         else
         {
+            var data = battleInitData.enemyTeam[index];
             ABResMgr.Instance.LoadResAsync<GameObject>("monster_prefab", battleInitData.enemyTeam[index].monster_id.ToString(), (obj) =>
             {
                 GameObject characterInstance = Instantiate(obj);

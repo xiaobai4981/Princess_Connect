@@ -11,11 +11,6 @@ public class CharacterFactoryTeamCardDataInBattle
     public int nowTp;
 }
 
-public class EnemyFactoryTeamCardDataInBattle
-{
-    
-}
-
 public class BattleControlPanel : BasePanel
 {
     // Õ½¶·³¡¾°µÄ±³¾°Í¼

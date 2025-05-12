@@ -34,6 +34,8 @@ public class QuestListener : MonoBehaviour
         TimeSpan timeUntilMidnight = midnightTonight - now;
         if (timeUntilMidnight == TimeSpan.Zero)
         {
+            PlayerDataMgr.Instance.ModifyUserIntInfo(playerData.username, new Dictionary<string, object>() {{"clear_stage_times", 0}, { "search_times", 5 }}
+            , false);
             for (int i = 1001; i <= 1005; i++)
             {
                 PlayerQuestInfo playerQuestInfo = new PlayerQuestInfo();

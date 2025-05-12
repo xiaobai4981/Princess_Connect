@@ -9,6 +9,11 @@ using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
+public class ArenaConfig
+{
+    public List<int> arena_deploy;
+}
+
 public class PlayerInfo
 {
     public string username;
@@ -170,6 +175,34 @@ public class PlayerDataMgr
             return -1;
         }
     }
+    // 查询其他用户的竞技场配置信息
+    public Dictionary<string, List<int>> SearchOtherArenaDeployInfo(string username)
+    {
+        Dictionary<string, List<int> > res = new Dictionary<string, List<int>>();
+        try
+        {
+            string query = "SELECT username, arena_deploy ->>'$' AS arena_deploy FROM player_data WHERE username != @username";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", username);
+
+            using (MySqlDataReader reader = cmd.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    string otherUsername = reader.GetString("username");
+                    string arenaDeployStr = reader.GetString("arena_deploy");
+                    ArenaConfig arenaDeploy = JsonMapper.ToObject<ArenaConfig>(arenaDeployStr);
+                    res.Add(otherUsername, arenaDeploy.arena_deploy);
+                }
+            }
+            return res;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Search failed: {e.Message}");
+            return null;
+        }
+    }
     // 查询用户上次体力更新的时间
     public int SearchUserLastStaminaUpdateInfo(string username, string anInfo)
     {
@@ -235,7 +268,7 @@ public class PlayerDataMgr
         if (columnUpdates == null || columnUpdates.Count == 0)
             return false;
         // 列名白名单（防止 SQL 注入）
-        var allowedColumns = new HashSet<string> { "level", "current_exp", "current_stamina", "mana_cnt", "diamond_cnt", "last_stamina_update" , "inventory", "arena_deploy", "clear_stage_times"};
+        var allowedColumns = new HashSet<string> { "level", "current_exp", "current_stamina", "mana_cnt", "diamond_cnt", "last_stamina_update" , "inventory", "arena_deploy", "clear_stage_times", "search_times"};
         var invalidColumns = columnUpdates.Keys.Where(col => !allowedColumns.Contains(col)).ToList();
         if (invalidColumns.Any())
         {

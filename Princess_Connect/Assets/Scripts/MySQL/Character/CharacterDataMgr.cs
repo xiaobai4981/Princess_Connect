@@ -198,6 +198,79 @@ public class CharacterDataMgr
         File.WriteAllText(filePath, jsonStr);
     }
 
+    // 获取玩家角色信息
+    public PlayerCharacterData GetUserCharacterData(string username, int character_id)
+    {
+        try
+        {
+            string query = @"SELECT character_id, character_name, level, current_exp, current_star, 
+                current_rank, current_likb, current_stats ->> '$' as current_stats, 
+                rank_requirements ->> '$' as rank_requirements, equipment_slots ->> '$' as equipment_slots, 
+                skills_config ->> '$' as skills_config, skills_level ->> '$' as skills_level, character_type 
+                FROM player_character WHERE username = @username AND character_id = @character_id";
+            using (MySqlCommand cmd = new MySqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@username", username);
+                cmd.Parameters.AddWithValue("@character_id", character_id);
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    PlayerCharacterData character = null;
+                    if (reader.Read())
+                    {
+                        character = new PlayerCharacterData
+                        {
+                            character_id = reader.GetInt32("character_id"),
+                            character_name = reader.IsDBNull("character_name") ? null : reader.GetString("character_name"),
+                            level = reader.GetInt32("level"),
+                            current_exp = reader.GetInt32("current_exp"),
+                            current_star = reader.GetInt32("current_star"),
+                            current_rank = reader.GetInt32("current_rank"),
+                            current_likb = reader.GetInt32("current_likb"),
+                            character_type = reader.IsDBNull("character_type") ? null : reader.GetString("character_type")
+                        };
+
+                        // 解析JSON字段
+                        if (!reader.IsDBNull("current_stats"))
+                        {
+                            string statsJson = reader.GetString("current_stats");
+                            character.current_stats = JsonMapper.ToObject<CharacterStats>(statsJson);
+                        }
+
+                        if (!reader.IsDBNull("rank_requirements"))
+                        {
+                            string rankJson = reader.GetString("rank_requirements");
+                            character.rank_requirements = JsonMapper.ToObject<RankRequirements>(rankJson);
+                        }
+
+                        if (!reader.IsDBNull("equipment_slots"))
+                        {
+                            string slotsJson = reader.GetString("equipment_slots");
+                            character.equipment_slots = JsonMapper.ToObject<EquipmentSlots>(slotsJson);
+                        }
+
+                        if (!reader.IsDBNull("skills_level"))
+                        {
+                            string skillsLevelJson = reader.GetString("skills_level");
+                            character.skills_level = JsonMapper.ToObject<Dictionary<string, int>>(skillsLevelJson);
+                        }
+
+                        if (!reader.IsDBNull("skills_config"))
+                        {
+                            string skillsConfigJson = reader.GetString("skills_config");
+                            character.skills_config = JsonMapper.ToObject<SkillsConfig>(skillsConfigJson);
+                        }
+                    }
+                    return character;
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"初始化失败: {e.Message}\n堆栈跟踪：{e.StackTrace}");
+            return null;
+        }
+    }
+
     // 上传玩家角色信息
     public void UploadUserCharacterData(string username, int characterId, PlayerCharacterData playerCharacterData)
     {
