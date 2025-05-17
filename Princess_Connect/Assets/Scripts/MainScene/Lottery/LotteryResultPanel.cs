@@ -49,6 +49,8 @@ public class LotteryResultPanel : BasePanel
         }
         else
         {
+            string defaultCharacterEquipment = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterEquipment.json");
+            string defaultCharacterSkillLevel = File.ReadAllText("Assets/Resources/Configs/NewPlayerCharacterSkillLevel.json");
             for (int i = 0; i < resultList.Count; i++)
             {
                 if (CharacterDataMgr.Instance.SearchCharacterInPlayer(nowPlayerName, resultList[i]))
@@ -60,6 +62,11 @@ public class LotteryResultPanel : BasePanel
                 }
                 else
                 {
+                    // 未获得的角色
+                    CharacterDataMgr.Instance.AddUserPlayerInfo(nowPlayerName, resultList[i]);
+                    CharacterDataMgr.Instance.InitPlayerCharacter(nowPlayerName, resultList[i], defaultCharacterEquipment, defaultCharacterSkillLevel);
+                    CharacterDataMgr.Instance.InitUserCharacterData(nowPlayerName);
+
                     ABResMgr.Instance.LoadResAsync<Sprite>("character_icon", $"icon_unit_{resultList[i]}11", (res) =>
                     {
                         lotteryResultItems[i].GetComponent<Image>().sprite = res;
@@ -102,12 +109,7 @@ public class LotteryResultPanel : BasePanel
 
         foreach (int characterItem in resultList)
         {
-            if (CharacterDataMgr.Instance.SearchCharacterInPlayer(nowPlayerName, characterItem) == false)
-            {
-                CharacterDataMgr.Instance.AddUserPlayerInfo(nowPlayerName, characterItem);
-                CharacterDataMgr.Instance.InitPlayerCharacter(nowPlayerName, characterItem, defaultCharacterEquipment, defaultCharacterSkillLevel);
-            }
-            else
+            if (CharacterDataMgr.Instance.SearchCharacterInPlayer(nowPlayerName, characterItem))
             {
                 DateTime now = DateTime.Now;
                 int totalSeconds = now.Second;

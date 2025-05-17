@@ -97,7 +97,7 @@ public class CharacterPanel : BasePanel
         Refresh();
     }
     // 类型不同的道具仓库卡牌初始化
-    private void PrepareCardDatas(string nowCharacterType, bool isSync = false)
+    private void PrepareCardDatas(string nowCharacterType, bool isSync = true)
     {
         cardDatas.Clear();
         foreach (CharacterFactoryData data in allCharacter)

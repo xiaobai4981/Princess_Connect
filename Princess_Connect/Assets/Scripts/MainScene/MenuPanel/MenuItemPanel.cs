@@ -141,7 +141,7 @@ public class MenuItemPanel : BasePanel
         action?.Invoke();
     }
     // 类型不同的道具仓库卡牌初始化
-    private void PrepareCardDatas(string nowItemType, bool isSync = false)
+    private void PrepareCardDatas(string nowItemType, bool isSync = true)
     {
         cardDatas.Clear();
         foreach (string cardIdStr in allItems.Keys)

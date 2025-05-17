@@ -3,18 +3,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class BattleUnit : MonoBehaviour
 {
+    #region 血条相关
+    public GameObject healthBarPrefab;
+    public RectTransform healthUIAnchor;
+    private Health healthComponent;
+    private GameObject healthBarInstance;
+    #endregion
     #region 动画名字相关
     private SkeletonGraphic skeleton;
     private Spine.AnimationState spineState;
-    private string characterNormalSpineNum;
-    private string characterSkillSpineNum;
-    private string monsterSpineNum;
 
     // 普通动画
     private string idleAnim;
@@ -24,9 +27,10 @@ public class BattleUnit : MonoBehaviour
     private string deathAnim;
     private string winAnim;
     // 技能动画
+    private string exSkillAnim;
+    private string skill1Anim;
+    private string skill2Anim;
 
-
-    // 庆祝动画
 
     #endregion
     // 开始移动相关
@@ -34,7 +38,14 @@ public class BattleUnit : MonoBehaviour
     public float moveDuration = 2f; // 移动耗时
     private Vector3 targetPosition;
 
+    #region 技能打断控制
+    private bool isSkillInterrupting = false;
+    private int savedAttackCycleIndex = 0;
+    private Coroutine currentAttackCoroutine;
+    #endregion
+
     #region 战斗属性
+    public int teamIndex;
     public bool isAlly;
     public bool isAlive => currentHp > 0;
     private int skillIndex;
@@ -45,24 +56,34 @@ public class BattleUnit : MonoBehaviour
     #region 游戏数据相关
     private CharacterFactoryTeamCardDataInBattle characterData;
     private MonsterData monsterData;
-    private int currentHp;
-    private int currentTp;
+    public int maxHp;
+    public int currentHp;
+    public int currentTp;
     private int currentAtk;
     #endregion
+    #region 攻击循环控制
+    private int attackCycleIndex = 0; // 新增：攻击循环计数器
+    private readonly int[] attackSequence = new int[] { 0, 0, 2, 0, 4 }; // 新增：攻击序列配置
+    #endregion
+
     // 事件
     public Action onMoveComplete;
 
     public void Initialize(bool isAlly, CharacterFactoryTeamCardDataInBattle characterData)
     {
+        teamIndex = characterData.characterFactoryTeamCardData.characterId;
         NormalSetupSpine(characterData.characterFactoryTeamCardData.characterData.character_id,
                  characterData.characterFactoryTeamCardData.characterData.current_star);
         // todo 还有技能动画的初始化
         this.isAlly = isAlly;
         this.characterData = characterData;
         this.attackInterval = characterData.characterFactoryTeamCardData.characterData.current_stats.atk_cap / 1000;
-        currentHp = characterData.nowHp;
+        maxHp = characterData.nowHp;
+        currentHp = maxHp;
         currentTp = characterData.nowTp;
         currentAtk = characterData.characterFactoryTeamCardData.characterData.current_stats.atk;
+
+        InitializeHealthBar();
 
         InitializePosition();
         StartCoroutine(DelayedActivation());
@@ -75,11 +96,61 @@ public class BattleUnit : MonoBehaviour
         this.isAlly = isAlly;
         this.monsterData = monsterData;
         this.attackInterval = monsterData.base_stats.atk_cap / 1000;
-        currentHp = monsterData.base_stats.hp;
+
+        maxHp = monsterData.base_stats.hp;
+        currentHp = maxHp;
         currentAtk = monsterData.base_stats.atk;
+
+        InitializeHealthBar();
 
         InitializePosition();
         StartCoroutine(DelayedActivation());
+    }
+
+    // 血条初始化
+    private void InitializeHealthBar()
+    {
+        healthComponent = GetComponent<Health>();
+        if (healthComponent == null)
+        {
+            Debug.LogError("Health component not found on " + gameObject.name);
+            return;
+        }
+
+        healthComponent.UpdateMaxHealth(currentHp);
+        if (healthBarPrefab == null || healthUIAnchor == null) return;
+
+        // 生成血条实例
+        healthBarInstance = Instantiate(
+            healthBarPrefab,
+            healthUIAnchor.position,
+            Quaternion.identity
+        );
+        healthBarInstance.transform.SetParent(healthUIAnchor.transform, false);
+
+        // 获取血条控制器并初始化
+        var healthBarController = healthBarInstance.GetComponent<HealthBarController>();
+        if (healthBarController != null)
+        {
+            healthBarController.target = healthUIAnchor; // 绑定锚点
+            healthBarController.Initialize(
+                healthComponent.maxHealth,
+                healthComponent.currentHealth
+            );
+        }
+
+        // 绑定血量变化事件
+        healthComponent.OnDamageTaken += UpdateHealthBar;
+    }
+
+    // 更新血条数值
+    void UpdateHealthBar(int damage)
+    {
+        if (healthBarInstance != null)
+        {
+            healthBarInstance.GetComponent<HealthBarController>()
+                .Initialize(healthComponent.maxHealth, healthComponent.currentHealth);
+        }
     }
 
     private void InitializePosition()
@@ -100,14 +171,20 @@ public class BattleUnit : MonoBehaviour
 
         string prefix = spineInfo.normalSpineNum[spineNum];
         
+
         idleAnim = $"{prefix}_idle";
         runAnim = $"{prefix}_run";
         attackAnim = $"{prefix}_attack";
         damageAnim = $"{prefix}_damage";
         deathAnim = $"{prefix}_die";
+        
+
         if (star != 0)
         {
             string suffix = spineInfo.fightSpineNum[spineNum];
+            exSkillAnim = $"{suffix}_skill0";
+            skill1Anim = $"{suffix}_skill1";
+            skill2Anim = $"{suffix}_skill2";
             winAnim = $"{suffix}_joyResult";
         }
     }
@@ -155,28 +232,140 @@ public class BattleUnit : MonoBehaviour
         spineState.SetAnimation(0, winAnim, false);
     }
 
+    public void PauseAnimations()
+    {
+        skeleton.AnimationState.TimeScale = 0; // Spine动画暂停
+    }
+
+    public void ResumeAnimations()
+    {
+        skeleton.AnimationState.TimeScale = 1; // Spine动画恢复
+    }
+
     public IEnumerator PerformAction(List<BattleUnit> targets)
     {
+        // 等待其他技能完成
+        yield return new WaitWhile(() => isSkillInterrupting);
+
         BattleUnit target = targets[targets.Count - 1];
         if (target == null) yield break;
         // todo 播放攻击动画 包括普通攻击和技能攻击
-        spineState.SetAnimation(0, attackAnim, false);
-        yield return new WaitForSeconds(0.3f); // 攻击前摇
+        int currentStep = 0;
+        if (characterData != null)
+        {
+            currentStep = attackSequence[attackCycleIndex % attackSequence.Length];
+        }
+        string currentAnim = GetAttackAnimation(currentStep);
+
+        spineState.SetAnimation(0, currentAnim, false);
+        attackCycleIndex++;
+        // 保存当前协程引用
+        currentAttackCoroutine = StartCoroutine(AttackProcess(target));
+        yield return currentAttackCoroutine;
+        
+    }
+    private IEnumerator AttackProcess(BattleUnit target)
+    {
+        float animStartTime = Time.time;
+
+        // 等待攻击前摇（带暂停检查）
+        while (Time.time - animStartTime < 0.3f)
+        {
+            if (BattleManager.Instance.isPaused) yield return null;
+            else yield return new WaitForEndOfFrame();
+        }
         // todo 计算伤害
+        currentTp += 50;
         bool isCritical = UnityEngine.Random.value < 0.1f; // 10%暴击率
         int damage = isCritical ? currentAtk * 2 : currentAtk;
         target.TakeDamage(damage, isCritical);
 
-        yield return new WaitForSeconds(1f); // 攻击后摇
+        float postAnimStart = Time.time;
+        while (Time.time - postAnimStart < 1f)
+        {
+            if (BattleManager.Instance.isPaused) yield return null;
+            else yield return new WaitForEndOfFrame();
+        }
         PlayIdleAnim();
+    }
+
+    #region 新增技能触发方法
+    public void TriggerSkill2(List<BattleUnit> targets)
+    {
+        if (!isAlive || isSkillInterrupting) return;
+
+        currentTp = 0;
+        // 打断当前攻击
+        if (currentAttackCoroutine != null)
+        {
+            StopCoroutine(currentAttackCoroutine);
+            currentAttackCoroutine = null;
+        }
+
+        StartCoroutine(Skill2Process(targets));
+    }
+
+    private IEnumerator Skill2Process(List<BattleUnit> targets)
+    {
+        isSkillInterrupting = true;
+
+        // 保存当前攻击序列状态
+        savedAttackCycleIndex = attackCycleIndex;
+
+        // 记录技能开始时间
+        float skillStartTime = Time.time;
+
+        // 播放技能动画
+        var trackEntry = spineState.SetAnimation(1, skill2Anim, false);
+        float animDuration = trackEntry.Animation.Duration;
+
+        while (animDuration > 0)
+        {
+            if (!BattleManager.Instance.isPaused)
+                animDuration -= Time.deltaTime;
+            yield return null;
+        }
+
+        // 执行技能效果
+        foreach (var target in targets)
+        {
+            if (target.isAlive)
+                target.TakeDamage(currentAtk * 3);
+        }
+
+        // 恢复攻击序列
+        attackCycleIndex = savedAttackCycleIndex;
+        
+
+        // 关键修改：更新攻击计时器
+        float skillDuration = Time.time - skillStartTime;
+        BattleManager.Instance.UpdateAttackTimer(this, skillDuration);
+
+        // 继续攻击循环
+        PlayIdleAnim();
+        isSkillInterrupting = false;
+    }
+
+    public bool IsCastingSkill()
+    {
+        return isSkillInterrupting;
+    }
+    #endregion
+
+    private string GetAttackAnimation(int step)
+    {
+        return step switch
+        {
+            2 => exSkillAnim,
+            4 => skill1Anim,
+            _ => attackAnim
+        };
     }
 
     public void TakeDamage(int amount, bool isCritical = false)
     {
         currentHp = Mathf.Max(0, currentHp - amount);
-
-        Vector3 displayPos = transform.position + Vector3.up * 1.5f;
-        //DamageNumberController.Instance.ShowDamage(displayPos, amount, isCritical);
+        healthComponent.TakeDamage(amount);
 
         spineState.SetAnimation(1, damageAnim, false);
 
@@ -233,6 +422,13 @@ public class BattleUnit : MonoBehaviour
 
         skeleton.color = Color.gray;
     }
+    void OnDestroy()
+    {
+        // 销毁血条实例
+        if (healthBarInstance != null) Destroy(healthBarInstance);
 
+        // 解绑事件
+        healthComponent.OnDamageTaken -= UpdateHealthBar;
+    }
 
 }

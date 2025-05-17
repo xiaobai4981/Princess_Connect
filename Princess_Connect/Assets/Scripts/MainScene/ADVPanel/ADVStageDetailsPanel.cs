@@ -23,6 +23,7 @@ public class ADVStageDetailsPanel : BasePanel
     public TMP_Text stageNameText;
     public TMP_Text nowStamina;
     public TMP_Text costStamina;
+    public GameObject beginBtn;
 
     public GameObject[] starCount;
     public Sprite star;
@@ -43,6 +44,20 @@ public class ADVStageDetailsPanel : BasePanel
         stageDatas = JsonMapper.ToObject<StageDatas>(jsonStr1);
 
         UpdateUI();
+    }
+
+    private void Update()
+    {
+        if (nowPlayerInfo.current_stamina >= stageDatas.stage_datas[nowStageIndex.ToString()].config_data.stamina_cost)
+        {
+            beginBtn.GetComponent<Button>().interactable = true;
+            beginBtn.GetComponent<Image>().color = Color.white;
+        }
+        else
+        {
+            beginBtn.GetComponent<Button>().interactable = false;
+            beginBtn.GetComponent<Image>().color = Color.gray;
+        }
     }
 
     private void UpdateUI()
@@ -118,12 +133,25 @@ public class ADVStageDetailsPanel : BasePanel
         switch (btnName)
         {
             case "BeginBtn":
-                UIMgr.Instance.ShowPanel<ADVTeamSelectPanel>(E_UILayer.System, (panel) =>
+                if (beginBtn.GetComponent<Button>().interactable)
                 {
-                    panel.UpdatePlayerName(nowPlayerName);
-                    panel.UpdateInfo(monsterList, stageDatas.stage_datas[nowStageIndex.ToString()]);
-                    panel.UpdateNowStageIndex(nowStageIndex);
-                });
+                    #region 体力
+                    // 扣除体力
+                    int costStaminaNum = stageDatas.stage_datas[nowStageIndex.ToString()].config_data.stamina_cost;
+                    nowPlayerInfo.current_stamina -= costStaminaNum;
+                    // 本地数据更新
+                    string filePath = Path.Combine(Application.persistentDataPath, "player_data.json");
+                    File.WriteAllText(filePath, JsonMapper.ToJson(nowPlayerInfo));
+                    // 服务器数据更新
+                    PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { { "current_stamina", nowPlayerInfo.current_stamina }}, false);
+                    #endregion
+                    UIMgr.Instance.ShowPanel<ADVTeamSelectPanel>(E_UILayer.System, (panel) =>
+                    {
+                        panel.UpdatePlayerName(nowPlayerName);
+                        panel.UpdateInfo(monsterList, stageDatas.stage_datas[nowStageIndex.ToString()]);
+                        panel.UpdateNowStageIndex(nowStageIndex);
+                    });
+                }
                 break;
             case "CancelBtn":
                 UIMgr.Instance.HidePanel<ADVStageDetailsPanel>(true);

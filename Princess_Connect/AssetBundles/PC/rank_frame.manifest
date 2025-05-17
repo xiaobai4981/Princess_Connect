@@ -1,0 +1,26 @@
+ManifestFileVersion: 0
+CRC: 882644661
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 24b83ac984c81c20086ea944e5114316
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 24b83ac984c81c20086ea944e5114316
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/rank_frame/character_rank_5.png
+- Assets/Editor/ArtRes/rank_frame/character_rank_3.png
+- Assets/Editor/ArtRes/rank_frame/character_rank_1.png
+- Assets/Editor/ArtRes/rank_frame/character_rank_2.png
+- Assets/Editor/ArtRes/rank_frame/character_rank_4.png
+Dependencies: []

@@ -120,7 +120,7 @@ public class BeginQuestPanel : BasePanel
         EventCenter.Instance.RemoveEventListener(E_EventType.E_Quest_Confirm, Refresh);
     }
     // 类型不同的道具仓库卡牌初始化
-    private void PrepareCardDatas(string nowQuestType, bool isSync = false)
+    private void PrepareCardDatas(string nowQuestType, bool isSync = true)
     {
         cardQuestDatas.Clear();
         foreach (BeginQuestCardData questData in allQuestDatas)

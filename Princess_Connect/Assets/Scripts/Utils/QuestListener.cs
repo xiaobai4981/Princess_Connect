@@ -10,6 +10,7 @@ public class QuestListener : MonoBehaviour
     private QuestConfig questConfig;
     private PlayerInfo playerData;
     private PlayerCharacterCollection playerCharacterCollection;
+
     private void Awake()
     {
         string filePath = Path.Combine(Application.persistentDataPath, "quest_config.json");

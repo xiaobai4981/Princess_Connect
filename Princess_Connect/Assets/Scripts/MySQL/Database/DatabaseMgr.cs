@@ -55,7 +55,4 @@ public class DatabaseMgr
             conn = null;
         }
     }
-    // º”‘ÿπÿø®≈‰÷√±Ì
-
-
 }

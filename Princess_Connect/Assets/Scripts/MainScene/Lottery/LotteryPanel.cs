@@ -178,6 +178,13 @@ public class LotteryPanel : BasePanel
     {
         // 准备数据
         List<int> result = GetRandomList(count, isCharacterLottery);
+        
+        // 修改玩家数据
+        int nowDiamond = int.Parse(playerDiamondHave.text) - count * 150;
+        PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { { "diamond_cnt", nowDiamond } }, false);
+        TMP_Text diamondText = GetControl<TMP_Text>("DiamondText");
+        diamondText.text = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "diamond_cnt").ToString("N0");
+
         // 传输数据
         UIMgr.Instance.HidePanel<LotteryPanel>();
         UIMgr.Instance.ShowPanel<LotteryResultPanel>(E_UILayer.Middle, (panel) =>
@@ -185,11 +192,6 @@ public class LotteryPanel : BasePanel
             panel.UpdatePlayerName(nowPlayerName);
             panel.UpdateLotteryResult(result, true);
         });
-        // 修改玩家数据
-        int nowDiamond = int.Parse(playerDiamondHave.text) - count * 150;
-        PlayerDataMgr.Instance.ModifyUserIntInfo(nowPlayerName, new Dictionary<string, object>() { { "diamond_cnt", nowDiamond } }, false);
-        TMP_Text diamondText = GetControl<TMP_Text>("DiamondText");
-        diamondText.text = PlayerDataMgr.Instance.SearchUserIntInfo(nowPlayerName, "diamond_cnt").ToString("N0");
     }
 
     private List<int> GetRandomList(int count, bool isCharacterLottery)

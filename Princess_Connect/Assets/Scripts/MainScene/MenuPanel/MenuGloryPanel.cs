@@ -78,7 +78,7 @@ public class MenuGloryPanel : BasePanel
         yield return new WaitForSeconds(delay);
         action?.Invoke();
     }
-    private void PrepareCardDatas(PlayerInfo playerInfo, bool isSync = false)
+    private void PrepareCardDatas(PlayerInfo playerInfo, bool isSync = true)
     {
         cardDatas.Clear();
         foreach (int cardId in allGloryIds)

@@ -22,7 +22,7 @@ public class BattleMenuPanel : BasePanel
     private void BackToBattle()
     {
         // todo 重新开始计时和角色打斗
-        BattleManager.Instance.isBattleActive = true;
+        BattleManager.Instance.ResumeBattle();
         // 关闭自己
         UIMgr.Instance.HidePanel<BattleMenuPanel>(true);
     }
@@ -32,7 +32,10 @@ public class BattleMenuPanel : BasePanel
         UIMgr.Instance.HidePanel<BattleMenuPanel>(true);
         UIMgr.Instance.HidePanel<BattleControlPanel>(true);
         SceneMgr.Instance.LoadSceneAsyn("MainScene");
-        UIMgr.Instance.ShowPanel<ADVPanel>();
+        UIMgr.Instance.ShowPanel<ADVPanel>(E_UILayer.Middle, (panel) =>
+        {
+            panel.UpdatePlayerInfo();
+        });
         UIMgr.Instance.ShowPanel<BottomBtnPanel>();
     }
 

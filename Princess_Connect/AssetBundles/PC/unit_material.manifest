@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 1761250726
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9febb2f95f2046c37d37462740c14f55
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 9febb2f95f2046c37d37462740c14f55
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_100261.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105761.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_106011.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105811.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105961.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_101161.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_106061.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105311.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105711.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105861.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105361.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_105911.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_101111.png
+- Assets/Editor/ArtRes/unit_material/unit_material_no_frame_100211.png
+Dependencies: []

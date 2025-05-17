@@ -29,6 +29,12 @@ public class BattleManager : MonoBehaviour
 
     private Dictionary<BattleUnit, float> nextAttackTimes = new Dictionary<BattleUnit, float>();
 
+    // 用于停止战斗
+    public bool isPaused;
+    private float pausedTimeRemaining; // 暂停时剩余的战斗时间
+    private Dictionary<BattleUnit, Coroutine> pausedCoroutines = new Dictionary<BattleUnit, Coroutine>();
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -166,6 +172,12 @@ public class BattleManager : MonoBehaviour
                 characterInstance.transform.SetParent(monsterPrefab.transform);
                 characterInstance.transform.localPosition = enemyPositions[index];
                 characterInstance.transform.localScale = new Vector3(-0.7f, 0.7f, 1);
+                // 其他组件保持正常方向
+                Transform uiRoot = characterInstance.transform.Find("HeadUIAnchor");
+                if (uiRoot != null)
+                {
+                    uiRoot.localScale = new Vector3(-0.7f, 0.7f, 1);
+                }
                 BattleUnit unit = characterInstance.GetComponent<BattleUnit>();
                 unit.onMoveComplete += () => unitsMovingCount--;
                 unitsMovingCount++;
@@ -198,16 +210,102 @@ public class BattleManager : MonoBehaviour
         else enemies.Remove(unit);
         nextAttackTimes.Remove(unit);
     }
+    #region 战斗暂停有关
+    public void PauseBattle()
+    {
+        if (!isBattleActive) return;
 
+        isPaused = true;
+        isBattleActive = false;
+        pausedTimeRemaining = battleDuration - battleTimer;
+
+        // 暂停所有单位的动画
+        foreach (var unit in GetAllUnits())
+        {
+            if (unit.isAlive)
+            {
+                unit.PauseAnimations();
+                // 暂停正在进行的攻击协程
+                pausedCoroutines[unit] = StartCoroutine(PauseUnitAction(unit));
+            }
+        }
+
+        Time.timeScale = 0; // 暂停游戏时间
+    }
+
+    public void ResumeBattle()
+    {
+        if (!isPaused) return;
+
+        isPaused = false;
+        isBattleActive = true;
+        battleTimer = battleDuration - pausedTimeRemaining;
+
+        Time.timeScale = 1; // 恢复游戏时间
+
+        // 恢复所有单位的动画
+        foreach (var unit in GetAllUnits())
+        {
+            if (unit.isAlive)
+            {
+                unit.ResumeAnimations();
+                // 恢复协程
+                if (pausedCoroutines.TryGetValue(unit, out var coroutine))
+                {
+                    StopCoroutine(coroutine);
+                    StartCoroutine(ResumeUnitAction(unit));
+                }
+            }
+        }
+        pausedCoroutines.Clear();
+
+        // 重新启动战斗循环
+        StartCoroutine(BattleLoop());
+    }
+
+    private IEnumerator PauseUnitAction(BattleUnit unit)
+    {
+        yield return new WaitWhile(() => isPaused); // 等待暂停结束
+    }
+
+    private IEnumerator ResumeUnitAction(BattleUnit unit)
+    {
+        yield return null; // 等待一帧确保状态恢复
+        if (unit.isAlive)
+        {
+            unit.PlayIdleAnim(); // 重置到待机状态
+            nextAttackTimes[unit] = Time.time + unit.GetActualAttackInterval();
+        }
+    }
+
+    public void UpdateAttackTimer(BattleUnit unit, float elapsedTime)
+    {
+        if (nextAttackTimes.ContainsKey(unit))
+        {
+            float realElapsed = elapsedTime * Time.timeScale;
+            nextAttackTimes[unit] = Mathf.Max(
+                Time.time,
+                nextAttackTimes[unit] + realElapsed
+            );
+        }
+    }
+
+
+    private List<BattleUnit> GetAllUnits()
+    {
+        return allies.Concat(enemies).ToList();
+    }
+    #endregion
     private IEnumerator BattleLoop()
     {
         while (isBattleActive)
         {
             yield return ExecuteTurn();
-            yield return null; // 每帧至少等待一帧
+            yield return null;
             CheckBattleEnd();
         }
     }
+
 
     private IEnumerator ExecuteTurn()
     {
@@ -238,8 +336,18 @@ public class BattleManager : MonoBehaviour
     }
     private IEnumerator ExecuteAttack(BattleUnit attacker, List<BattleUnit> targets)
     {
+        // 添加状态检查
+        if (attacker.IsCastingSkill()) yield break;
+
         yield return StartCoroutine(attacker.PerformAction(targets));
+
+        // 强制刷新攻击计时器
+        if (nextAttackTimes.ContainsKey(attacker))
+        {
+            nextAttackTimes[attacker] = Time.time + attacker.GetActualAttackInterval();
+        }
     }
+
 
     private void CheckBattleEnd()
     {
@@ -308,6 +416,15 @@ public class BattleManager : MonoBehaviour
                 break;
         }
         Debug.Log($"Battle Ended: {result}");
+    }
+
+    public void OnSkill2ButtonClicked(int allyIndex)
+    {
+        if (allies.Count > allyIndex && allies[allyIndex].isAlive)
+        {
+            List<BattleUnit> targets = enemies.Where(e => e.isAlive).ToList();
+            allies[allyIndex].TriggerSkill2(targets);
+        }
     }
     private void OnDestroy()
     {

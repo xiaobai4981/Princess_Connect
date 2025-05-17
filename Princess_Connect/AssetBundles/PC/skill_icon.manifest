@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 59362783
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 763d4603b6933ffb6409a968f67bfea8
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 763d4603b6933ffb6409a968f67bfea8
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/skill_icon/icon_skill_3005.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_2004.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_2003.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_2001.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_3003.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_3001.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_1016.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_1002.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_2002.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_1005.png
+- Assets/Editor/ArtRes/skill_icon/icon_skill_1006.png
+Dependencies: []

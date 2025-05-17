@@ -1,0 +1,28 @@
+ManifestFileVersion: 0
+CRC: 505080658
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 666d2fce3a1a608c567190259fa84209
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 666d2fce3a1a608c567190259fa84209
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/item/icon_item_94001.png
+- Assets/Editor/ArtRes/item/icon_item_91001.png
+- Assets/Editor/ArtRes/item/icon_item_92001.png
+- Assets/Editor/ArtRes/item/icon_item_01003.png
+- Assets/Editor/ArtRes/item/icon_item_50003.png
+- Assets/Editor/ArtRes/item/icon_item_20001.png
+- Assets/Editor/ArtRes/item/icon_item_25001.png
+Dependencies: []

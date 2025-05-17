@@ -24,7 +24,7 @@ public class ADVArenaPanel : BasePanel
     // 暂存按钮数据
     private List<ArenaCardData> cardDatas = new List<ArenaCardData>();
     // 类型不同的道具仓库卡牌初始化
-    private void PrepareCardDatas(bool isSync = false)
+    private void PrepareCardDatas(bool isSync = true)
     {
         cardDatas.Clear();
         foreach (string userName in otherPlayerArenaConfig.Keys)

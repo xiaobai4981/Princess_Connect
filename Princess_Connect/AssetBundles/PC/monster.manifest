@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 1998604888
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1aeeecc7ebfb3cb33c82dc7c4597f123
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 1aeeecc7ebfb3cb33c82dc7c4597f123
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/monster/icon_unit_300800.png
+- Assets/Editor/ArtRes/monster/icon_unit_200400.png
+- Assets/Editor/ArtRes/monster/icon_unit_200501.png
+- Assets/Editor/ArtRes/monster/icon_unit_200500.png
+Dependencies: []

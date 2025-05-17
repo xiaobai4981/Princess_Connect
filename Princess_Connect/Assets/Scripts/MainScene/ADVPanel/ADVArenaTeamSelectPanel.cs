@@ -115,7 +115,7 @@ public class ADVArenaTeamSelectPanel : BasePanel
         Refresh();
     }
     // 类型不同的道具仓库卡牌初始化
-    private void PrepareCardDatas(string nowCharacterType, bool isSync = false)
+    private void PrepareCardDatas(string nowCharacterType, bool isSync = true)
     {
         cardDatas.Clear();
         for (int i = 0; i < allCharacter.Count; i++)

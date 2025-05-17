@@ -1,0 +1,42 @@
+ManifestFileVersion: 0
+CRC: 1690533602
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 28948544ea2c0b12531cfc716570956d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 2d8df09e698f722ada1caa03d3413830
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 28948544ea2c0b12531cfc716570956d
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Editor/ArtRes/character_plate/unit_plate_101131.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_101161.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_106031.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_100211.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105311.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_106061.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105731.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_101111.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105911.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105761.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_106011.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_100231.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105811.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105711.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105361.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105961.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_100261.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105861.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105831.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105331.png
+- Assets/Editor/ArtRes/character_plate/unit_plate_105931.png
+Dependencies: []

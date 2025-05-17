@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7746103540332252402}
   - component: {fileID: 5065555297941509611}
   - component: {fileID: -1234767258132421785}
+  - component: {fileID: 1751377850840812555}
   m_Layer: 0
   m_Name: 1058
   m_TagString: Untagged
@@ -30,7 +31,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2355131983029097717}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -96,4 +98,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa860f58e9e5e8458889ea7ef2d216b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonGraphic: {fileID: 5065555297941509611}
+  healthBarPrefab: {fileID: 6779511225682377015, guid: 5b9e89f3f209e894c80b15aea7a726aa, type: 3}
+  healthUIAnchor: {fileID: 2355131983029097717}
+  spawnOffsetX: 500
+  moveDuration: 2
+  isAlly: 0
+  attackInterval: 0
+  attackIntervalVariation: 0.15
+--- !u!114 &1751377850840812555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459409041057460645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df45dfe47720d1543b2d339d059c8bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
+  damageNumberPrefab: {fileID: 880058647667457358, guid: 03d726c79f7642e44abe59ba9a83bb28, type: 3}
+  headPos: {fileID: 2355131983029097717}
+--- !u!1 &4667962312437372894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2355131983029097717}
+  m_Layer: 0
+  m_Name: HeadUIAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2355131983029097717
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4667962312437372894}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8864472012437747003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 476}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

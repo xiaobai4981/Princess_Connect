@@ -19,11 +19,7 @@ public class RegisterPanel : BasePanel
                 break;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     // 注册操作
     private void Resgister()
     {
@@ -72,7 +68,7 @@ public class RegisterPanel : BasePanel
             });
             return;
         }
-        // 调用数据库登录方法
+        // 调用数据库注册方法
         bool result = PlayerDataMgr.Instance.RegisterUser(username, password);
         if (result)
         {

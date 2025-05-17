@@ -1,0 +1,78 @@
+ManifestFileVersion: 0
+CRC: 696005987
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fdecd3a5a90de1a64778806408241a1c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7b7434671056e6531ae3befdcf539f7a
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: fdecd3a5a90de1a64778806408241a1c
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 9fa860f58e9e5e8458889ea7ef2d216b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a009f35f1d52a054aa31fb8d97dccb7a, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: df45dfe47720d1543b2d339d059c8bb7, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: d85b887af7e6c3f45a2e2d2920d641bc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3da365b777c3e7642bbd796a800b936b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: f1b3b4b945939a54ea0b23d3396115fb, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 223
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+- Class: 225
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: Assembly-CSharp
+  ClassName: Spine.Unity.MeshGenerator
+- AssemblyName: Assembly-CSharp
+  ClassName: Spine.Unity.MeshGenerator/Settings
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/Editor/ArtRes/character_prefab/105361.prefab
+- Assets/Editor/ArtRes/character_prefab/1059.prefab
+- Assets/Editor/ArtRes/character_prefab/1011.prefab
+- Assets/Editor/ArtRes/character_prefab/1053.prefab
+- Assets/Editor/ArtRes/character_prefab/1060.prefab
+- Assets/Editor/ArtRes/character_prefab/1057.prefab
+- Assets/Editor/ArtRes/character_prefab/1002.prefab
+- Assets/Editor/ArtRes/character_prefab/1058.prefab
+- Assets/Editor/ArtRes/character_prefab/105761.prefab
+Dependencies: []

@@ -49,3 +49,6 @@ TagManager:
   - name: UI
     uniqueID: 981844779
     locked: 0
+  - name: DamageNumbers
+    uniqueID: 29963059
+    locked: 0

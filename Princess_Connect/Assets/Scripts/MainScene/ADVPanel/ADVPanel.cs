@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class ADVPanel : BasePanel
 {
-    private void Start()
-    {
-        
-    }
     public override void UpdatePlayerName(string nowPlayerName)
     {
         this.nowPlayerName = nowPlayerName;
@@ -40,7 +36,6 @@ public class ADVPanel : BasePanel
                     panel.UpdatePlayerName(nowPlayerName);
                 });
                 break;
-
         }
     }
 

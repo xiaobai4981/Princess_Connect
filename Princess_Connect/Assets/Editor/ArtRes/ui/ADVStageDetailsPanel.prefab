@@ -4388,6 +4388,7 @@ MonoBehaviour:
   stageNameText: {fileID: 4942957738093766896}
   nowStamina: {fileID: 6263397491286914125}
   costStamina: {fileID: 978463590684548262}
+  beginBtn: {fileID: 5463061025064063460}
   starCount:
   - {fileID: 5722311297328041838}
   - {fileID: 8879849089313685926}

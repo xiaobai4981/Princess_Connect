@@ -149,7 +149,7 @@ public class GloryDataMgr
         }
     }
 
-    // 查询用户的buff信息
+    // 查询道具的buff信息
     public string GetItemBuff(int equipmentId)
     {
         try
